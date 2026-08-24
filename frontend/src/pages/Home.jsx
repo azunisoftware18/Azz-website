@@ -9,7 +9,7 @@ import { MdArrowOutward } from "react-icons/md";
 import TechStack from "../components/TechStack";
 import Test from "../components/Test";
 import Services from "../components/Services";
-import Career from "../components/career";
+import Career from "../components/Career";
 import TiltCard from "../components/TiltCard.jsx";
 import Header from "../components/Header/Header.jsx";
 
