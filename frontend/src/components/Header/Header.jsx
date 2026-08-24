@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 
-const DEFAULT_VIDEO_SRC = "https://www.infosys.com//content/dam/infosys-web/en/hero-video/leon-navigate-ai.mp4";
+const DEFAULT_VIDEO_SRC =
+  "https://www.infosys.com//content/dam/infosys-web/en/hero-video/leon-navigate-ai.mp4";
 
 const navLinks = [
   { to: "/", label: "Home", end: true },
@@ -11,7 +12,6 @@ const navLinks = [
   { to: "/careers", label: "Careers" },
   { to: "/whatwedo", label: "WWD" },
   // { to: "/ERP", label: "ERP" },
-
 ];
 
 const navLinkClass = ({ isActive }) =>
@@ -20,18 +20,11 @@ const navLinkClass = ({ isActive }) =>
     isActive ? "text-blue-600" : "text-gray-700 hover:text-blue-600",
   ].join(" ");
 
-export default function Header({
-  videoSrc = null,
-  children,
-}) {
+export default function Header({ videoSrc = null, children }) {
   const hasVideo = Boolean(videoSrc);
 
   return (
-    <header
-      className={`relative ${
-        hasVideo ? "h-screen p-2" : "py-6"
-      }`}
-    >
+    <header className={`relative ${hasVideo ? "h-screen p-2" : "py-6"}`}>
       {hasVideo ? (
         <div className="relative w-full h-full rounded-3xl overflow-hidden">
           {/* Video */}
@@ -142,4 +135,3 @@ export default function Header({
     </header>
   );
 }
-
