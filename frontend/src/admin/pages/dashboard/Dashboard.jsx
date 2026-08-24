@@ -7,7 +7,7 @@ import StatsCard from "./components/StatsCard";
 import { getDashboard } from "../../../services/dashboard.service";
 import RecentBlogs from "./components/RecentBlogs";
 import RecentJobs from "./components/RecentJobs";
-import RecentApplications from "./components/RecentApplications";
+import RecentApplications from "../../../admin/pages/dashboard/components/RecentApplication.jsx";
 
 export default function Dashboard() {
   const [dashboard, setDashboard] = useState(null);

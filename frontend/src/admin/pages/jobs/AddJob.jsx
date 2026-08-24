@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import JobForm from "./components/JobForm";
-import { createJob } from "../../services/job.service.js";
+import JobForm from "./components/JobForm.jsx";
+import { createJob } from "../../../services/job.service.js";
 import { getCategories } from "../../../services/category.service.js";
 
 export default function AddJob() {

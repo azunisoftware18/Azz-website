@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 
-import BlogCard from "../../components/blog/BlogCard";
-import BlogSidebar from "../../components/blog/BlogSidebar";
+import BlogCard from "../../pages/Blog/components/BlogCard.jsx";
+import BlogSidebar from "../../components/blog/BlogSidebar.jsx";
 
-import { getPublishedBlogs } from "../../services/blog.service";
+import { getPublishedBlogs } from "../../services/blog.service.js";
 
-import { getCategories } from "../../services/category.service";
+import { getCategories } from "../../services/category.service.js";
 
 export default function BlogList() {
   const [blogs, setBlogs] = useState([]);

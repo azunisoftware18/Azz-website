@@ -1,20 +1,15 @@
 import * as jobService from "./job.service.js";
-import { createJobSchema } from "./job.validation.js";
+import { createJobSchema, updateJobSchema } from "./job.validation.js";
 
-const validatedData = createJobSchema.parse(req.body);
-
-const job = await jobService.createJob(validatedData);
-
-
-
-await jobService.updateJob(req.params.id, validatedData);
 // ==============================
 // Create Job
 // ==============================
 
 export const createJob = async (req, res) => {
   try {
-    const job = await jobService.createJob(req.body);
+    const validatedData = createJobSchema.parse(req.body);
+
+    const job = await jobService.createJob(validatedData);
 
     return res.status(201).json({
       success: true,
@@ -24,7 +19,7 @@ export const createJob = async (req, res) => {
   } catch (error) {
     console.error(error);
 
-    return res.status(500).json({
+    return res.status(400).json({
       success: false,
       message: error.message,
     });
@@ -81,7 +76,11 @@ export const getJobById = async (req, res) => {
 
 export const updateJob = async (req, res) => {
   try {
-    const job = await jobService.updateJob(req.params.id, req.body);
+    const validatedData = updateJobSchema
+      ? updateJobSchema.parse(req.body)
+      : req.body;
+
+    const job = await jobService.updateJob(req.params.id, validatedData);
 
     return res.status(200).json({
       success: true,
@@ -91,7 +90,7 @@ export const updateJob = async (req, res) => {
   } catch (error) {
     console.error(error);
 
-    return res.status(500).json({
+    return res.status(400).json({
       success: false,
       message: error.message,
     });

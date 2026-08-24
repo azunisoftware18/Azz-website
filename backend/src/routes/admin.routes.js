@@ -1,5 +1,5 @@
 import express from "express";
-import { verifyAdmin } from "../middleware/auth.middleware.js";
+import  verifyAdmin  from "../middleware/auth.middleware.js";
 
 import  authorize from "../middleware/role.middleware.js"
 

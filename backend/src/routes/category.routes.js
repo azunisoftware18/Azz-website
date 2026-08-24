@@ -7,7 +7,7 @@ import {
     deleteCategory,
 } from "../modules/blogs/category.controller.js";
 
-import { verifyAdmin } from "../middleware/auth.middleware.js";
+import  verifyAdmin  from "../middleware/auth.middleware.js";
 
 const router = Router();
 

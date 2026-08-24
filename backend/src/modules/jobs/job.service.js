@@ -1,11 +1,16 @@
 import prisma from "../../db/db.js";
-import slugify from "slugify";
+
+const generateSlug = (title = "") => {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+};
 
 export const createJob = async (data) => {
-  const slug = slugify(data.title, {
-    lower: true,
-    strict: true,
-  });
+  const slug = generateSlug(data.title);
 
   const existingJob = await prisma.job.findUnique({
     where: { slug },
@@ -123,10 +128,7 @@ export const updateJob = async (id, data) => {
     throw new Error("Job not found");
   }
 
-  const slug = slugify(data.title, {
-    lower: true,
-    strict: true,
-  });
+  const slug = generateSlug(data.title);
 
   return prisma.job.update({
     where: { id },

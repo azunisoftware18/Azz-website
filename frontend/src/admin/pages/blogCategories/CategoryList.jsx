@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Pencil, Trash2, Plus } from "lucide-react";
 import toast from "react-hot-toast";
 
-import DataTable from "../../components/DataTable/DataTable";
+import DataTable from "../../DataTable/DataTable.jsx";
 import ConfirmModal from "../../components/ui/ConfirmModal";
 import CategoryModal from "./components/CategoryModal";
 

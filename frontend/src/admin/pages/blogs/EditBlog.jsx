@@ -7,7 +7,7 @@ import BlogForm from "./components/BlogForm";
 import {
   getBlogById,
   updateBlog,
-} from "../../../services/blog.service";
+} from "../../../services/blog.service.js";
 
 import { getCategories } from "../../../services/category.service";
 

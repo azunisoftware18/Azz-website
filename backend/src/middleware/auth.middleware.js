@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import prisma from "../db/db.js";
 
-export const verifyAdmin = async (req, res, next) => {
+const verifyAdmin = async (req, res, next) => {
   try {
     const authHeader = req.headers.authorization;
 
@@ -14,13 +14,15 @@ export const verifyAdmin = async (req, res, next) => {
 
     const token = authHeader.split(" ")[1];
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(
+      token,
+      process.env.JWT_SECRET
+    );
 
     const user = await prisma.user.findUnique({
       where: {
         id: decoded.id,
       },
-
       select: {
         id: true,
         name: true,
@@ -38,11 +40,14 @@ export const verifyAdmin = async (req, res, next) => {
     }
 
     req.user = user;
+
     next();
   } catch (error) {
     return res.status(401).json({
       success: false,
-      message: error.message || "token is expired or not",
+      message: error.message || "Token is expired or invalid",
     });
   }
 };
+
+export default verifyAdmin;

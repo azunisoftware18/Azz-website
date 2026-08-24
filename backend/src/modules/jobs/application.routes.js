@@ -1,6 +1,6 @@
 import express from "express";
 
-import { verifyAdmin } from "../../middlewares/auth.middleware.js";
+import  verifyAdmin  from "../../middlewares/auth.middleware.js";
 
 import {
   applyJob,

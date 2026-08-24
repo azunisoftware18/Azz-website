@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+// import BlogSidebar from "../../components/blog/BlogSidebar.jsx";
 import BlogSidebar from "../../components/blog/BlogSidebar.jsx";
-import BlogCard from "../../components/blog/BlogCard.jsx";
+import BlogCard from "../../pages/Blog/components/BlogCard.jsx";
 import { getBlogBySlug, getRelatedBlogs } from "../../services/blog.service.js";
 import { getCategories } from "../../services/category.service.js";
 

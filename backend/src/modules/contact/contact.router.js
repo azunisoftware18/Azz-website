@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { verifyAdmin } from "../../middleware/auth.middleware.js";
+import  verifyAdmin  from "../../middleware/auth.middleware.js";
 
 import {
   createContact,

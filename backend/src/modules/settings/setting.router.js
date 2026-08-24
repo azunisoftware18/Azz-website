@@ -1,12 +1,12 @@
 import { Router } from "express";
 
-import { verifyAdmin } from "../../middleware/auth.middleware.js";
+import  verifyAdmin  from "../../middleware/auth.middleware.js";
 import upload from "../../utils/multer.js";
 
 import {
   getWebsiteSettings,
   updateWebsiteSettings,
-} from "./settings.controller.js";
+} from "./setting.controller.js";
 
 const router = Router();
 

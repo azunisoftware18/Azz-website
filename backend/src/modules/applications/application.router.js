@@ -7,7 +7,7 @@ import {
   deleteApplication,
 } from "./application.controller.js";
 
-import verifyAdmin from "../../middlewares/verifyAdmin.js";
+import verifyAdmin from "../../middleware/auth.middleware.js";
 import { validateStatusUpdate } from "./application.validation.js";
 
 const router = Router();

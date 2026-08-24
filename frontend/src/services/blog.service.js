@@ -1,6 +1,5 @@
 import api from "./api.js";
 
-
 /* ===========================
    Public APIs
 =========================== */
@@ -25,4 +24,44 @@ export const getFeaturedBlogs = () => {
 // Get blog categories
 export const getPublicBlogCategories = () => {
   return api.get("/blog-categories/public");
+};
+
+
+/* ===========================
+   Admin APIs
+=========================== */
+
+// Get all blogs
+export const getBlogs = (params) => {
+  return api.get("/blogs", {
+    params,
+  });
+};
+
+// Get blog by ID
+export const getBlogById = (id) => {
+  return api.get(`/blogs/${id}`);
+};
+
+// Create blog
+export const createBlog = (formData) => {
+  return api.post("/blogs", formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+};
+
+// Update blog
+export const updateBlog = (id, formData) => {
+  return api.put(`/blogs/${id}`, formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+};
+
+// Delete blog
+export const deleteBlog = (id) => {
+  return api.delete(`/blogs/${id}`);
 };

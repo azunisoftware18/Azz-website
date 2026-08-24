@@ -1,6 +1,6 @@
-import * as settingsService from "./settings.service.js";
+import * as settingsService from "./setting.service.js";
 
-import { updateWebsiteSettingsSchema } from "./settings.schema.js";
+import { updateWebsiteSettingsSchema } from "./setting.schema.js";
 
 /* ===========================
    Get Website Settings

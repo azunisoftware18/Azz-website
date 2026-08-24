@@ -1,6 +1,6 @@
 import express from "express";
 import { createBlog, deleteBlog, getBlog, getBlogs, updateBlog } from "../controllers/blog.controller.js"
-import { verifyAdmin } from "../middleware/auth.middleware.js"
+import  verifyAdmin  from "../middleware/auth.middleware.js"
 
 const router = express.Router()
 
