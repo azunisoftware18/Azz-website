@@ -9,6 +9,7 @@ import {
   Search,
   Settings,
   LogOut,
+  FolderOpen,
 } from "lucide-react";
 
 const menuItems = [

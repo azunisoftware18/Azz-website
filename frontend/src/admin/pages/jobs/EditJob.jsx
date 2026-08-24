@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import JobForm from "./components/JobForm";
 
-import { getJobById, updateJob } from "../../../services/job.category.service.js";
+import { getJobById, updateJob } from "../../../services/job.service.js";
 
 import { getCategories } from "../../../services/job.category.service.js";
 

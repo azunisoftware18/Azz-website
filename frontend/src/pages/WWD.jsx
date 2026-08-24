@@ -73,7 +73,7 @@ function WWD() {
         <div className="relative max-w-7xl mx-auto px-6 text-center">
 
           <span className="px-5 py-2 rounded-full bg-white/10 text-white">
-            🚀 Digital Solutions Company
+            Digital Solutions Company
           </span>
 
           <h1 className="text-6xl lg:text-8xl font-bold text-white mt-8">

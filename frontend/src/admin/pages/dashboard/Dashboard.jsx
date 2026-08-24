@@ -10,7 +10,11 @@ import RecentJobs from "./components/RecentJobs";
 import RecentApplications from "../../../admin/pages/dashboard/components/RecentApplication.jsx";
 
 export default function Dashboard() {
-  const [dashboard, setDashboard] = useState(null);
+  // const [dashboard, setDashboard] = useState(null);
+  const [dashboard, setDashboard] = useState({
+    stats: {},
+    admin: null,
+  });
 
   const [loading, setLoading] = useState(true);
 
@@ -45,28 +49,28 @@ export default function Dashboard() {
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         <StatsCard
           title="Blogs"
-          value={dashboard.stats.totalBlogs}
+          value={dashboard?.stats.totalBlogs}
           icon={<FileText size={28} />}
           color="bg-blue-500"
         />
 
         <StatsCard
           title="Jobs"
-          value={dashboard.stats.totalJobs}
+          value={dashboard?.stats.totalJobs}
           icon={<Briefcase size={28} />}
           color="bg-green-500"
         />
 
         <StatsCard
           title="Applications"
-          value={dashboard.stats.totalApplications}
+          value={dashboard?.stats.totalApplications}
           icon={<Users size={28} />}
           color="bg-purple-500"
         />
 
         <StatsCard
           title="Categories"
-          value={dashboard.stats.totalCategories}
+          value={dashboard?.stats.totalCategories}
           icon={<FolderOpen size={28} />}
           color="bg-orange-500"
         />

@@ -5,20 +5,29 @@ import api from "./api.js";
 =========================== */
 
 // Get published blogs
-export const getPublicBlogs = (params) => {
+export const getPublishedBlogs = (params) => {
   return api.get("/blogs/public", {
     params,
   });
 };
 
 // Get blog by slug
-export const getPublicBlogBySlug = (slug) => {
+export const getBlogBySlug = (slug) => {
   return api.get(`/blogs/public/${slug}`);
 };
 
 // Get featured blogs
 export const getFeaturedBlogs = () => {
   return api.get("/blogs/public/featured");
+};
+
+// Get related blogs
+export const getRelatedBlogs = (categoryId) => {
+  return api.get("/blogs/public", {
+    params: {
+      categoryId,
+    },
+  });
 };
 
 // Get blog categories

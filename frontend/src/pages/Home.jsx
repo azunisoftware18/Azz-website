@@ -30,10 +30,8 @@ const slides = [
   },
   {
     id: 3,
-    title:
-      "Cloud Technologies Continue to Accelerate Digital Transformation",
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200",
+    title: "Cloud Technologies Continue to Accelerate Digital Transformation",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200",
   },
   {
     id: 4,
@@ -44,8 +42,7 @@ const slides = [
   },
   {
     id: 5,
-    title:
-      "Technology Brands Experience Record Growth in Global Rankings",
+    title: "Technology Brands Experience Record Growth in Global Rankings",
     image:
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200",
   },
@@ -57,7 +54,6 @@ const slides = [
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200",
   },
 ];
-
 
 const cards = [
   {
@@ -73,20 +69,16 @@ const cards = [
     image:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200",
     title: "Mountain View",
-    description:
-      "A beautiful mountain landscape with a tilt animation.",
+    description: "A beautiful mountain landscape with a tilt animation.",
   },
   {
     id: 3,
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200",
     title: "Technology",
-    description:
-      "Modern workspace with immersive interaction.",
+    description: "Modern workspace with immersive interaction.",
   },
 ];
-
-
 
 function Home() {
   const swiperRef = useRef(null);
@@ -103,7 +95,7 @@ function Home() {
           <div className="flex justify-between items-center px-8 lg:px-16 mb-12">
             <h2 className="text-sm md:text-xl font-semibold tracking-wide text-[#0E0A42]">
               TOP STORIES
-            </h2> 
+            </h2>
 
             <div className="flex items-center gap-4">
               <button
@@ -159,9 +151,7 @@ function Home() {
                 {({ isActive }) => (
                   <div
                     className={`rounded-[30px] overflow-hidden bg-[#eef0f5] transition-all duration-500 ${
-                      isActive
-                        ? "scale-100 opacity-100"
-                        : "scale-95 opacity-70"
+                      isActive ? "scale-100 opacity-100" : "scale-95 opacity-70"
                     }`}
                   >
                     <div className="flex flex-col lg:flex-row">
@@ -180,7 +170,6 @@ function Home() {
 
                         <button className="group relative mt-10 inline-block w-fit text-lg font-medium text-[#0E0A42]">
                           Read More
-
                           <span className="absolute left-0 -bottom-1 h-[2px] w-full bg-current scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
                         </button>
                       </div>

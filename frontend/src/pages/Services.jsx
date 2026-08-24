@@ -1,29 +1,14 @@
-import React from 'react'
-import Header from '../components/Header/Header.jsx'
-import { ArrowRight } from "lucide-react";
-import Servicessection from '../components/ServicesPage.jsx';
-
 import {
-  Landmark,
-  GraduationCap,
-  CreditCard,
-  PlayCircle,
-  CheckCircle,
+  // Landmark,
+  // GraduationCap,
+  // CreditCard,
+  // CheckCircle,
+  ArrowRight,
 } from "lucide-react";
 
-import {
-  Search,
-  ClipboardList,
-  PlugZap,
-  Rocket,
-} from "lucide-react";
-import {
-  ShieldCheck,
-  Zap,
-  LifeBuoy,
-  TrendingUp,
-} from "lucide-react";
-
+import { Search, ClipboardList, PlugZap, Rocket } from "lucide-react";
+import { ShieldCheck, Zap, LifeBuoy, TrendingUp } from "lucide-react";
+import Header from "../components/Header/Header";
 
 const features = [
   {
@@ -41,8 +26,7 @@ const features = [
   {
     icon: LifeBuoy,
     title: "Dedicated Support",
-    description:
-      "A named success manager plus 24/7 engineering on call.",
+    description: "A named success manager plus 24/7 engineering on call.",
   },
   {
     icon: TrendingUp,
@@ -78,6 +62,7 @@ const steps = [
     desc: "Launch, monitor, and scale with confidence.",
   },
 ];
+
 const testimonials = [
   {
     quote:
@@ -86,27 +71,22 @@ const testimonials = [
     role: "CFO, Greenfield Schools Group",
   },
   {
-    quote:
-      "Bulk payouts that used to take a day now finish in minutes.",
+    quote: "Bulk payouts that used to take a day now finish in minutes.",
     name: "Arjun Rao",
     role: "Head of Operations",
   },
   {
-    quote:
-      "Our SLA compliance jumped from 72% to 98% in the first quarter.",
+    quote: "Our SLA compliance jumped from 72% to 98% in the first quarter.",
     name: "Sara Khan",
     role: "Director of Support",
   },
 ];
 
-
 const services = [
-
   {
     title: "Fintech Solutions",
     // icon: CreditCard,
-    video: "/videos/fintech-demo.mp4",  // Video will upload from here 👈👈
-    // videoTitle: "Watch Fintech Solutions Demo",
+    image: "/images/",
     description:
       "Power digital payments, settlements, and compliance with a single, secure financial backbone. Unifin Fintech handles transaction processing, KYC, fraud checks, and API integrations so your team can launch new financial products without rebuilding core infrastructure.",
     features: [
@@ -121,7 +101,8 @@ const services = [
   {
     title: "School Management Solutions",
     // icon: GraduationCap,
-    video: "/videos/school-demo.mp4",
+    image: "/images/",
+
     // videoTitle: "Watch School Management Solutions Demo",
     reverse: true,
     description:
@@ -138,7 +119,8 @@ const services = [
   {
     title: "Loan Management System",
     // icon: Landmark,
-    video: "/videos/loan-demo.mp4",
+    image: "/images/",
+
     // videoTitle: "Watch Loan Management System Demo",
     description:
       "Originate, approve, and service loans on a workflow engine built for lenders. Unifin LMS digitizes the full lending lifecycle — from application and credit checks to disbursement and collections — cutting turnaround time from weeks to hours while keeping your portfolio risk and compliance under control.",
@@ -150,10 +132,12 @@ const services = [
       "Disbursement automation",
     ],
   },
+
   {
     title: "Paying Payout Management System",
     // icon: Landmark,
-    video: "/videos/loan-demo.mp4",
+    image: "/images/",
+
     // videoTitle: "Watch Loan Management System Demo",
     reverse: true,
 
@@ -171,7 +155,7 @@ const services = [
   {
     title: "Ticket Booking Management System",
     // icon: Landmark,
-    video: "/videos/loan-demo.mp4",
+    image: "/images/",
     // videoTitle: "Watch Loan Management System Demo",
 
     description:
@@ -186,138 +170,11 @@ const services = [
   },
 ];
 
-
-
-
-function Services() {
+function ServicesPage() {
   return (
     <>
-      <Header />
-
-      <section className="bg-[#f8f9fc] min-h-screen flex items-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-            {/* Left Content */}
-            <div>
-              {/* <div className="inline-flex items-center gap-2 border border-indigo-200 rounded-full px-4 py-2 text-sm text-indigo-600 bg-white mb-8">
-              <span className="w-2 h-2 rounded-full bg-orange-500"></span>
-              5 integrated products. 1 unified platform.
-            </div> */}
-
-              <h1 className="text-5xl lg:text-5xl font-bold leading-tight text-slate-900">
-                One Platform.
-                {/* <span className="text-indigo-600"> Five</span> */}
-                <br />
-                <span className="bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
-                  Powerful Solutions
-                </span>
-                <br />
-                for Modern Institutions.
-              </h1>
-
-              <p className="mt-8 text-xl text-slate-600 leading-relaxed max-w-xl">
-                Unifin helps schools, lenders, and businesses automate finance,
-                payments, and support operations — all from a single, secure
-                platform.
-              </p>
-
-              <div className="flex flex-wrap gap-4 mt-10">
-                <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl font-medium flex items-center gap-2 shadow-lg transition">
-                  Book a Demo
-                  <ArrowRight size={18} />
-                </button>
-
-                <button className="border border-slate-300 px-8 py-4 rounded-xl font-medium text-slate-700 hover:bg-white transition">
-                  Explore Services
-                </button>
-              </div>
-
-              {/* Stats */}
-              <div className="flex flex-wrap gap-12 mt-14">
-                <div>
-                  <h3 className="text-4xl font-bold text-slate-900">
-                    ₹2,400Cr+
-                  </h3>
-                  <p className="text-slate-500 mt-1">Processed</p>
-                </div>
-
-                <div>
-                  <h3 className="text-4xl font-bold text-slate-900">500+</h3>
-                  <p className="text-slate-500 mt-1">Institutions</p>
-                </div>
-
-                <div>
-                  <h3 className="text-4xl font-bold text-slate-900">99.99%</h3>
-                  <p className="text-slate-500 mt-1">Uptime</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Dashboard Card */}
-            <div className="relative">
-              <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-200">
-
-                {/* Browser Header */}
-                <div className="bg-slate-100 px-6 py-4 flex items-center gap-2 border-b">
-                  <span className="w-3 h-3 rounded-full bg-red-400"></span>
-                  <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
-                  <span className="w-3 h-3 rounded-full bg-green-400"></span>
-
-                  <span className="ml-4 text-slate-500 text-sm">
-                    app.unifin.io/overview
-                  </span>
-                </div>
-
-                <div className="p-6">
-                  {/* Product Tabs */}
-                  <div className="grid grid-cols-5 gap-4 mb-6">
-                    {[
-                      "Fintech",
-                      "School",
-                      "Loan",
-                      "Payout",
-                      "Ticketing",
-                    ].map((item) => (
-                      <div
-                        key={item}
-                        className="border rounded-xl py-5 text-center text-sm text-slate-600 hover:border-indigo-500 cursor-pointer"
-                      >
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Metrics */}
-                  <div className="space-y-4">
-                    <MetricRow
-                      title="Payouts disbursed"
-                      value="₹4.2 Cr"
-                      growth="+12%"
-                    />
-
-                    <MetricRow
-                      title="Loans approved"
-                      value="318"
-                      growth="+8%"
-                    />
-
-                    <MetricRow
-                      title="Tickets resolved"
-                      value="1,247"
-                      growth="SLA 98%"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* <Servicessection /> */}
-
+    <Header />
+      {/* Services Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Heading */}
@@ -327,8 +184,8 @@ function Services() {
             </span>
 
             {/* <h2 className="mt-4 text-4xl md:text-5xl font-bold text-slate-900">
-                Our Poducts 
-              </h2> */}
+              Our Products
+            </h2> */}
 
             <p className="mt-6 text-lg md:text-xl text-slate-500">
               Each solution is powerful on its own — and unstoppable together.
@@ -338,22 +195,16 @@ function Services() {
           {/* Services List */}
           <div className="space-y-32">
             {services.map((service, index) => {
-              // const Icon = service.icon;
-
               return (
                 <div
                   key={index}
-                  className={`grid lg:grid-cols-2 gap-16 items-center ${service.reverse ? "lg:[&>*:first-child]:order-2" : ""
-                    }`}
+                  className={`grid lg:grid-cols-2 gap-16 items-center ${
+                    service.reverse ? "lg:[&>*:first-child]:order-2" : ""
+                  }`}
                 >
                   {/* Left Content */}
-
                   <div>
                     <div className="flex items-center gap-5 mb-8">
-                      {/* <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-indigo-500 to-cyan-500 flex items-center justify-center shadow-lg">
-                          {/* <Icon className="w-8 h-8 text-white" /> */}
-                      {/* </div> */}
-
                       <h3 className="text-3xl md:text-5xl font-bold text-slate-900">
                         {service.title}
                       </h3>
@@ -369,7 +220,7 @@ function Services() {
                           key={idx}
                           className="flex items-center gap-4 text-lg text-slate-700"
                         >
-                          <CheckCircle className="w-6 h-6 text-teal-500 shrink-0" />
+                          <span className="w-2 h-2 rounded-full bg-teal-500 shrink-0" />
                           <span>{feature}</span>
                         </div>
                       ))}
@@ -377,30 +228,22 @@ function Services() {
 
                     <button className="group text-indigo-600 font-semibold text-lg flex items-center gap-2 hover:gap-4 transition-all">
                       Learn more about {service.title}
-                      {/* <ArrowRight className="w-5 h-5" /> */}
                     </button>
                   </div>
 
-                  {/* Right Video */}
+                  {/* Right Image */}
                   <div>
-                    <div className="flex items-center gap-2 text-slate-700 font-medium mb-4">
-                      <PlayCircle className="w-5 h-5 text-indigo-600" />
-                      {service.videoTitle}
-                    </div>
+                    {/* <div className="flex items-center gap-2 text-slate-700 font-medium mb-4">
+                      {service.title}
+                    </div> */}
 
-                    <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-black">
-                      <video
-                        className="w-full h-[300px] md:h-[500px] object-cover pointer-events-none"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="auto"
-                      >
-                        <source src={service.video} type="video/mp4" />
-                      </video>
+                    <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-[300px] md:h-[500px] object-cover"
+                      />
                     </div>
-
                   </div>
                 </div>
               );
@@ -410,7 +253,6 @@ function Services() {
       </section>
 
       {/* Features Section */}
-
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-center text-5xl font-bold text-slate-900 mb-16">
@@ -447,7 +289,6 @@ function Services() {
       </section>
 
       {/* How it Works Section */}
-
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-center text-sm font-semibold text-indigo-600 tracking-widest uppercase mb-4">
@@ -481,9 +322,7 @@ function Services() {
                       {step.title}
                     </h3>
 
-                    <p className="text-gray-600">
-                      {step.desc}
-                    </p>
+                    <p className="text-gray-600">{step.desc}</p>
                   </div>
                 );
               })}
@@ -492,8 +331,7 @@ function Services() {
         </div>
       </section>
 
-      {/* Testinomial Section */}
-
+      {/* Testimonial Section */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <p className="text-center text-xs uppercase tracking-[4px] text-indigo-500 font-semibold">
@@ -517,13 +355,9 @@ function Services() {
                 </p>
 
                 <div>
-                  <h4 className="font-semibold text-slate-900">
-                    {item.name}
-                  </h4>
+                  <h4 className="font-semibold text-slate-900">{item.name}</h4>
 
-                  <p className="text-sm text-gray-500">
-                    {item.role}
-                  </p>
+                  <p className="text-sm text-gray-500">{item.role}</p>
                 </div>
               </div>
             ))}
@@ -546,7 +380,7 @@ function Services() {
         </div>
       </section>
 
-      {/*  CTA Section */}
+      {/* CTA Section */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="rounded-3xl bg-gradient-to-r from-indigo-700 via-blue-600 to-cyan-600 p-16 text-center text-white shadow-xl">
@@ -557,8 +391,8 @@ function Services() {
             </h2>
 
             <p className="text-white/80 mb-10">
-              See Unifin in action with a free 30-minute demo tailored to
-              your organization.
+              See Unifin in action with a free 30-minute demo tailored to your
+              organization.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -574,30 +408,8 @@ function Services() {
           </div>
         </div>
       </section>
-
-
-
-
-
-
     </>
-  )
-}
-
-
-function MetricRow({ title, value, growth }) {
-  return (
-    <div className="flex items-center justify-between border rounded-xl px-5 py-4">
-      <span className="text-slate-600">{title}</span>
-
-      <div className="flex items-center gap-4">
-        <span className="font-semibold text-slate-900">{value}</span>
-        <span className="text-emerald-500 text-sm font-medium">
-          {growth}
-        </span>
-      </div>
-    </div>
   );
 }
 
-export default Services
+export default ServicesPage;
