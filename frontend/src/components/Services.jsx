@@ -24,42 +24,61 @@ export default function Services() {
       description:
         "Native and cross-platform mobile apps for iOS and Android, designed to engage users and drive business growth.",
     },
+
+    // {
+    //   name: "UI/UX Design",
+    //   icon: Palette,
+    //   description: "User-centric design that combines aesthetics with functionality, ensuring intuitive and delightful experiences.",
+    // },
+
     {
-      name: "UI/UX Design",
-      icon: Palette,
-      description:
-        "User-centric design that combines aesthetics with functionality, ensuring intuitive and delightful experiences.",
-    },
-    {
-      name: "Cloud Solutions",
+      name: "Verification Services",
       icon: Cloud,
       description:
         "Scalable cloud infrastructure, migration, and management services on AWS, Azure, and Google Cloud.",
     },
     {
-      name: "AI & Machine Learning",
+      name: "School ERP Software",
       icon: Brain,
       description:
         "Intelligent automation, predictive analytics, and custom AI models to unlock new opportunities for your business.",
     },
     {
-      name: "Digital Marketing",
+      name: "Bill & Recharge",
       icon: BarChart3,
       description:
         "Data-driven marketing strategies, SEO, and social media campaigns to boost your online presence and reach.",
     },
     {
-      name: "Cybersecurity",
+      name: "Marketing Services",
       icon: Shield,
       description:
         "Comprehensive security assessments, penetration testing, and compliance solutions to protect your digital assets.",
     },
     {
-      name: "Performance Optimization",
+      name: "IT & Development",
       icon: Zap,
       description:
         "Speed up your websites and applications with advanced caching, CDN integration, and code optimization techniques.",
     },
+    {
+      name: "Banking & Collection",
+      icon: Zap,
+      description:
+        "Speed up your websites and applications with advanced caching, CDN integration, and code optimization techniques.",
+    },
+    // {
+    //   name: "Finance Software",
+    //   icon: Zap,
+    //   description:
+    //     "Speed up your websites and applications with advanced caching, CDN integration, and code optimization techniques.",
+    // },
+    // {
+    //   name: "Business Software",
+    //   icon: Zap,
+    //   description:
+    //     "Speed up your websites and applications with advanced caching, CDN integration, and code optimization techniques.",
+    // },
   ];
 
   return (
@@ -94,7 +113,7 @@ export default function Services() {
             return (
               <div
                 key={service.name}
-                className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl transition-shadow duration-300 border border-gray-100 hover:border-indigo-200 hover:-translate-y-1 hover:scale-[1.02] transform transition-all duration-300"
+                className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-2xl  border border-gray-100 hover:border-indigo-200 hover:-translate-y-1 hover:scale-[1.02] transform transition-all duration-300"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
                 {/* Icon */}
@@ -123,7 +142,7 @@ export default function Services() {
         <div className="mt-20 text-center">
           <a
             href="#"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-indigo-200/50 hover:shadow-indigo-300/70 hover:-translate-y-0.5 transition-all duration-300"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white font-semibold rounded-xl shadow-lg shadow-indigo-200/50 hover:bg-gray-900 hover:shadow-indigo-300/70 hover:-translate-y-0.5 transition-all duration-300"
           >
             Let's Build Something Amazing
             <svg

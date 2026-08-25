@@ -142,26 +142,26 @@ function CareerPage() {
     <Header />
     <div className="min-h-screen bg-[#F8FAFC]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0B0736] via-[#1A0B4A] to-[#2D1B69] py-32 lg:py-40">
+      <section className="relative overflow-hidden bg-white text-black py-32 lg:py-40">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-[800px] h-[800px] rounded-full bg-blue-500/10 blur-3xl -top-40 -right-40 animate-pulse"></div>
-          <div className="absolute w-[600px] h-[600px] rounded-full bg-purple-500/10 blur-3xl -bottom-40 -left-40 animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full bg-indigo-500/5 blur-3xl"></div>
-          <div className="absolute top-20 left-10 w-2 h-2 bg-white/30 rounded-full animate-bounce"></div>
-          <div className="absolute top-40 right-20 w-3 h-3 bg-white/20 rounded-full animate-bounce delay-200"></div>
-          <div className="absolute bottom-40 left-20 w-2 h-2 bg-white/30 rounded-full animate-bounce delay-500"></div>
+          {/* <div className="absolute w-[800px] h-[800px] rounded-full bg-blue-500/10 blur-3xl -top-40 -right-40 animate-pulse"></div> */}
+          {/* <div className="absolute w-[600px] h-[600px] rounded-full bg-purple-500/10 blur-3xl -bottom-40 -left-40 animate-pulse delay-1000"></div> */}
+          {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] rounded-full bg-indigo-500/5 blur-3xl"></div> */}
+          {/* <div className="absolute top-20 left-10 w-2 h-2 bg-white/30 rounded-full animate-bounce"></div> */}
+          {/* <div className="absolute top-40 right-20 w-3 h-3 bg-white/20 rounded-full animate-bounce delay-200"></div> */}
+          {/* <div className="absolute bottom-40 left-20 w-2 h-2 bg-white/30 rounded-full animate-bounce delay-500"></div> */}
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full text-white/90 text-sm font-medium border border-white/10 shadow-lg mb-8">
+          {/* <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full text-white/90 text-sm font-medium border border-white/10 shadow-lg mb-8">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
             </span>
             Now Hiring — 6 Open Positions
-          </div>
+          </div> */}
           
-          <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.1]">
+          <h1 className="text-black text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.1]">
             Build The
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -170,7 +170,7 @@ function CareerPage() {
             With Us
           </h1>
           
-          <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mt-6 leading-relaxed">
+          <p className="text-gray-900 text-lg md:text-xl max-w-3xl mx-auto mt-6 leading-relaxed">
             We're building innovative digital products that impact millions. 
             Join our team of passionate creators and shape the future of technology.
           </p>
@@ -178,14 +178,14 @@ function CareerPage() {
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
               to="#jobs"
-              className="group inline-flex items-center gap-2 bg-white text-[#1A0B4A] px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="group inline-flex items-center gap-2 bg-black text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               Explore Openings
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="#perks"
-              className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
+              className="inline-flex items-center gap-2 border border-white/30 text-black px-8 py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300"
             >
               Why Join Us?
               <ChevronDown className="w-5 h-5" />
@@ -195,11 +195,11 @@ function CareerPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
-                <div className="flex items-center justify-center text-white/60 mb-2">
+                <div className="flex items-center justify-center text-black mb-2">
                   {stat.icon}
                 </div>
-                <div className="text-white text-2xl font-bold">{stat.value}</div>
-                <div className="text-white/60 text-sm">{stat.label}</div>
+                <div className="text-black text-2xl font-bold">{stat.value}</div>
+                <div className="text-black text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -211,9 +211,9 @@ function CareerPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-[#1A0B4A]/60 text-sm font-semibold uppercase tracking-wider">
-              ● Culture & Benefits
+              {/* ● Culture & Benefits */}
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B0736] mt-2">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#000000] mt-2">
               Why Join Us?
             </h2>
             <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">
@@ -229,10 +229,10 @@ function CareerPage() {
               >
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.color} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity`}></div>
                 <div className="relative">
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#1A0B4A] to-[#2D1B69] flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-14 h-14 rounded-xl bg-black flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-[#0B0736] mb-3">
+                  <h3 className="text-xl font-bold text-[#000000] mb-3">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm">
@@ -250,9 +250,9 @@ function CareerPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-[#1A0B4A]/60 text-sm font-semibold uppercase tracking-wider">
-              ● Our People
+              ● Our People  
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B0736] mt-2">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#000000] mt-2">
               Meet Our Team
             </h2>
             <p className="text-gray-600 text-lg mt-4">
@@ -318,7 +318,7 @@ function CareerPage() {
             <span className="text-[#1A0B4A]/60 text-sm font-semibold uppercase tracking-wider">
               ● Opportunities
             </span>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0B0736] mt-2">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#000000] mt-2">
               Open Positions
             </h2>
             <p className="text-gray-600 text-lg mt-4">
@@ -335,11 +335,11 @@ function CareerPage() {
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-start gap-3">
-                      <div className="p-2 bg-[#EEF3FA] rounded-lg text-[#1A0B4A]">
+                      <div className="p-2 bg-[#EEF3FA] rounded-lg text-[#000000]">
                         <Briefcase size={20} />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-[#0B0736]">
+                        <h3 className="text-2xl font-bold text-[#000000]">
                           {job.title}
                         </h3>
                         <p className="text-gray-500 text-sm mt-1">{job.description}</p>
@@ -367,7 +367,7 @@ function CareerPage() {
 
                     <div className="flex flex-wrap gap-2 mt-3">
                       {job.skills.map((skill, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-[#EEF3FA] rounded-full text-xs font-medium text-[#1A0B4A]">
+                        <span key={idx} className="px-3 py-1 bg-[#EEF3FA] rounded-full text-xs font-medium text-[#000000]">
                           {skill}
                         </span>
                       ))}
@@ -377,7 +377,7 @@ function CareerPage() {
                   <Link
                     to="/contact"
                     state={{ job: job.title }}
-                    className="group relative inline-flex items-center justify-center gap-2 px-8 py-3 bg-[#1A0B4A] text-white rounded-full font-semibold hover:bg-[#2D1B69] transition-colors duration-300 whitespace-nowrap"
+                    className="group relative inline-flex items-center justify-center gap-2 px-8 py-3 bg-black text-white rounded-full font-semibold hover:bg-gray-900 transition-colors duration-300 whitespace-nowrap"
                   >
                     <span>Apply Now</span>
                     <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -391,7 +391,7 @@ function CareerPage() {
             <div className="text-center mt-10">
               <button
                 onClick={loadMoreJobs}
-                className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[#1A0B4A] text-[#1A0B4A] rounded-full font-semibold hover:bg-[#1A0B4A] hover:text-white transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-3 border-2 border-[#000000] text-black rounded-full font-semibold hover:bg-black hover:text-white transition-all duration-300"
               >
                 Load More Positions
                 <ChevronDown size={20} />
@@ -402,17 +402,17 @@ function CareerPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0B0736] to-[#2D1B69]">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
             Ready to Make an Impact?
           </h2>
-          <p className="text-gray-300 text-lg mt-4">
+          <p className="text-black text-lg mt-4">
             Join us and be part of something bigger. Your next adventure starts here.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-white text-[#1A0B4A] rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-xl"
+            className="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-black text-[#fffdfd] rounded-full font-semibold hover:scale-105 transition-all duration-300 shadow-xl"
           >
             Get in Touch
             <Mail size={20} />

@@ -10,6 +10,25 @@ import {
 } from "react-icons/fa";
 
 import { BiLogoPlayStore } from "react-icons/bi";
+import {
+  Bell,
+  BookOpenText,
+  BusFront,
+  ChartColumn,
+  Headset,
+  IdCard,
+  LibraryBig,
+  PencilSparkles,
+  PhoneCall,
+  ReceiptText,
+  RotateCcw,
+  Shield,
+  Smartphone,
+  Star,
+  TableOfContents,
+  Users,
+  X,
+} from "lucide-react";
 
 function Sms() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -55,7 +74,7 @@ function Sms() {
                   </div> */}
                   <div className="flex flex-col">
                     <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">
-                      Azzunique<span className="text-brand-600">ERP</span>
+                      Aadishala<span className="text-brand-600"> ERP</span>
                     </span>
                     <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
                       School Operating System
@@ -94,7 +113,7 @@ function Sms() {
                   href="#pricing"
                   className="hover:text-brand-600 transition-colors"
                 >
-                  Why Azzunique
+                  Why Aadishala
                 </a>
                 <a
                   href="#faq"
@@ -111,8 +130,10 @@ function Sms() {
                   className="hidden sm:flex items-center gap-2 text-slate-700 hover:text-brand-600 font-semibold text-sm px-3 py-2 rounded-lg hover:bg-slate-100 transition-all border border-transparent hover:border-slate-200"
                 >
                   <div className="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center">
-                    {/* <FaPhone className="text-xs" /> */}
+                    <PhoneCall />
                   </div>
+
+                  {/* change it */}
                   <span className="hidden md:inline">+91 98765 43210</span>
                 </a>
 
@@ -193,10 +214,10 @@ function Sms() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-xs sm:text-sm font-semibold mb-6 shadow-sm">
-                <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
-                <span className="bg-brand-600 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-full">
+                {/* <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span> */}
+                {/* <span className="bg-brand-600 text-white text-[10px] uppercase font-bold px-2 py-0.5 rounded-full">
                   New v4.5
-                </span>
+                </span> */}
                 <span>AI-Powered School Automation & CBSE/ICSE Compliant</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight sm:leading-none">
@@ -278,7 +299,7 @@ function Sms() {
                 UI Screenshots & Demo
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
-                Explore the Azzunique Admin Portal
+                Explore the Aadishala Admin Portal
               </h2>
               <p className="mt-3 text-slate-600 text-base">
                 Clean, intuitive, and designed for fast daily school operations.
@@ -904,7 +925,9 @@ function Sms() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-blue-800 text-white flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <i className="fa-solid fa-id-card"></i>
+                  <i className="fa-solid fa-id-card">
+                    <IdCard />
+                  </i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   Student Management
@@ -928,7 +951,9 @@ function Sms() {
 
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-blue-800 text-white flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <i className="fa-solid fa-id-card"></i>
+                  <i className="fa-solid fa-id-card">
+                    <RotateCcw />
+                  </i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   Attendance & RFID
@@ -952,7 +977,9 @@ function Sms() {
 
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-blue-800 text-white flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <i className="fa-solid fa-id-card"></i>
+                  <i className="fa-solid fa-id-card">
+                    <ReceiptText />
+                  </i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   Fees & Online Payments
@@ -976,7 +1003,10 @@ function Sms() {
 
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-blue-800 text-white flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <i className="fa-solid fa-id-card"></i>
+                  <i className="fa-solid fa-id-card">
+                    {" "}
+                    <ChartColumn />
+                  </i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   Examination & Grading
@@ -1000,7 +1030,10 @@ function Sms() {
 
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-blue-800 text-white flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <i className="fa-solid fa-id-card"></i>
+                  <i className="fa-solid fa-id-card">
+                    {" "}
+                    <TableOfContents />
+                  </i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   Smart Timetable Generator
@@ -1024,7 +1057,9 @@ function Sms() {
 
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-blue-800 text-white flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <i className="fa-solid fa-id-card"></i>
+                  <i className="fa-solid fa-id-card">
+                    <Users />
+                  </i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   HR & Staff Payroll
@@ -1048,7 +1083,9 @@ function Sms() {
 
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-blue-800 text-white flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <i className="fa-solid fa-id-card"></i>
+                  <i className="fa-solid fa-id-card">
+                    <BusFront />
+                  </i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   Transport & Fleet GPS
@@ -1072,7 +1109,9 @@ function Sms() {
 
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-blue-800 text-white flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <i className="fa-solid fa-id-card"></i>
+                  <i className="fa-solid fa-id-card">
+                    <LibraryBig />
+                  </i>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   Inventory & Library
@@ -1144,7 +1183,10 @@ function Sms() {
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center shrink-0 font-bold">
-                      <i className="fa-solid fa-bell"></i>
+                      <i className="fa-solid fa-bell">
+                        {" "}
+                        <Bell />
+                      </i>
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900 text-base">
@@ -1158,7 +1200,9 @@ function Sms() {
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 font-bold">
-                      <i className="fa-solid fa-mobile-screen"></i>
+                      <i className="fa-solid fa-mobile-screen">
+                        <Smartphone />
+                      </i>
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900 text-base">
@@ -1172,7 +1216,9 @@ function Sms() {
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0 font-bold">
-                      <i className="fa-solid fa-book-open"></i>
+                      <i className="fa-solid fa-book-open">
+                        <BookOpenText />
+                      </i>
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900 text-base">
@@ -1277,7 +1323,7 @@ function Sms() {
                 Savings & ROI Calculator
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold mt-2">
-                See How Much Time & Money Azzunique Saves Your School
+                See How Much Time & Money Aadishala Saves Your School
               </h2>
               <p className="text-slate-400 text-base mt-3">
                 Adjust the slider according to your school strength to estimate
@@ -1365,7 +1411,7 @@ function Sms() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-brand-600 font-bold text-sm tracking-widest uppercase">
-                Why Choose Azzunique
+                Why Choose Aadishala
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">
                 Built for Security, Reliability & Scale
@@ -1378,7 +1424,9 @@ function Sms() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold mb-4">
-                  <i className="fa-solid fa-shield-halved"></i>
+                  <i className="fa-solid fa-shield-halved">
+                    <Shield />
+                  </i>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   Bank-Grade Data Encryption
@@ -1391,7 +1439,9 @@ function Sms() {
               </div>
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl font-bold mb-4">
-                  <i className="fa-solid fa-headset"></i>
+                  <i className="fa-solid fa-headset">
+                    <Headset />
+                  </i>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   Dedicated Onsite & Online Support
@@ -1404,7 +1454,10 @@ function Sms() {
               </div>
               <div className="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm">
                 <div className="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl font-bold mb-4">
-                  <i className="fa-solid fa-wand-magic-sparkles"></i>
+                  <i className="fa-solid fa-wand-magic-sparkles">
+                    {" "}
+                    <PencilSparkles />
+                  </i>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   Zero Maintenance Cost
@@ -1421,17 +1474,28 @@ function Sms() {
               <h3 className="text-2xl font-bold text-slate-900 text-center mb-10">
                 Trusted by Leading Educators
               </h3>
+
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                   <div className="flex items-center gap-1 text-amber-400 text-xs mb-3">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
                   </div>
                   <p className="text-slate-600 text-sm italic mb-4">
-                    "Azzunique School ERP completely transformed our fee
+                    "Aadishala School ERP completely transformed our fee
                     collection. Parents love paying via the mobile app, and our
                     pending dues dropped by 60% within 3 months."
                   </p>
@@ -1451,11 +1515,21 @@ function Sms() {
                 </div>
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                   <div className="flex items-center gap-1 text-amber-400 text-xs mb-3">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
                   </div>
                   <p className="text-slate-600 text-sm italic mb-4">
                     "The automated CBSE report card generation saved our
@@ -1478,11 +1552,21 @@ function Sms() {
                 </div>
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
                   <div className="flex items-center gap-1 text-amber-400 text-xs mb-3">
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
-                    <i className="fa-solid fa-star"></i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
+                    <i className="fa-solid fa-star">
+                      <Star />
+                    </i>
                   </div>
                   <p className="text-slate-600 text-sm italic mb-4">
                     "The live GPS bus tracking feature has given our parents
@@ -1522,20 +1606,20 @@ function Sms() {
             <div className="space-y-4">
               {[
                 {
-                  q: "How long does it take to set up Azzunique ERP in our school?",
+                  q: "How long does it take to set up Aadishala ERP in our school?",
                   a: "Our setup process typically takes between 2 to 5 business days. Our technical team handles all data migration from your existing Excel files or previous software at no extra charge.",
                 },
                 {
                   q: "Is our student data secure and backed up?",
-                  a: "Yes! Azzunique uses 256-bit SSL encryption and hosts data on secure AWS cloud servers. Automated daily backups ensure your school data is protected with 99.9% uptime SLA.",
+                  a: "Yes! Aadishala uses 256-bit SSL encryption and hosts data on secure AWS cloud servers. Automated daily backups ensure your school data is protected with 99.9% uptime SLA.",
                 },
                 {
                   q: "Can we get custom modules according to our school policies?",
-                  a: "Absolutely. Azzunique ERP is modular and highly configurable. We can customize fee rules, report cards format, grading scales, and attendance rules to match your exact institutional policies.",
+                  a: "Absolutely. Aadishala ERP is modular and highly configurable. We can customize fee rules, report cards format, grading scales, and attendance rules to match your exact institutional policies.",
                 },
                 {
                   q: "Does it support RFID/Biometric attendance hardware?",
-                  a: "Yes, Azzunique seamlessly integrates with leading RFID gate barriers, biometric thumb scanners, and AI face recognition cameras.",
+                  a: "Yes, Aadishala seamlessly integrates with leading RFID gate barriers, biometric thumb scanners, and AI face recognition cameras.",
                 },
               ].map((item, index) => (
                 <div
@@ -1585,7 +1669,7 @@ function Sms() {
                 href="tel:+919876543210"
                 className="w-full sm:w-auto px-8 py-4 bg-brand-800/60 border border-brand-400/40 hover:bg-brand-800 text-white font-bold text-base rounded-2xl transition-all flex items-center justify-center gap-2"
               >
-                <FaPhone /> Call Sales: +91 98765 43210
+                <PhoneCall /> Call Sales: +91 98765 43210
               </a>
             </div>
           </div>
@@ -1601,11 +1685,11 @@ function Sms() {
                     A
                   </div>
                   <span className="text-white font-extrabold text-lg">
-                    Azzunique<span className="text-brand-500">ERP</span>
+                    Aadishala<span className="text-brand-500">ERP</span>
                   </span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  Azzunique is a leading cloud-based School Management ERP
+                  Aadishala is a leading cloud-based School Management ERP
                   software helping educational institutions automate academics,
                   fees, attendance, and parent communication.
                 </p>
@@ -1739,9 +1823,11 @@ function Sms() {
           <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-slate-200">
             <button
               onClick={closeModal}
-              className="absolute top-5 right-5 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center"
+              className="absolute top-5 right-5 text-red-600 hover:text-red-500 w-8 h-8 rounded-full bg-none flex items-center justify-center"
             >
-              <i className="fa-solid fa-xmark"></i>
+              <i className="fa-solid fa-xmark">
+                <X />
+              </i>
             </button>
             <div className="mb-6">
               <span className="bg-brand-50 text-brand-600 text-xs font-bold px-3 py-1 rounded-full uppercase">

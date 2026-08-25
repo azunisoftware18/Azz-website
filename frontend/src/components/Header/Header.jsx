@@ -10,8 +10,8 @@ const navLinks = [
   { to: "/blog", label: "Blog" },
   { to: "/pricing", label: "Pricing" },
   { to: "/careers", label: "Careers" },
-  { to: "/whatwedo", label: "WWD" },
-  // { to: "/ERP", label: "ERP" },
+  { to: "/whatwedo", label: "What We Do" },
+  { to: "/ERP", label: "ERP" },
 ];
 
 const navLinkClass = ({ isActive }) =>
@@ -43,7 +43,7 @@ export default function Header({ videoSrc = null, children }) {
           <div className="absolute inset-0 bg-black/40 z-10" />
 
           {/* Navbar */}
-          <nav className="absolute top-0 left-0 w-full z-50 px-6 py-6">
+          <nav className="fixed top-0 left-0 w-full z-50 px-6 py-6">
             <div className="max-w-7xl mx-auto bg-white/40 backdrop-blur-md rounded-full px-6 py-3 shadow-lg">
               <div className="flex items-center justify-between">
                 {/* Logo */}
@@ -92,7 +92,7 @@ export default function Header({ videoSrc = null, children }) {
         </div>
       ) : (
         /* Navbar Only (No Video) */
-        <nav className="w-full px-6">
+        <nav className=" fixed top-0 left-0 w-full z-50 px-6 py-6">
           <div className="max-w-7xl mx-auto bg-white/40 backdrop-blur-md rounded-full px-6 py-3 shadow-lg">
             <div className="flex items-center justify-between">
               {/* Logo */}

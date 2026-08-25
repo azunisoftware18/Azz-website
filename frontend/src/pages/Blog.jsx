@@ -310,7 +310,7 @@ function BlogPage() {
 
                 <button
                   onClick={addComment}
-                  className="mt-5 bg-[#1B0A42] text-white px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-black"
+                  className="mt-5 bg-black text-white px-8 py-4 rounded-xl flex items-center gap-2 hover:bg-gray-900"
                 >
                   <Send size={18} />
                   Post Comment

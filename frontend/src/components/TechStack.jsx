@@ -2,84 +2,130 @@ import React from "react";
 
 function TechStack() {
   const techStacks = [
-    {
-      name: "JavaScript",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    },
-    {
-      name: "React JS",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
-    {
-      name: "Node JS",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-    },
-    {
-      name: "Next JS",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-    },
-    {
-      name: "Express JS",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-    },
-    {
-      name: "MongoDB",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-    },
-    {
-      name: "Prisma",
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
-    },
+    { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { name: "React JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { name: "Node JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+    { name: "Next JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+    { name: "Express JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+    { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+    { name: "Prisma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" },
   ];
+
+  // Duplicate array once – we'll render it twice in the JSX
+  const duplicated = [...techStacks, ...techStacks];
 
   return (
     <>
-      <style>
-        {`
-          .marquee {
-            animation: scroll 20s linear infinite;
-            width: max-content;
+      <style>{`
+        .marquee-wrapper {
+          overflow: hidden;
+          background: white;
+          padding: 2.5rem 0;
+          position: relative;
+        }
+
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          will-change: transform;
+          backface-visibility: hidden;
+          transform: translateZ(0);
+          animation: marquee-scroll 25s linear infinite;
+        }
+
+        .marquee-item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          margin: 0 1rem;
+          padding: 0.75rem 1.5rem;
+          border-radius: 9999px;
+          border: 1px solid #e5e7eb;
+          background: #f9fafb;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+          white-space: nowrap;
+          flex-shrink: 0;
+          transition: box-shadow 0.2s, transform 0.2s;
+          cursor: default;
+        }
+
+        .marquee-item:hover {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          transform: scale(1.02);
+        }
+
+        .marquee-item img {
+          width: 2rem;
+          height: 2rem;
+          display: block;
+          flex-shrink: 0;
+        }
+
+        .marquee-item span {
+          font-weight: 600;
+          color: #1f2937;
+          font-size: 0.95rem;
+        }
+
+        @keyframes marquee-scroll {
+          0%   { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+
+        /* Fade overlays – using Tailwind-like gradients */
+        .marquee-fade-left {
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 5rem;
+          background: linear-gradient(to right, white, transparent);
+          z-index: 10;
+          pointer-events: none;
+        }
+
+        .marquee-fade-right {
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 100%;
+          width: 5rem;
+          background: linear-gradient(to left, white, transparent);
+          z-index: 10;
+          pointer-events: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+          .marquee-item {
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem;
           }
-
-          @keyframes scroll {
-            from {
-              transform: translateX(0);
-            }
-            to {
-              transform: translateX(-50%);
-            }
+          .marquee-item img {
+            width: 1.5rem;
+            height: 1.5rem;
           }
-        `}
-      </style>
+          .marquee-item span {
+            font-size: 0.8rem;
+          }
+          .marquee-fade-left,
+          .marquee-fade-right {
+            width: 2.5rem;
+          }
+        }
+      `}</style>
 
-      <section className="py-10 bg-white overflow-hidden">
-        <div className="relative overflow-hidden">
+      <section className="marquee-wrapper">
+        <div className="marquee-fade-left" />
+        <div className="marquee-fade-right" />
 
-          {/* Left Gradient */}
-          <div className="absolute left-0 top-0 h-full w-20 bg-gradient-to-r from-white to-transparent z-10" />
-
-          <div className="marquee flex">
-            {[...techStacks, ...techStacks].map((tech, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 mx-4 px-6 py-3 rounded-full border border-gray-200 bg-gray-50 shadow-sm whitespace-nowrap"
-              >
-                <img
-                  src={tech.logo}
-                  alt={tech.name}
-                  className="w-8 h-8"
-                />
-
-                <span className="font-semibold text-gray-800">
-                  {tech.name}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Gradient */}
-          <div className="absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white to-transparent z-10" />
-
+        <div className="marquee-track">
+          {duplicated.map((tech, index) => (
+            <div key={index} className="marquee-item">
+              <img src={tech.logo} alt={tech.name} loading="lazy" />
+              <span>{tech.name}</span>
+            </div>
+          ))}
         </div>
       </section>
     </>

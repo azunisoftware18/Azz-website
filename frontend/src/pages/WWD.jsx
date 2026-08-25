@@ -46,13 +46,50 @@ function WWD() {
     },
     {
       icon: <Cloud size={42} />,
-      title: "Cloud & DevOps",
+      title: "Verification Services",
       description:
         "Deployment, automation, hosting, and cloud infrastructure solutions.",
     },
     {
       icon: <Code2 size={42} />,
-      title: "Custom Software",
+      title: "School ERP Software",
+      description:
+        "Tailor-made software solutions designed specifically for your business.",
+    },
+
+    {
+      icon: <Code2 size={42} />,
+      title: "Bill & Recharge",
+      description:
+        "Tailor-made software solutions designed specifically for your business.",
+    },
+    {
+      icon: <Code2 size={42} />,
+      title: "Marketing Services",
+      description:
+        "Tailor-made software solutions designed specifically for your business.",
+    },
+    {
+      icon: <Code2 size={42} />,
+      title: "IT & Development",
+      description:
+        "Tailor-made software solutions designed specifically for your business.",
+    },
+    {
+      icon: <Code2 size={42} />,
+      title: "Banking & Collection",
+      description:
+        "Tailor-made software solutions designed specifically for your business.",
+    },
+    {
+      icon: <Code2 size={42} />,
+      title: "Finance Software",
+      description:
+        "Tailor-made software solutions designed specifically for your business.",
+    },
+    {
+      icon: <Code2 size={42} />,
+      title: "Business Software",
       description:
         "Tailor-made software solutions designed specifically for your business.",
     },
@@ -64,32 +101,29 @@ function WWD() {
 
       {/* Hero Section */}
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0E0A42] via-[#1B0A42] to-[#30206B] py-32">
+      <section className="relative overflow-hidden bg-white py-32">
+        {/* <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-blue-500/20 blur-[120px] animate-pulse"></div> */}
 
-        <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-blue-500/20 blur-[120px] animate-pulse"></div>
-
-        <div className="absolute right-0 bottom-0 w-[450px] h-[450px] rounded-full bg-purple-500/20 blur-[120px] animate-pulse"></div>
+        {/* <div className="absolute right-0 bottom-0 w-[450px] h-[450px] rounded-full bg-purple-500/20 blur-[120px] animate-pulse"></div> */}
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-
-          <span className="px-5 py-2 rounded-full bg-white/10 text-white">
+          {/* <span className="px-5 py-2 rounded-full bg-black text-white">
             Digital Solutions Company
-          </span>
+          </span> */}
 
-          <h1 className="text-6xl lg:text-8xl font-bold text-white mt-8">
+          <h1 className="text-6xl lg:text-8xl font-bold text-black mt-8">
             What We Do
           </h1>
 
-          <p className="max-w-3xl mx-auto text-xl text-gray-300 mt-8 leading-9">
-            We empower businesses with innovative digital products,
-            scalable technologies, and exceptional user experiences.
-            From websites to enterprise software, we transform ideas
-            into reality.
+          <p className="max-w-3xl mx-auto text-xl text-black mt-8 leading-9">
+            We empower businesses with innovative digital products, scalable
+            technologies, and exceptional user experiences. From websites to
+            enterprise software, we transform ideas into reality.
           </p>
 
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 mt-10 px-8 py-4 rounded-full bg-white text-[#1B0A42] font-semibold hover:scale-105 duration-300"
+            className="inline-flex items-center gap-2 mt-10 px-8 py-4 rounded-full bg-white text-black font-semibold hover:scale-105 duration-300"
           >
             Let's Work Together
             <ArrowRight size={20} />
@@ -100,19 +134,16 @@ function WWD() {
       {/* About */}
 
       <section className="py-24 bg-[#F8FAFC]">
-
         <div className="max-w-6xl mx-auto px-6 text-center">
-
-          <h2 className="text-5xl font-bold text-[#0E0A42]">
+          <h2 className="text-5xl font-bold text-black">
             Helping Businesses Grow Digitally
           </h2>
 
           <p className="mt-8 text-gray-600 text-lg leading-9 max-w-4xl mx-auto">
             Our company specializes in delivering high-quality software
-            development services tailored to startups, enterprises,
-            and growing businesses. We combine creativity,
-            technology, and strategy to build products that drive
-            measurable success.
+            development services tailored to startups, enterprises, and growing
+            businesses. We combine creativity, technology, and strategy to build
+            products that drive measurable success.
           </p>
         </div>
       </section>
@@ -120,14 +151,9 @@ function WWD() {
       {/* Services Grid */}
 
       <section className="py-24">
-
         <div className="max-w-7xl mx-auto px-6">
-
           <div className="text-center mb-16">
-
-            <h2 className="text-5xl font-bold text-[#0E0A42]">
-              Our Services
-            </h2>
+            <h2 className="text-5xl font-bold text-black">Our Services</h2>
 
             <p className="mt-5 text-gray-600 text-lg">
               Everything your business needs under one roof.
@@ -135,17 +161,16 @@ function WWD() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
             {services.map((service, index) => (
               <div
                 key={index}
                 className="group bg-white rounded-3xl p-10 shadow-lg hover:-translate-y-3 hover:shadow-2xl transition-all duration-500"
               >
-                <div className="w-20 h-20 rounded-2xl bg-[#EEF3FA] flex items-center justify-center text-[#1B0A42] group-hover:rotate-12 transition duration-500">
+                <div className="w-20 h-20 rounded-2xl bg-[#EEF3FA] flex items-center justify-center text-black group-hover:rotate-12 transition duration-500">
                   {service.icon}
                 </div>
 
-                <h3 className="text-3xl font-bold text-[#0E0A42] mt-8">
+                <h3 className="text-3xl font-bold text-black mt-8">
                   {service.title}
                 </h3>
 
@@ -153,7 +178,7 @@ function WWD() {
                   {service.description}
                 </p>
 
-                <button className="mt-8 flex items-center gap-2 text-[#1B0A42] font-semibold group-hover:gap-4 transition-all">
+                <button className="mt-8 flex items-center gap-2 text-black font-semibold group-hover:gap-4 transition-all">
                   Learn More
                   <ArrowRight size={18} />
                 </button>
@@ -166,25 +191,20 @@ function WWD() {
       {/* Why Choose Us */}
 
       <section className="bg-[#EEF3FA] py-24">
-
         <div className="max-w-7xl mx-auto px-6">
-
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-
             <div>
-
-              <h2 className="text-5xl font-bold text-[#0E0A42]">
+              <h2 className="text-5xl font-bold text-[#000000]">
                 Why Businesses Choose Us
               </h2>
 
               <p className="mt-8 text-gray-600 leading-9 text-lg">
-                We don't just build software—we create scalable
-                digital ecosystems that help businesses improve
-                efficiency, engage customers, and increase revenue.
+                We don't just build software—we create scalable digital
+                ecosystems that help businesses improve efficiency, engage
+                customers, and increase revenue.
               </p>
 
               <ul className="space-y-5 mt-10">
-
                 <li> Experienced Development Team</li>
 
                 <li> Modern Technologies & Frameworks</li>
@@ -195,46 +215,39 @@ function WWD() {
                 <li>SEO & Performance Optimized Solutions</li>
 
                 <li>Enterprise Grade Security</li>
-
               </ul>
             </div>
 
             <div>
-
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200"
                 alt="Team"
                 className="rounded-[40px] shadow-2xl hover:scale-105 transition duration-700"
               />
-
             </div>
-
           </div>
         </div>
       </section>
 
       {/* CTA */}
 
-      <section className="py-28 bg-[#0E0A42] text-center">
-
+      <section className="py-28 bg-white text-center">
         <div className="max-w-5xl mx-auto px-6">
-
-          <h2 className="text-5xl lg:text-6xl font-bold text-white">
+          <h2 className="text-5xl lg:text-6xl font-bold text-black">
             Ready to Build Something Amazing?
           </h2>
 
-          <p className="mt-8 text-gray-300 text-xl leading-9">
-            Let's discuss your project and create a solution that
-            accelerates your business growth.
+          <p className="mt-8 text-gray-800 text-xl leading-9">
+            Let's discuss your project and create a solution that accelerates
+            your business growth.
           </p>
 
           <Link
             to="/contact"
-            className="inline-flex mt-10 px-10 py-5 rounded-full bg-white text-[#0E0A42] font-semibold hover:scale-105 transition duration-300"
+            className="inline-flex mt-10 px-10 py-5 rounded-full bg-black text-white font-semibold hover:scale-105 transition duration-300"
           >
             Get Started Today
           </Link>
-
         </div>
       </section>
     </>

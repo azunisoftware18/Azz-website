@@ -1,54 +1,46 @@
-import React from 'react'
-import { useState } from 'react'
-import Header from '../components/Header/Header.jsx'
+import { useState } from "react";
+import Header from "../components/Header/Header.jsx";
 import {
   Star,
   BarChart3,
   Globe,
   UserRound,
   BriefcaseBusiness,
+  ArrowUpRight,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
 } from "lucide-react";
-import { ArrowUpRight } from "lucide-react";
 
-
-
-export default function AboutPage() {
-
-    
+export default function About() {
   const [marketing, setMarketing] = useState(false);
   const [privacy, setPrivacy] = useState(false);
+
+  // ----- Data -----
   const cards = [
     {
-      title: "History",
+      title: "Discover",
       description:
-        "Established in 1981, Infosys is a NYSE listed global consulting company.",
+        "We shape brands through exploration, applying in-depth research to challenge assumptions at every turn.",
     },
     {
-      title: "Subsidiaries",
+      title: "Design",
       description:
-        "Infosys has made strategic investments in different domains and industries.",
+        "Our design approach is to simplify. We embrace the joy in creating something unique that is easy for end users.",
     },
     {
-      title: "Management",
+      title: "Build",
       description:
-        "View profiles of top Executives and Members of the Infosys leadership.",
+        "Using modern technologies, we build with efficiency and skill, creating flexible and scalable business-driven solutions.",
     },
     {
-      title: "Alliances",
+      title: "Deliver",
       description:
-        "Our network of alliance and teaming relationships creates value.",
-    },
-    {
-      title: "Corporate Governance",
-      description:
-        "At Infosys, the goal of corporate governance is to ensure fairness.",
-    },
-    {
-      title: "Investor Relations",
-      description:
-        "News and events, investor calendar, presentations and analyst updates.",
+        "We take an iterative approach to both our work and our practice, always looking for ways to improve what we do.",
     },
   ];
+
   const stats = [
     {
       icon: <Star size={24} />,
@@ -59,8 +51,7 @@ export default function AboutPage() {
       icon: <BarChart3 size={24} />,
       value: (
         <>
-          <span className="text-2xl align-top">US$</span>{" "}
-          <span>20.2</span>
+          <span className="text-2xl align-top">US$</span> 20.2
           <span className="text-2xl align-top">BN</span>
         </>
       ),
@@ -82,13 +73,67 @@ export default function AboutPage() {
       label: "Trusting Clients",
     },
   ];
+
+  // ----- Form state (simple) -----
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    jobTitle: "",
+    phone: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    // clear error on change
+    if (errors[name]) setErrors({ ...errors, [name]: "" });
+  };
+
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.firstName.trim()) newErrors.firstName = "Required";
+    if (!formData.lastName.trim()) newErrors.lastName = "Required";
+    if (!formData.email.trim()) newErrors.email = "Required";
+    else if (!/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Invalid email";
+    if (!formData.company.trim()) newErrors.company = "Required";
+    if (!formData.jobTitle.trim()) newErrors.jobTitle = "Required";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert("Form submitted! (demo)");
+      // reset form
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        jobTitle: "",
+        phone: "",
+        message: "",
+      });
+      setMarketing(false);
+      setPrivacy(false);
+    }
+  };
+
+  // ----- Render -----
   return (
     <>
+      <Header />
 
-    <Header />
-
-    <section
-        className="relative py-24 overflow-hidden bg-[#f3f4fb]"
+      {/* ====== HERO / PURPOSE SECTION ====== */}
+      <section
+        className="relative py-20 lg:py-32 overflow-hidden bg-[#f3f4fb]"
         style={{
           backgroundImage:
             "url('https://www.infosys.com/content/dam/infosys-web/en/global-resource/media-resources/pattern-bg.png')",
@@ -97,224 +142,133 @@ export default function AboutPage() {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          {/* Top Content */}
           <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
-            {/* Left */}
-            <h2 className="text-6xl lg:text-7xl font-medium text-[#111827] leading-none">
-              Our <br />
-              Purpose:
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-medium text-[#111827] leading-tight lg:leading-none">
+              Our <br /> Mission:
             </h2>
-
-            {/* Right */}
-            <p className="text-2xl lg:text-[24px] leading-relaxed text-[#222] font-normal">
-              To amplify human potential and create the next opportunity for
-              people, businesses and communities
+            <p className="text-xl sm:text-2xl lg:text-[24px] leading-relaxed text-[#222] font-normal">
+              We will deliver flawless and complex software products. We will
+              strive to bring the best of kind IT solutions to be superior
+              services providers while delivering tangible results to our
+              clients in all phases and help them achieve better products for
+              their needs.
             </p>
           </div>
 
           {/* Video Cards */}
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Card 1 */}
-            <div className="relative group rounded-2xl overflow-hidden cursor-pointer">
-              <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200"
-                alt="Purpose Video"
-                className="w-full h-[420px] object-cover transition duration-500 group-hover:scale-105"
-              />
-
-              {/* Play Button */}
-              {/* <div className="absolute inset-0 flex items-center justify-center"> */}
-                {/* <div className="w-28 h-28 rounded-full bg-cyan-500/90 flex items-center justify-center backdrop-blur-sm transition group-hover:scale-110">
-                  {/* <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="white"
-                    viewBox="0 0 24 24"
-                    className="w-10 h-10 ml-1"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg> */}
-                {/* </div> */} 
-              {/* </div> */}
-            </div>
-
-            {/* Card 2 */}
-            <div className="relative group rounded-2xl overflow-hidden cursor-pointer">
-              <img
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200"
-                alt="About Why"
-                className="w-full h-[420px] object-cover transition duration-500 group-hover:scale-105"
-              />
-
-              {/* Overlay */}
-              {/* <div className="absolute inset-0 bg-black/20" /> */}
-
-              {/* Play Button */}
-              {/* <div className="absolute inset-0 flex items-center justify-center"> */}
-
-                {/* Video 2 */}
-                {/* <div className="w-28 h-28 rounded-full bg-cyan-500/90 flex items-center justify-center backdrop-blur-sm transition group-hover:scale-110">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="white"
-                    viewBox="0 0 24 24"
-                    className="w-10 h-10 ml-1"
-                  >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div> */}
-              {/* </div> */}
-
-              {/* Bottom Text */}
-              
-            </div>
+            {[
+              {
+                img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200",
+                alt: "Purpose video thumbnail",
+              },
+              {
+                img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200",
+                alt: "About why video thumbnail",
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              >
+                <img
+                  src={item.img}
+                  alt={item.alt}
+                  className="w-full h-[280px] sm:h-[360px] lg:h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                  {/* <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-blue-600/90 backdrop-blur-sm flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:bg-blue-700">
+                    {/* <Play className="w-8 h-8 text-white ml-1" fill="white" /> */}
+                  {/* </div> */}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-
-      <section className="bg-[#f5f5f5] py-24">
+      {/* ====== OVERVIEW + STATS ====== */}
+      <section className="bg-[#f5f5f5] py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          {/* Heading */}
-          <h2 className="text-6xl font-semibold text-[#000000] mb-16">
+          <h2 className="text-2xl sm:text-5xl lg:text-6xl  text-[#000000] mb-12 lg:mb-16">
             Overview
           </h2>
 
-          {/* Top Content */}
-          <div className="grid lg:grid-cols-2 gap-20 mb-24">
-            {/* Left */}
-            <h3 className="text-[34px] lg:text-[40px] leading-tight  text-[#000000]">
-              Infosys is a global leader in next-generation digital services
-              and consulting. We enable clients in 59 countries to navigate
-              their digital transformation.
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 mb-16 lg:mb-24">
+            <h3 className="text-xs sm:text-[10px] lg:text-[30px] leading-tight text-[#000000]">
+              Azzunique is a leading software company based in Jaipur ,
+              Rajasthan. We provide custom IT solutions to businesses of all
+              sizes, empowering them to streamline operations, boost
+              productivity, and enhance the customer experience.
             </h3>
-
-            {/* Right */}
-            <div>
-              <p className="text-md text-[#3c3c3c]">
-                With over four decades of experience in managing the systems
-                and workings of global enterprises, we expertly steer clients,
-                in 59 countries, as they navigate their digital transformation
-                powered by cloud and AI
-                We enable them with an AI-first core, empower the business
-                with agile digital at scale and drive continuous improvement
-                with always-on learning through the transfer of digital
-                skills, expertise, and ideas from our innovation ecosystem.
-                We are deeply committed to being a well-governed,
-                environmentally sustainable organization where diverse
-                talent thrives in an inclusive workplace.
+            <div className="space-y-4 text-base sm:text-lg text-[#3c3c3c]">
+              <p>
+                To become a leading software provider and earn global
+                commendation by delivering optimal and cutting-edge solutions
+                with top quality and services at an affordable cost to our
+                clients. To become a premier service provider in the industry as
+                well as ensure to build and maintain excellent relationships
+                with our internal and external team.
+              </p>
+              <p>
+                Our passionate team of highly skilled professionals includes web
+                developers, mobile app developers, and web designers. Whether
+                you need a flawless website, engaging mobile app, or custom
+                software, we're committed to delivering world-class results.
               </p>
             </div>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-20">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 lg:gap-x-16">
             {stats.map((item, index) => (
               <div key={index} className="flex items-start gap-5">
-                {/* Icon */}
                 <div className="w-14 h-14 rounded-full bg-[#e8e1f8] flex items-center justify-center text-[#7d59b2] flex-shrink-0">
                   {item.icon}
                 </div>
-
-                {/* Text */}
                 <div>
-                  <h4 className="text-6xl font-light text-[#202020] leading-none">
+                  <h4 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#202020] leading-none">
                     {item.value}
                   </h4>
-
-                  <p className="mt-3 text-2xl text-[#3b3b3b]">
+                  <p className="mt-2 text-xl sm:text-2xl text-[#3b3b3b]">
                     {item.label}
                   </p>
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
+
+
         </div>
       </section>
 
-
-      <section className="bg-[#e8edf6] py-24">
+      {/* ====== ABOUT US CARDS ====== */}
+      <section className="bg-[#e8edf6] py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Heading */}
-          <h2 className="text-5xl font-light text-center text-[#000000] mb-16">
-            About Us
+          <h2 className="text-4xl sm:text-5xl font-light text-center text-[#000000] mb-12 lg:mb-16">
+            We Clarify Project Development Process
           </h2>
 
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
             {cards.map((card, index) => (
               <div
                 key={index}
-                className="
-                group
-                bg-white
-                rounded-3xl
-                p-8
-                min-h-[260px]
-                flex
-                flex-col
-                justify-between
-                transition-all
-                duration-500
-                hover:-translate-y-2
-                hover:shadow-2xl
-                cursor-pointer
-              "
+                className="group bg-white rounded-3xl p-6 sm:p-8 min-h-[240px] flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl cursor-pointer"
               >
-                {/* Title */}
-                <h3
-                  className="
-                  text-[20px]
-                  font-medium
-                  text-[#10154d]
-                  transition-colors
-                  duration-300
-                  group-hover:text-[#3557ff]
-                "
-                >
+                <h3 className="text-xl font-medium text-[#10154d] transition-colors duration-300 group-hover:text-[#3557ff]">
                   {card.title}
                 </h3>
-
-                {/* Description */}
-                <p className="mt-10 text-[18px] leading-9 text-[#10154d]">
+                <p className="mt-6 text-base sm:text-lg leading-8 text-[#10154d]">
                   {card.description}
                 </p>
+                <div className="flex justify-end mt-6 opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
 
-                {/* Know More */}
-                <div
-                  className="
-                  flex
-                  justify-end
-                  mt-8
-                  opacity-0
-                  translate-y-5
-                  transition-all
-                  duration-500
-                  group-hover:opacity-100
-                  group-hover:translate-y-0
-                "
-                >
-                  <div className="relative inline-flex items-center gap-1 text-[#10154d] text-[18px] font-medium">
+                  {/* <div className="relative inline-flex items-center gap-1 text-[#10154d] text-base font-medium">
                     Know More
+                    <ArrowUpRight size={18} />
+                    <span className="absolute -bottom-1 left-0 h-[2px] bg-current w-full scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100" />
+                  </div> */}
 
-                    {/* <ArrowUpRight size={20} /> */}
-
-                    {/* Animated Underline */}
-                    <span
-                      className="
-                      absolute
-                      -bottom-1
-                      left-0
-                      h-[2px]
-                      bg-current
-                      w-full
-                      scale-x-0
-                      origin-right
-                      transition-transform
-                      duration-300
-                      group-hover:scale-x-100
-                    "
-                    />
-                  </div>
                 </div>
               </div>
             ))}
@@ -322,184 +276,177 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ====== CONTACT / REQUEST FORM ====== */}
+      <section
+        className="relative py-16 lg:py-24 px-4 lg:px-10 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://img.magnific.com/free-photo/abstract-futuristic-background-with-3d-design_1361-3532.jpg?semt=ais_hybrid&w=740&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/70" />
 
-    <section
-  className="relative py-20 px-4 lg:px-10 bg-cover bg-center"
-  style={{
-    backgroundImage:
-      "url('https://images.unsplash.com/photo-1633412802994-5c058f151b66?w=2000&auto=format&fit=crop&q=80')",
-  }}
->
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/65" />
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-[380px_1fr] gap-12 items-start">
+          {/* Left */}
+          <div className="text-white pt-2">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight lg:leading-none">
+              Request for
+              <br />
+              services
+            </h2>
+            <p className="mt-6 text-lg lg:text-xl leading-relaxed text-gray-200 max-w-md">
+              Find out more about how we can help your organization navigate its
+              next. Let us know your areas of interest so that we can serve you
+              better.
+            </p>
+            <div className="mt-8 space-y-3 text-gray-300">
+              <div className="flex items-center gap-3">
+                <Mail size={20} className="text-blue-400" />
+                <span>info@company.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone size={20} className="text-blue-400" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin size={20} className="text-blue-400" />
+                <span>123 Main St, City, Country</span>
+              </div>
+            </div>
+          </div>
 
-  <div className="relative max-w-[1700px] mx-auto grid lg:grid-cols-[420px_1fr] gap-12 items-start">
-    {/* Left Content */}
-    <div className="text-white pt-2">
-      <h2 className="text-5xl lg:text-7xl font-light leading-none">
-        Request for
-        <br />
-        services
-      </h2>
+          {/* Form Card */}
+          <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl">
+            <h3 className="text-[#1B0A42] text-xl sm:text-2xl font-semibold mb-6">
+              All the fields are required
+            </h3>
 
-      <p className="mt-10 text-xl leading-10 text-gray-200 max-w-md">
-        Find out more about how we can help your organization navigate its
-        next. Let us know your areas of interest so that we can serve you
-        better.
-      </p>
-    </div>
+            <form onSubmit={handleSubmit} noValidate>
+              <div className="grid sm:grid-cols-2 gap-5">
+                {[
+                  { label: "First Name", name: "firstName", type: "text" },
+                  { label: "Last Name", name: "lastName", type: "text" },
+                  { label: "Email", name: "email", type: "email" },
+                  { label: "Company", name: "company", type: "text" },
+                  { label: "Job Title", name: "jobTitle", type: "text" },
+                  { label: "Phone", name: "phone", type: "tel" },
+                ].map((field) => (
+                  <div key={field.name} className="relative group">
+                    <input
+                      type={field.type}
+                      name={field.name}
+                      value={formData[field.name]}
+                      onChange={handleChange}
+                      placeholder={`${field.label} *`}
+                      className={`w-full bg-[#F0F5FD] p-4 rounded-lg outline-none transition-all duration-200 focus:ring-2 ${
+                        errors[field.name]
+                          ? "ring-2 ring-red-400 focus:ring-red-500"
+                          : "focus:ring-blue-500"
+                      } placeholder:text-gray-600`}
+                      aria-label={field.label}
+                      aria-invalid={!!errors[field.name]}
+                      aria-describedby={
+                        errors[field.name] ? `${field.name}-error` : undefined
+                      }
+                    />
+                    {errors[field.name] && (
+                      <p
+                        id={`${field.name}-error`}
+                        className="text-red-500 text-xs mt-1"
+                      >
+                        {errors[field.name]}
+                      </p>
+                    )}
+                    <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
+                  </div>
+                ))}
+              </div>
 
-    {/* Form Card */}
-    <div className="bg-[#f8f8f8] rounded-[24px] p-8 lg:p-12 shadow-2xl">
-      <h3 className="text-[#1B0A42] text-2xl mb-10">
-        All the fields are required
-      </h3>
+              {/* Message */}
+              <div className="relative group mt-6">
+                <label
+                  htmlFor="message"
+                  className="block text-base font-medium text-black mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Write your message..."
+                  className="w-full bg-[#F0F5FD] rounded-xl p-4 outline-none resize-none transition-all focus:ring-2 focus:ring-blue-500 placeholder:text-gray-600"
+                />
+                <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
+              </div>
 
-      {/* Inputs */}
-      <div className="grid w-full md:grid-cols-2 gap-7">
-        {/* First Name */}
-        <div className="relative group">
-          <input
-            type="text"
-            placeholder="First Name *"
-            className="w-full bg-[#F0F5FD] p-5 rounded-lg outline-none placeholder:text-black"
-            required
-          />
-          <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
+              {/* Toggles */}
+              <div className="mt-6 space-y-4">
+                <div className="flex items-center gap-4">
+                  <button
+                    type="button"
+                    onClick={() => setMarketing(!marketing)}
+                    className={`relative w-14 h-8 rounded-full transition-colors duration-300 ${
+                      marketing ? "bg-[#1B0A42]" : "bg-gray-300"
+                    }`}
+                    aria-label="Toggle marketing consent"
+                  >
+                    <span
+                      className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
+                        marketing ? "left-7" : "left-1"
+                      }`}
+                    />
+                  </button>
+                  <p className="text-sm sm:text-base text-[#1B0A42]">
+                    Opt in for marketing communication{" "}
+                    <span className="underline cursor-pointer hover:text-blue-700 transition">
+                      Privacy Statement
+                    </span>
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <button
+                    type="button"
+                    onClick={() => setPrivacy(!privacy)}
+                    className={`relative w-14 h-8 rounded-full transition-colors duration-300 ${
+                      privacy ? "bg-[#1B0A42]" : "bg-gray-300"
+                    }`}
+                    aria-label="Toggle privacy agreement"
+                  >
+                    <span
+                      className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
+                        privacy ? "left-7" : "left-1"
+                      }`}
+                    />
+                  </button>
+                  <p className="text-sm sm:text-base text-[#1B0A42]">
+                    I agree to the{" "}
+                    <span className="underline cursor-pointer hover:text-blue-700 transition">
+                      Privacy Statement
+                    </span>
+                    <sup>*</sup>
+                  </p>
+                </div>
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="group mt-8 flex items-center gap-3 bg-black text-white px-8 py-4 rounded-xl text-lg hover:bg-gray-800 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
+                Submit
+                <ArrowUpRight
+                  size={20}
+                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </button>
+            </form>
+          </div>
         </div>
-
-        {/* Last Name */}
-        <div className="relative group">
-          <input
-            type="text"
-            placeholder="Last Name *"
-            className="w-full bg-[#F0F5FD] p-5 rounded-lg outline-none placeholder:text-black"
-            required
-          />
-          <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
-        </div>
-
-        {/* Email */}
-        <div className="relative group">
-          <input
-            type="email"
-            placeholder="Email *"
-            className="w-full bg-[#F0F5FD] p-5 rounded-lg outline-none placeholder:text-black"
-            required
-          />
-          <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
-        </div>
-
-        {/* Company */}
-        <div className="relative group">
-          <input
-            type="text"
-            placeholder="Company *"
-            className="w-full bg-[#F0F5FD] p-5 rounded-lg outline-none placeholder:text-black"
-            required
-          />
-          <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
-        </div>
-
-        {/* Job Title */}
-        <div className="relative group">
-          <input
-            type="text"
-            placeholder="Job Title *"
-            className="w-full bg-[#F0F5FD] p-5 rounded-lg outline-none placeholder:text-black"
-            required
-          />
-          <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
-        </div>
-
-        {/* Phone */}
-        <div className="relative group">
-          <input
-            type="tel"
-            placeholder="Phone"
-            className="w-full bg-[#F0F5FD] p-5 rounded-lg outline-none placeholder:text-black"
-          />
-          <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
-        </div>
-      </div>
-
-      {/* Message */}
-      <div className="relative group mt-8">
-        <label className="block text-xl text-black mb-3">
-          Message
-        </label>
-
-        <textarea
-          rows={5}
-          placeholder="Write your message..."
-          className="w-full bg-[#F0F5FD] rounded-xl p-5 outline-none resize-none placeholder:text-black"
-        />
-
-        <span className="absolute left-0 bottom-0 h-[2px] w-full bg-[#1B0A42] origin-left scale-x-0 transition-transform duration-300 group-focus-within:scale-x-100" />
-      </div>
-
-      {/* Marketing Toggle */}
-      <div className="mt-8 flex items-center gap-4">
-        <button
-          type="button"
-          onClick={() => setMarketing(!marketing)}
-          className={`relative w-14 h-8 rounded-full transition ${
-            marketing ? "bg-[#1B0A42]" : "bg-gray-300"
-          }`}
-        >
-          <span
-            className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
-              marketing ? "left-7" : "left-1"
-            }`}
-          />
-        </button>
-
-        <p className="text-lg lg:text-xl text-[#1B0A42]">
-          Opt in for marketing communication{" "}
-          <span className="underline cursor-pointer hover:text-blue-700 transition">
-            Privacy Statement
-          </span>
-        </p>
-      </div>
-
-      {/* Privacy Toggle */}
-      <div className="mt-5 flex items-center gap-4">
-        <button
-          type="button"
-          onClick={() => setPrivacy(!privacy)}
-          className={`relative w-14 h-8 rounded-full transition ${
-            privacy ? "bg-[#1B0A42]" : "bg-gray-300"
-          }`}
-        >
-          <span
-            className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
-              privacy ? "left-7" : "left-1"
-            }`}
-          />
-        </button>
-
-        <p className="text-lg lg:text-xl text-[#1B0A42]">
-          I agree to the{" "}
-          <span className="underline cursor-pointer hover:text-blue-700 transition">
-            Privacy Statement
-          </span>
-          <sup>*</sup>
-        </p>
-      </div>
-
-      {/* Submit Button */}
-      <button className="group mt-10 flex items-center gap-3 bg-black text-white px-8 py-4 rounded-xl text-xl hover:bg-[#202021] transition-all duration-300">
-        Submit
-
-        {/* <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
-          ↗
-        </span> */}
-      </button>
-    </div>
-  </div>
-</section>
-
-    
+      </section>
     </>
-  )
+  );
 }

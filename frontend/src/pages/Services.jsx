@@ -362,7 +362,7 @@ function ServicesPage() {
               </div>
             ))}
           </div>
-
+{/* 
           <div className="mt-14 text-center">
             <p className="text-xs uppercase tracking-[3px] text-gray-400 mb-8">
               Trusted by leading institutions
@@ -376,14 +376,16 @@ function ServicesPage() {
               <span>ScholarPay</span>
               <span>LearnHub</span>
             </div>
-          </div>
+          </div> */}
+
+
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="rounded-3xl bg-gradient-to-r from-indigo-700 via-blue-600 to-cyan-600 p-16 text-center text-white shadow-xl">
+        <div className="max-w-10xl  mx-auto ">
+          <div className=" bg-gradient-to-r from-indigo-700 via-blue-600 to-cyan-600 p-16 text-center text-white shadow-xl">
             <h2 className="text-5xl font-bold mb-6">
               Ready to streamline your operations
               <br />
@@ -396,7 +398,7 @@ function ServicesPage() {
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
+              <button className="bg-white text-black px-6 py-3 rounded-lg font-semibold flex items-center gap-2">
                 Schedule a Free Demo
                 <ArrowRight size={18} />
               </button>

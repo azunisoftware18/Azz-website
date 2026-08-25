@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom";
 import {
   LayoutDashboard,
   House,
+  UserRound,
+  Layers,
   FileText,
   BriefcaseBusiness,
   Image,
@@ -18,41 +20,61 @@ const menuItems = [
     path: "/admin/dashboard",
     icon: LayoutDashboard,
   },
+
   {
     title: "Home CMS",
     path: "/admin/home",
     icon: House,
   },
+
+  {
+    title: "About CMS",
+    path: "/admin/about",
+    icon: UserRound,
+  },
+
+  {
+    title: "Services CMS",
+    path: "/admin/services",
+    icon: Layers,
+  },
+
   {
     title: "Blogs",
     path: "/admin/blogs",
     icon: FileText,
   },
+
   {
     title: "Blog Categories",
-    icon: FolderOpen,
     path: "/admin/blog-categories",
+    icon: FolderOpen,
   },
+
   {
     title: "Jobs",
     path: "/admin/jobs",
     icon: BriefcaseBusiness,
   },
+
   {
     title: "Gallery",
     path: "/admin/gallery",
     icon: Image,
   },
+
   {
     title: "Testimonials",
     path: "/admin/testimonials",
     icon: MessageSquareQuote,
   },
+
   {
     title: "SEO",
     path: "/admin/seo",
     icon: Search,
   },
+
   {
     title: "Settings",
     path: "/admin/settings",
@@ -62,12 +84,12 @@ const menuItems = [
 
 export default function Sidebar() {
   return (
-    <aside className="w-72 bg-slate-900 text-white flex flex-col">
-      <div className="h-20 flex items-center justify-center border-b border-slate-700">
+    <aside className="flex w-72 flex-col bg-slate-900 text-white">
+      <div className="flex h-20 items-center justify-center border-b border-slate-700">
         <h1 className="text-2xl font-bold">Azzunique CMS</h1>
       </div>
 
-      <nav className="flex-1 px-4 py-6 space-y-2">
+      <nav className="flex-1 space-y-2 px-4 py-6">
         {menuItems.map((item) => {
           const Icon = item.icon;
 
@@ -82,6 +104,7 @@ export default function Sidebar() {
               }
             >
               <Icon size={20} />
+
               <span>{item.title}</span>
             </NavLink>
           );

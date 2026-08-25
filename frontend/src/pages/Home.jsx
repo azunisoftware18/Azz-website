@@ -105,7 +105,7 @@ function Home() {
                 <ChevronLeft size={15} />
               </button>
 
-              <span className="text-sm md:text-lg text-[#1a1b55]">
+              <span className=" text-sm md:text-lg text-[#1a1b55]">
                 {current} / {slides.length}
               </span>
 
@@ -154,7 +154,7 @@ function Home() {
                       isActive ? "scale-100 opacity-100" : "scale-95 opacity-70"
                     }`}
                   >
-                    <div className="flex flex-col lg:flex-row">
+                    <div className="flex  cursor-grab flex-col lg:flex-row">
                       <div className="lg:w-[38%]">
                         <img
                           src={slide.image}
