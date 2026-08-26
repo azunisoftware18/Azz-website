@@ -34,6 +34,12 @@ const menuItems = [
   },
 
   {
+    title: "Applications",
+    path: "/admin/applications",
+    icon: UserRound,
+  },
+
+  {
     title: "Services CMS",
     path: "/admin/services",
     icon: Layers,

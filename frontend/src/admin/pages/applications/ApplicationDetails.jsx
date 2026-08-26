@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import {
   getApplicationById,
   updateApplicationStatus,
-} from "../../../services/application.service";
+} from "../../../services/application.service.js";
 
 export default function ApplicationDetails() {
   const { id } = useParams();

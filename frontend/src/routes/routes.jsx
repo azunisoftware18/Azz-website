@@ -13,30 +13,25 @@ import Contactus from "../pages/Contact.jsx";
 import Pricing from "../pages/Pricing.jsx";
 import Career from "../pages/Career.jsx";
 import WWD from "../pages/WWD.jsx";
-
 import ProtectedRoute from "../admin/routes/ProtectedRoute.jsx";
 import AdminLayout from "../admin/layouts/AdminLayout.jsx";
 import Login from "../admin/pages/auth/Login.jsx";
 import Dashboard from "../admin/pages/dashboard/Dashboard.jsx";
-
 import CategoryList from "../admin/pages/blogCategories/CategoryList.jsx";
 import EditBlog from "../admin/pages/blogs/EditBlog.jsx";
-
 import BlogList from "../pages/Blog/BlogList.jsx";
 import BlogDetails from "../pages/Blog/BlogDetails.jsx";
-
 import AddJob from "../admin/pages/jobs/AddJob.jsx";
 import EditJob from "../admin/pages/jobs/EditJob.jsx";
 import JobList from "../admin/pages/jobs/JobList.jsx";
-
 import ApplicationList from "../admin/pages/applications/ApplicationList.jsx";
 import ApplicationDetails from "../admin/pages/applications/ApplicationDetails.jsx";
 import Sms from "../components/school/Sms.jsx";
 import AboutCMS from "../admin/pages/website/AboutCMS.jsx";
-import HomeCMS from "../admin/pages/website/HomeCMS.jsx";
 import ServicesCMS from "../admin/pages/website/ServicesCMS.jsx";
 import ServiceList from "../admin/pages/services/ServiceList.jsx";
 import HomepageSettings from "../admin/homepage/HomepageSettings.jsx";
+import Settings from "../admin/pages/settings/Settings.jsx";
 
 export const createRouter = () => {
   return createBrowserRouter(
@@ -92,6 +87,8 @@ export const createRouter = () => {
             {/* Blog Categories */}
             <Route path="blog-categories" element={<CategoryList />} />
 
+            <Route path="blogs" element={<BlogList />} />
+
             {/* Admin Blog Edit */}
             <Route path="blogs/edit/:id" element={<EditBlog />} />
 
@@ -112,6 +109,8 @@ export const createRouter = () => {
             <Route path="/admin/home" element={<HomepageSettings />} />
 
             <Route path="/admin/services" element={<ServiceList />} />
+
+            <Route path="/admin/settings" element={<Settings />} />
           </Route>
         </Route>
       </>,
