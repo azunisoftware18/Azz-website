@@ -221,7 +221,7 @@ function TechStack() {
 
       <section className="marquee-wrapper">
         <div className=" flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-medium text-neutral-900 mb-4">Technologies We Work With</h1>
+          <h1 className="text-4xl md:text-5xl font-medium text-[#0E0A42] mb-4">Technologies We Work With</h1>
         </div>
         <div className="pt-10 mt-10 marquee-fade-left" />
         <div className="marquee-fade-right" />

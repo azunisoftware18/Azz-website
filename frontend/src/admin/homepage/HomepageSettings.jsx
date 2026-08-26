@@ -8,7 +8,7 @@ import ImageUploader from "./components/ImageUploader";
 import {
   getHomepage,
   updateHomepage,
-} from "../../../services/homepage.service";
+} from "../../services/homepage.service.js";
 
 export default function HomepageSettings() {
   const [homepage, setHomepage] = useState({
@@ -85,40 +85,20 @@ export default function HomepageSettings() {
 
   return (
     <div className="space-y-8">
-
       <div>
-        <h1 className="text-3xl font-bold">
-          Homepage CMS
-        </h1>
+        <h1 className="text-3xl font-bold">Homepage CMS</h1>
 
-        <p className="text-gray-500">
-          Manage homepage content.
-        </p>
+        <p className="text-gray-500">Manage homepage content.</p>
       </div>
 
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-8"
-      >
-        <HeroSectionForm
-          homepage={homepage}
-          onChange={handleChange}
-        />
+      <form onSubmit={handleSubmit} className="space-y-8">
+        <HeroSectionForm homepage={homepage} onChange={handleChange} />
 
-        <AboutSectionForm
-          homepage={homepage}
-          onChange={handleChange}
-        />
+        <AboutSectionForm homepage={homepage} onChange={handleChange} />
 
-        <CTASectionForm
-          homepage={homepage}
-          onChange={handleChange}
-        />
+        <CTASectionForm homepage={homepage} onChange={handleChange} />
 
-        <ImageUploader
-          homepage={homepage}
-          onChange={handleChange}
-        />
+        <ImageUploader homepage={homepage} onChange={handleChange} />
 
         <button
           type="submit"
@@ -128,7 +108,6 @@ export default function HomepageSettings() {
           {loading ? "Saving..." : "Save Homepage"}
         </button>
       </form>
-
     </div>
   );
 }

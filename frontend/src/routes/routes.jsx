@@ -35,6 +35,8 @@ import Sms from "../components/school/Sms.jsx";
 import AboutCMS from "../admin/pages/website/AboutCMS.jsx";
 import HomeCMS from "../admin/pages/website/HomeCMS.jsx";
 import ServicesCMS from "../admin/pages/website/ServicesCMS.jsx";
+import ServiceList from "../admin/pages/services/ServiceList.jsx";
+import HomepageSettings from "../admin/homepage/HomepageSettings.jsx";
 
 export const createRouter = () => {
   return createBrowserRouter(
@@ -107,9 +109,9 @@ export const createRouter = () => {
 
             <Route path="/admin/about" element={<AboutCMS />} />
 
-            <Route path="/admin/home" element={<HomeCMS />} />
+            <Route path="/admin/home" element={<HomepageSettings />} />
 
-            <Route path="/admin/services" element={<ServicesCMS />} />
+            <Route path="/admin/services" element={<ServiceList />} />
           </Route>
         </Route>
       </>,

@@ -56,7 +56,7 @@ export default function ServiceList() {
   };
 
   // ===========================
-  // Submit Service
+  // Create / Update Service
   // ===========================
 
   const handleSubmit = async (data) => {
@@ -70,8 +70,8 @@ export default function ServiceList() {
       setIsModalOpen(false);
       setSelectedService(null);
     } catch (err) {
-      // ServiceModal handles displaying the error.
       console.error("Service submit failed:", err);
+      throw err;
     }
   };
 
@@ -108,31 +108,32 @@ export default function ServiceList() {
   return (
     <div className="space-y-6">
       {/* ===========================
-          Page Header
+          PAGE HEADER
       =========================== */}
 
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">
-            Services
+            Services CMS
           </h1>
 
           <p className="mt-1 text-sm text-gray-500">
-            Manage the services displayed on your website.
+            Manage all services displayed on your website.
           </p>
         </div>
 
         <button
           type="button"
           onClick={handleCreate}
-          className="rounded-lg bg-black px-5 py-2.5 text-sm font-medium text-white transition hover:bg-gray-800"
+          disabled={loading}
+          className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
         >
           + Add Service
         </button>
       </div>
 
       {/* ===========================
-          Error
+          ERROR
       =========================== */}
 
       {error && (
@@ -150,7 +151,7 @@ export default function ServiceList() {
       )}
 
       {/* ===========================
-          Filters
+          FILTERS
       =========================== */}
 
       <ServiceFilters
@@ -160,53 +161,53 @@ export default function ServiceList() {
       />
 
       {/* ===========================
-          Summary
+          SUMMARY CARDS
       =========================== */}
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-500">
             Total Services
           </p>
 
           <p className="mt-2 text-2xl font-bold text-gray-900">
-            {pagination.total}
+            {pagination.total || 0}
           </p>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-500">
             Current Page
           </p>
 
           <p className="mt-2 text-2xl font-bold text-gray-900">
-            {pagination.page}
+            {pagination.page || 1}
           </p>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-500">
             Per Page
           </p>
 
           <p className="mt-2 text-2xl font-bold text-gray-900">
-            {pagination.limit}
+            {pagination.limit || 10}
           </p>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-white p-5">
+        <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
           <p className="text-sm text-gray-500">
             Total Pages
           </p>
 
           <p className="mt-2 text-2xl font-bold text-gray-900">
-            {pagination.totalPages}
+            {pagination.totalPages || 0}
           </p>
         </div>
       </div>
 
       {/* ===========================
-          Service Table
+          SERVICES TABLE
       =========================== */}
 
       <ServiceTable
@@ -217,11 +218,11 @@ export default function ServiceList() {
       />
 
       {/* ===========================
-          Pagination
+          PAGINATION
       =========================== */}
 
       {pagination.totalPages > 1 && (
-        <div className="flex items-center justify-between rounded-xl border border-gray-200 bg-white px-5 py-4">
+        <div className="flex flex-col items-center justify-between gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 sm:flex-row">
           <p className="text-sm text-gray-500">
             Page{" "}
             <span className="font-medium text-gray-900">
@@ -237,9 +238,7 @@ export default function ServiceList() {
             <button
               type="button"
               disabled={pagination.page <= 1 || loading}
-              onClick={() =>
-                changePage(pagination.page - 1)
-              }
+              onClick={() => changePage(pagination.page - 1)}
               className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50"
             >
               Previous
@@ -251,9 +250,7 @@ export default function ServiceList() {
                 pagination.page >= pagination.totalPages ||
                 loading
               }
-              onClick={() =>
-                changePage(pagination.page + 1)
-              }
+              onClick={() => changePage(pagination.page + 1)}
               className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50"
             >
               Next
@@ -263,7 +260,7 @@ export default function ServiceList() {
       )}
 
       {/* ===========================
-          Create / Edit Modal
+          CREATE / EDIT MODAL
       =========================== */}
 
       <ServiceModal

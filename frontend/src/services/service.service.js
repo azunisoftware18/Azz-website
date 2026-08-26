@@ -23,34 +23,33 @@ export const getServiceById = (id) => {
 =========================== */
 
 export const createService = (formData) => {
-  return api.post(
-    "/services",
-    formData,
-    {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    }
-  );
+  return api.post("/services", formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
 };
 
 /* ===========================
    Update Service
 =========================== */
 
-export const updateService = (
-  id,
-  formData
-) => {
-  return api.put(
-    `/services/${id}`,
-    formData,
-    {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    }
-  );
+export const updateService = (id, formData) => {
+  return api.put(`/services/${id}`, formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+};
+
+/* ===========================
+   Update Service Status
+=========================== */
+
+export const updateServiceStatus = (id, status) => {
+  return api.patch(`/services/${id}/status`, {
+    isActive: status,
+  });
 };
 
 /* ===========================

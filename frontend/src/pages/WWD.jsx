@@ -111,7 +111,7 @@ function WWD() {
             Digital Solutions Company
           </span> */}
 
-          <h1 className="text-6xl lg:text-8xl font-bold text-black mt-8">
+          <h1 className="text-6xl lg:text-8xl font-bold text-[#0E0A42] mt-8">
             What We Do
           </h1>
 
@@ -153,7 +153,7 @@ function WWD() {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-black">Our Services</h2>
+            <h2 className="text-5xl font-bold text-black">We Offer a wide Variety of IT Services</h2>
 
             <p className="mt-5 text-gray-600 text-lg">
               Everything your business needs under one roof.
@@ -178,10 +178,10 @@ function WWD() {
                   {service.description}
                 </p>
 
-                <button className="mt-8 flex items-center gap-2 text-black font-semibold group-hover:gap-4 transition-all">
+                {/* <button className="mt-8 flex items-center gap-2 text-black font-semibold group-hover:gap-4 transition-all">
                   Learn More
                   <ArrowRight size={18} />
-                </button>
+                </button> */}
               </div>
             ))}
           </div>

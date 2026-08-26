@@ -31,7 +31,7 @@ export const getDashboardStats = async () => {
 
     prisma.job.count({
       where: {
-        status: "ACTIVE",
+        status: "PUBLISHED",
       },
     }),
 
