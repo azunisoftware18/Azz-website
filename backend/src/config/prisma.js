@@ -1,5 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import prisma  from "../db/db.js";
 
-const prisma = new PrismaClient();
 
 export default prisma;

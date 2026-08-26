@@ -15,7 +15,7 @@ export default function JobForm({
     vacancies: initialData.vacancies || 1,
     employmentType: initialData.employmentType || "FULL_TIME",
     categoryId: initialData.categoryId || "",
-    status: initialData.status || "DRAFT",
+    status: initialData.status || "DRAFT", 
     lastDate: initialData.lastDate ? initialData.lastDate.substring(0, 10) : "",
   });
 

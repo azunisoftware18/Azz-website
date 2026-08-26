@@ -164,6 +164,24 @@ model Contact {
   updatedAt DateTime @updatedAt
 }
 
+
+model Gallery {
+  id          String   @id @default(cuid())
+  title       String
+  fileName    String
+  filePath    String
+  url         String
+  altText     String?
+  category    String?
+  description String?
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@index([isActive])
+}
+
 model WhyChooseUs {
   id String @id @default(cuid())
   title       String

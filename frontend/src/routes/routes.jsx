@@ -32,6 +32,7 @@ import ServicesCMS from "../admin/pages/website/ServicesCMS.jsx";
 import ServiceList from "../admin/pages/services/ServiceList.jsx";
 import HomepageSettings from "../admin/homepage/HomepageSettings.jsx";
 import Settings from "../admin/pages/settings/Settings.jsx";
+import WhyChooseList from "../admin/pages/why-choose-us/WhyChooseList.jsx";
 
 export const createRouter = () => {
   return createBrowserRouter(
@@ -87,7 +88,7 @@ export const createRouter = () => {
             {/* Blog Categories */}
             <Route path="blog-categories" element={<CategoryList />} />
 
-            <Route path="blogs" element={<BlogList />} />
+            <Route path="blog" element={<BlogList />} />
 
             {/* Admin Blog Edit */}
             <Route path="blogs/edit/:id" element={<EditBlog />} />
@@ -111,6 +112,9 @@ export const createRouter = () => {
             <Route path="/admin/services" element={<ServiceList />} />
 
             <Route path="/admin/settings" element={<Settings />} />
+
+            <Route path="/admin/why-choose-us" element={<WhyChooseList />} />
+
           </Route>
         </Route>
       </>,

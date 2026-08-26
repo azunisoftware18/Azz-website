@@ -42,19 +42,19 @@ export const getPublicBlogCategories = () => {
 
 // Get all blogs
 export const getBlogs = (params) => {
-  return api.get("/blogs", {
+  return api.get("/blog", {
     params,
   });
 };
 
 // Get blog by ID
 export const getBlogById = (id) => {
-  return api.get(`/blogs/${id}`);
+  return api.get(`/blog/${id}`);
 };
 
 // Create blog
 export const createBlog = (formData) => {
-  return api.post("/blogs", formData, {
+  return api.post("/blog", formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
@@ -63,7 +63,7 @@ export const createBlog = (formData) => {
 
 // Update blog
 export const updateBlog = (id, formData) => {
-  return api.put(`/blogs/${id}`, formData, {
+  return api.put(`/blog/${id}`, formData, {
     headers: {
       "Content-Type": "multipart/form-data",
     },
@@ -72,5 +72,5 @@ export const updateBlog = (id, formData) => {
 
 // Delete blog
 export const deleteBlog = (id) => {
-  return api.delete(`/blogs/${id}`);
+  return api.delete(`/blog/${id}`);
 };

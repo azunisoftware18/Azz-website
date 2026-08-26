@@ -196,6 +196,8 @@ function Pricing() {
                   ))}
                 </ul>
 
+                {/* // with bg-whtie card  */}
+
                 <Link
                   to="/contact"
                   state={{ service }}
@@ -222,14 +224,16 @@ function Pricing() {
                 <li>✓ SLA & Maintenance</li>
               </ul>
 
+              {/* Button with background image */}
+
               <Link
                 to="/contact"
                 state={{ service }}
-                className="group relative mt-10 w-full flex items-center justify-center overflow-hidden rounded-xl border-2 border-[#1B0A42] bg-white py-4 font-semibold text-[#1B0A42]"
+                className="group relative mt-10 w-full flex items-center justify-center overflow-hidden rounded-xl border-2 border-[#b7b1c5] bg-[#1B0A42] py-4 font-semibold text-white"
               >
-                <span className="absolute right-full top-0 h-full w-[140%] skew-y-10 bg-[#1B0A42] transition-all duration-500 group-hover:right-[-20%]"></span>
+                <span className="absolute right-full top-0 h-full w-[140%] skew-y-10 bg-[#ffffff] transition-all duration-500 group-hover:right-[-20%]"></span>
 
-                <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+                <span className="relative -10 transition-colors duration-300 group-hover:text-black">
                   Contact Us
                 </span>
               </Link>

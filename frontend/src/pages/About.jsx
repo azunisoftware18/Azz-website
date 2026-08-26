@@ -41,39 +41,6 @@ export default function About() {
     },
   ];
 
-  const stats = [
-    {
-      icon: <Star size={24} />,
-      value: "40+",
-      label: "Years of Service",
-    },
-    {
-      icon: <BarChart3 size={24} />,
-      value: (
-        <>
-          <span className="text-2xl align-top">US$</span> 20.2
-          <span className="text-2xl align-top">BN</span>
-        </>
-      ),
-      label: "Total Revenue (LTM)",
-    },
-    {
-      icon: <Globe size={24} />,
-      value: "59",
-      label: "Countries We Are Present In",
-    },
-    {
-      icon: <UserRound size={24} />,
-      value: "328K+",
-      label: "Employees",
-    },
-    {
-      icon: <BriefcaseBusiness size={24} />,
-      value: "1,965",
-      label: "Trusting Clients",
-    },
-  ];
-
   // ----- Form state (simple) -----
   const [formData, setFormData] = useState({
     firstName: "",
@@ -135,8 +102,7 @@ export default function About() {
       <section
         className="relative py-20 lg:py-32 overflow-hidden bg-[#f3f4fb]"
         style={{
-          backgroundImage:
-            "url('https://www.infosys.com/content/dam/infosys-web/en/global-resource/media-resources/pattern-bg.png')",
+          backgroundImage: "url('https://www.infosys.com/content/dam/infosys-web/en/global-resource/media-resources/pattern-bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -198,8 +164,7 @@ export default function About() {
             <h3 className="text-xs sm:text-[10px] lg:text-[30px] leading-tight text-[#000000]">
               Azzunique is a leading software company based in Jaipur ,
               Rajasthan. We provide custom IT solutions to businesses of all
-              sizes, empowering them to streamline operations, boost
-              productivity, and enhance the customer experience.
+              sizes.
             </h3>
             <div className="space-y-4 text-base sm:text-lg text-[#3c3c3c]">
               <p>
@@ -218,27 +183,6 @@ export default function About() {
               </p>
             </div>
           </div>
-
-          {/* Stats */}
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 lg:gap-x-16">
-            {stats.map((item, index) => (
-              <div key={index} className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-full bg-[#e8e1f8] flex items-center justify-center text-[#7d59b2] flex-shrink-0">
-                  {item.icon}
-                </div>
-                <div>
-                  <h4 className="text-4xl sm:text-5xl lg:text-6xl font-light text-[#202020] leading-none">
-                    {item.value}
-                  </h4>
-                  <p className="mt-2 text-xl sm:text-2xl text-[#3b3b3b]">
-                    {item.label}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div> */}
-
-
         </div>
       </section>
 
@@ -262,13 +206,11 @@ export default function About() {
                   {card.description}
                 </p>
                 <div className="flex justify-end mt-6 opacity-0 translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
-
                   {/* <div className="relative inline-flex items-center gap-1 text-[#10154d] text-base font-medium">
                     Know More
                     <ArrowUpRight size={18} />
                     <span className="absolute -bottom-1 left-0 h-[2px] bg-current w-full scale-x-0 origin-right transition-transform duration-300 group-hover:scale-x-100" />
                   </div> */}
-
                 </div>
               </div>
             ))}

@@ -2,7 +2,7 @@ import * as service from "../../modules/blogs/category.service.js";
 
 export const getCategories = async (req, res) => {
   try {
-    const categories = await service.getAllCategories();
+    const categories = await service.getCategories                                                 ();
 
     res.json({
       success: true,

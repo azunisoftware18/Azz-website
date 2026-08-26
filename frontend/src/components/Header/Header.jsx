@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 
-const DEFAULT_VIDEO_SRC = "https://www.infosys.com//content/dam/infosys-web/en/hero-video/leon-navigate-ai.mp4";
+const DEFAULT_VIDEO_SRC =
+  "https://www.infosys.com//content/dam/infosys-web/en/hero-video/leon-navigate-ai.mp4";
 
 const navLinks = [
   { to: "/", label: "Home", end: true },
@@ -10,7 +11,6 @@ const navLinks = [
   { to: "/pricing", label: "Pricing" },
   { to: "/careers", label: "Careers" },
   { to: "/whatwedo", label: "What We Do" },
-
 ];
 
 const navLinkClass = ({ isActive }) =>

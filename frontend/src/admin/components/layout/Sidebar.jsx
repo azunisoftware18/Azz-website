@@ -12,6 +12,7 @@ import {
   Settings,
   LogOut,
   FolderOpen,
+  icons,
 } from "lucide-react";
 
 const menuItems = [
@@ -47,7 +48,7 @@ const menuItems = [
 
   {
     title: "Blogs",
-    path: "/admin/blogs",
+    path: "/admin/blog",
     icon: FileText,
   },
 
@@ -75,9 +76,15 @@ const menuItems = [
     icon: MessageSquareQuote,
   },
 
+  // {
+  //   title: "SEO",
+  //   path: "/admin/seo",
+  //   icon: Search,
+  // },
+
   {
-    title: "SEO",
-    path: "/admin/seo",
+    title: "Why Choose Us",
+    path: "/admin/why-choose-us",
     icon: Search,
   },
 

@@ -14,6 +14,7 @@ import settingsRoutes from "./modules/settings/setting.router.js";
 import homepageRoutes from "./modules/homepage/homepage.router.js";
 import whyChooseRoutes from "./modules/why-choose-us/whyChoose.router.js"
 import serviceRoutes from "./modules/services/service.router.js";
+import galleryRoutes from "./modules/gallery/gallery.routes.js"
 
 const app = express();
 
@@ -40,6 +41,7 @@ app.use("/api/contact", contactRoutes);
 app.use("/api/settings", settingsRoutes);
 app.use("/api/homepage", homepageRoutes);
 app.use("/api/why-choose-us", whyChooseRoutes);
+app.use("/api/gallery", galleryRoutes);
 
 
 app.use("/api/services", serviceRoutes);

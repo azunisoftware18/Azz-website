@@ -9,121 +9,129 @@ import {
   Cloud,
   Database,
   ArrowRight,
+  GraduationCap,
+  CreditCard,
+  Megaphone,
+  Building2,
+  Landmark,
+  Briefcase,
+  CheckCircle,
 } from "lucide-react";
 import Header from "../components/Header/Header";
 
 function WWD() {
   const services = [
     {
-      icon: <Globe size={42} />,
+      icon: <Globe size={40} />,
       title: "Website Development",
       description:
         "Modern, responsive, and SEO-friendly websites built for businesses and startups.",
     },
     {
-      icon: <Smartphone size={42} />,
+      icon: <Smartphone size={40} />,
       title: "Mobile App Development",
       description:
         "Native and cross-platform mobile applications for Android and iOS.",
     },
     {
-      icon: <ShoppingCart size={42} />,
+      icon: <ShoppingCart size={40} />,
       title: "E-Commerce Solutions",
       description:
         "Complete online store development with payment gateway integration.",
     },
     {
-      icon: <Database size={42} />,
+      icon: <Database size={40} />,
       title: "CRM & ERP Systems",
       description:
         "Custom management systems that streamline business operations.",
     },
     {
-      icon: <Palette size={42} />,
+      icon: <Palette size={40} />,
       title: "UI / UX Design",
       description:
         "Beautiful and user-friendly interfaces focused on customer experience.",
     },
     {
-      icon: <Cloud size={42} />,
+      icon: <Cloud size={40} />,
       title: "Verification Services",
       description:
         "Deployment, automation, hosting, and cloud infrastructure solutions.",
     },
     {
-      icon: <Code2 size={42} />,
+      icon: <GraduationCap size={40} />,
       title: "School ERP Software",
       description:
-        "Tailor-made software solutions designed specifically for your business.",
+        "Comprehensive ERP solutions tailored for educational institutions.",
     },
-
     {
-      icon: <Code2 size={42} />,
+      icon: <CreditCard size={40} />,
       title: "Bill & Recharge",
       description:
-        "Tailor-made software solutions designed specifically for your business.",
+        "Streamlined billing and recharge systems for utilities and services.",
     },
     {
-      icon: <Code2 size={42} />,
+      icon: <Megaphone size={40} />,
       title: "Marketing Services",
       description:
-        "Tailor-made software solutions designed specifically for your business.",
+        "Digital marketing strategies to boost brand visibility and engagement.",
     },
     {
-      icon: <Code2 size={42} />,
+      icon: <Code2 size={40} />,
       title: "IT & Development",
       description:
-        "Tailor-made software solutions designed specifically for your business.",
+        "End‑to‑end IT consulting and custom software development services.",
     },
     {
-      icon: <Code2 size={42} />,
+      icon: <Landmark size={40} />,
       title: "Banking & Collection",
       description:
-        "Tailor-made software solutions designed specifically for your business.",
+        "Secure banking and automated collection systems for financial institutions.",
     },
     {
-      icon: <Code2 size={42} />,
+      icon: <Briefcase size={40} />,
       title: "Finance Software",
       description:
-        "Tailor-made software solutions designed specifically for your business.",
+        "Robust financial management and accounting software solutions.",
     },
     {
-      icon: <Code2 size={42} />,
+      icon: <Building2 size={40} />,
       title: "Business Software",
       description:
-        "Tailor-made software solutions designed specifically for your business.",
+        "Tailor‑made business software to optimise operations and productivity.",
     },
+  ];
+
+  const benefits = [
+    "Experienced Development Team",
+    "Modern Technologies & Frameworks",
+    "Agile Development Process",
+    "Dedicated Support & Maintenance",
+    "SEO & Performance Optimized Solutions",
+    "Enterprise Grade Security",
   ];
 
   return (
     <>
       <Header />
 
-      {/* Hero Section */}
-
-      <section className="relative overflow-hidden bg-white py-32">
-        {/* <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-blue-500/20 blur-[120px] animate-pulse"></div> */}
-
-        {/* <div className="absolute right-0 bottom-0 w-[450px] h-[450px] rounded-full bg-purple-500/20 blur-[120px] animate-pulse"></div> */}
+      {/* ===== HERO ===== */}
+      <section className="relative overflow-hidden bg-white py-28 lg:py-36">
+        {/* Subtle background blobs (same as before, but cleaned) */}
+        <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-blue-500/10 blur-[140px]"></div>
+        <div className="absolute right-0 bottom-0 w-[450px] h-[450px] rounded-full bg-purple-500/10 blur-[140px]"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          {/* <span className="px-5 py-2 rounded-full bg-black text-white">
-            Digital Solutions Company
-          </span> */}
-
-          <h1 className="text-6xl lg:text-8xl font-bold text-[#0E0A42] mt-8">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#0E0A42] leading-tight">
             What We Do
           </h1>
-
-          <p className="max-w-3xl mx-auto text-xl text-black mt-8 leading-9">
+          <p className="max-w-3xl mx-auto text-xl md:text-2xl text-gray-700 mt-6 leading-relaxed">
             We empower businesses with innovative digital products, scalable
             technologies, and exceptional user experiences. From websites to
             enterprise software, we transform ideas into reality.
           </p>
-
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 mt-10 px-8 py-4 rounded-full bg-white text-black font-semibold hover:scale-105 duration-300"
+            className="inline-flex items-center gap-3 mt-10 px-10 py-4 rounded-full bg-[#0E0A42] text-white font-semibold hover:bg-[#1a1b55] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Let's Work Together
             <ArrowRight size={20} />
@@ -131,15 +139,13 @@ function WWD() {
         </div>
       </section>
 
-      {/* About */}
-
-      <section className="py-24 bg-[#F8FAFC]">
+      {/* ===== ABOUT BLURB ===== */}
+      <section className="py-20 bg-[#F8FAFC]">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold text-black">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0E0A42]">
             Helping Businesses Grow Digitally
           </h2>
-
-          <p className="mt-8 text-gray-600 text-lg leading-9 max-w-4xl mx-auto">
+          <p className="mt-6 text-gray-600 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
             Our company specializes in delivering high-quality software
             development services tailored to startups, enterprises, and growing
             businesses. We combine creativity, technology, and strategy to build
@@ -148,14 +154,14 @@ function WWD() {
         </div>
       </section>
 
-      {/* Services Grid */}
-
-      <section className="py-24">
+      {/* ===== SERVICES GRID ===== */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-black">We Offer a wide Variety of IT Services</h2>
-
-            <p className="mt-5 text-gray-600 text-lg">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#0E0A42]">
+              We Offer a Wide Variety of IT Services
+            </h2>
+            <p className="mt-4 text-gray-600 text-lg">
               Everything your business needs under one roof.
             </p>
           </div>
@@ -164,87 +170,76 @@ function WWD() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-white rounded-3xl p-10 shadow-lg hover:-translate-y-3 hover:shadow-2xl transition-all duration-500"
+                className="group bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-blue-100"
               >
-                <div className="w-20 h-20 rounded-2xl bg-[#EEF3FA] flex items-center justify-center text-black group-hover:rotate-12 transition duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-[#EEF3FA] flex items-center justify-center text-[#0E0A42] group-hover:bg-[#0E0A42] group-hover:text-white transition-colors duration-300 group-hover:rotate-6">
                   {service.icon}
                 </div>
-
-                <h3 className="text-3xl font-bold text-black mt-8">
+                <h3 className="text-2xl font-bold text-[#0E0A42] mt-6">
                   {service.title}
                 </h3>
-
-                <p className="text-gray-600 leading-8 mt-5">
+                <p className="text-gray-600 leading-relaxed mt-4">
                   {service.description}
                 </p>
-
-                {/* <button className="mt-8 flex items-center gap-2 text-black font-semibold group-hover:gap-4 transition-all">
-                  Learn More
-                  <ArrowRight size={18} />
-                </button> */}
+                <div className="mt-6 flex items-center text-[#0E0A42] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span>Learn More</span>
+                  <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-
-      <section className="bg-[#EEF3FA] py-24">
+      {/* ===== WHY CHOOSE US ===== */}
+      <section className="py-24 bg-[#EEF3FA]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-5xl font-bold text-[#000000]">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#0E0A42]">
                 Why Businesses Choose Us
               </h2>
-
-              <p className="mt-8 text-gray-600 leading-9 text-lg">
+              <p className="mt-6 text-gray-700 text-lg leading-relaxed">
                 We don't just build software—we create scalable digital
                 ecosystems that help businesses improve efficiency, engage
                 customers, and increase revenue.
               </p>
-
-              <ul className="space-y-5 mt-10">
-                <li> Experienced Development Team</li>
-
-                <li> Modern Technologies & Frameworks</li>
-
-                <li> Agile Development Process</li>
-                <li> Dedicated Support & Maintenance</li>
-
-                <li>SEO & Performance Optimized Solutions</li>
-
-                <li>Enterprise Grade Security</li>
+              <ul className="space-y-4 mt-10">
+                {benefits.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <CheckCircle
+                      size={22}
+                      className="text-[#0E0A42] flex-shrink-0 mt-1"
+                    />
+                    <span className="text-gray-700 text-lg">{item}</span>
+                  </li>
+                ))}
               </ul>
             </div>
-
             <div>
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200"
-                alt="Team"
-                className="rounded-[40px] shadow-2xl hover:scale-105 transition duration-700"
+                alt="Team collaboration"
+                className="rounded-[40px] shadow-2xl hover:scale-105 transition duration-700 object-cover w-full h-[400px]"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-
+      {/* ===== CTA ===== */}
       <section className="py-28 bg-white text-center">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-5xl lg:text-6xl font-bold text-black">
+          <h2 className="text-4xl md:text-6xl font-bold text-[#0E0A42]">
             Ready to Build Something Amazing?
           </h2>
-
-          <p className="mt-8 text-gray-800 text-xl leading-9">
+          <p className="mt-6 text-gray-700 text-xl leading-relaxed max-w-2xl mx-auto">
             Let's discuss your project and create a solution that accelerates
             your business growth.
           </p>
-
           <Link
             to="/contact"
-            className="inline-flex mt-10 px-10 py-5 rounded-full bg-black text-white font-semibold hover:scale-105 transition duration-300"
+            className="inline-flex mt-10 px-12 py-5 rounded-full bg-[#0E0A42] text-white font-semibold hover:bg-[#1a1b55] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Get Started Today
           </Link>

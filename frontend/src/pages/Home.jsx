@@ -16,17 +16,13 @@ import Header from "../components/Header/Header.jsx";
 const slides = [
   {
     id: 1,
-    title:
-      "Infosys is the Fastest Growing IT Services Brand Globally with a CAGR of 15% in Brand Value",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200",
+    title: "Azzunique is the Fastest Growing IT Services Brand Globally with a CAGR of 15% in Brand Value",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200",
   },
   {
     id: 2,
-    title:
-      "Artificial Intelligence is Reshaping the Future of Enterprise Solutions",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
+    title: "Artificial Intelligence is Reshaping the Future of Enterprise Solutions",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200",
   },
   {
     id: 3,
@@ -35,23 +31,18 @@ const slides = [
   },
   {
     id: 4,
-    title:
-      "The Rise of Modern Software Engineering Practices Across Industries",
-    image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200",
+    title: "The Rise of Modern Software Engineering Practices Across Industries",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200",
   },
   {
     id: 5,
     title: "Technology Brands Experience Record Growth in Global Rankings",
-    image:
-      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200",
   },
   {
     id: 6,
-    title:
-      "Innovation Drives New Opportunities for Digital Businesses Worldwide",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200",
+    title: "Innovation Drives New Opportunities for Digital Businesses Worldwide",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200",
   },
 ];
 
@@ -154,7 +145,7 @@ function Home() {
                       isActive ? "scale-100 opacity-100" : "scale-95 opacity-70"
                     }`}
                   >
-                    <div className="flex  cursor-grab flex-col lg:flex-row">
+                    <div className="flex  flex-col lg:flex-row">
                       <div className="lg:w-[38%]">
                         <img
                           src={slide.image}

@@ -69,10 +69,10 @@ export default function Contact() {
         <section className="px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <div className="mb-12 max-w-3xl">
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
+              {/* <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
                 <MessageCircle size={16} />
                 Let's start a conversation
-              </div>
+              </div> */}
 
               <h1 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
                 Let's build something
@@ -133,10 +133,12 @@ export default function Contact() {
                         <p className="text-sm text-gray-400">Call us</p>
 
                         <a
-                          href="tel:+910000000000"
+                          href="tel:+91 7412066477"
                           className="font-medium text-white transition hover:text-blue-400"
                         >
-                          +91 00000 00000
+                          +91 74120 66477
+
+
                         </a>
                       </div>
                     </div>
@@ -149,7 +151,7 @@ export default function Contact() {
                       <div>
                         <p className="text-sm text-gray-400">Location</p>
 
-                        <p className="font-medium text-white">India</p>
+                        <p className="font-medium text-white">78, Tech Bhawan, Tara Nagar-A, Hari Nagar, Jhotwara, Jaipur, Rajasthan 302012 </p>
                       </div>
                     </div>
                   </div>
@@ -204,7 +206,7 @@ export default function Contact() {
                       <input
                         type="text"
                         name="name"
-                        placeholder="John Doe"
+                        placeholder="Full Name"
                         value={form.name}
                         onChange={handleChange}
                         className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
@@ -220,7 +222,7 @@ export default function Contact() {
                       <input
                         type="email"
                         name="email"
-                        placeholder="john@example.com"
+                        placeholder="Enter your email"
                         value={form.email}
                         onChange={handleChange}
                         className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
@@ -239,7 +241,7 @@ export default function Contact() {
                       <input
                         type="tel"
                         name="phone"
-                        placeholder="+91 98765 43210"
+                        placeholder="Phone No."
                         value={form.phone}
                         onChange={handleChange}
                         className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-gray-900 outline-none transition placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-500/10"
