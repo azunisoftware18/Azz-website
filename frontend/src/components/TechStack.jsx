@@ -2,13 +2,116 @@ import React from "react";
 
 function TechStack() {
   const techStacks = [
-    { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    { name: "React JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "Node JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "Next JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-    { name: "Express JS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-    { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-    { name: "Prisma", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" },
+    // --- Existing ---
+    {
+      name: "JavaScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    },
+    {
+      name: "React JS",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      name: "Node JS",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+    },
+    {
+      name: "Next JS",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    },
+    {
+      name: "Express JS",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    },
+    {
+      name: "MongoDB",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    },
+    {
+      name: "Prisma",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+    },
+
+    // --- Newly added ---
+    {
+      name: "Angular",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
+    },
+    {
+      name: "TypeScript",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+      name: "Vue",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+    },
+    {
+      name: "HTML 5",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    },
+
+    // {
+    //   name: "WPF",
+    //   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnet/dotnet-original.svg",
+    // }, // .NET as close match
+
+    // {
+    //   name: "ASP.NET",
+    //   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnet/dotnet-original.svg",
+    // }, // or 'aspnet'
+
+    {
+      name: "iOS",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
+    },
+    {
+      name: "Android",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+    },
+    {
+      name: "React Native",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      name: "Xamarin",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xamarin/xamarin-original.svg",
+    },
+    {
+      name: "MS SQL",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+    },
+    {
+      name: "MySQL",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    },
+    {
+      name: "PHP",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+    },
+    // {
+    //   name: "Laravel",
+    //   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+    // },
+    {
+      name: "CodeIgniter",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg",
+    },
+    {
+      name: "C#",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+    },
+    {
+      name: "Drupal",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drupal/drupal-original.svg",
+    },
+    {
+      name: "WordPress",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
+    },
+    // {
+    //   name: "Shopify",
+    //   logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg",
+    // },
   ];
 
   // Duplicate array once – we'll render it twice in the JSX
@@ -30,7 +133,7 @@ function TechStack() {
           will-change: transform;
           backface-visibility: hidden;
           transform: translateZ(0);
-          animation: marquee-scroll 25s linear infinite;
+          animation: marquee-scroll 30s linear infinite;
         }
 
         .marquee-item {
@@ -52,6 +155,7 @@ function TechStack() {
         .marquee-item:hover {
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           transform: scale(1.02);
+           
         }
 
         .marquee-item img {
@@ -116,7 +220,10 @@ function TechStack() {
       `}</style>
 
       <section className="marquee-wrapper">
-        <div className="marquee-fade-left" />
+        <div className=" flex items-center justify-center">
+          <h1 className="text-4xl md:text-5xl font-medium text-neutral-900 mb-4">Technologies We Work With</h1>
+        </div>
+        <div className="pt-10 mt-10 marquee-fade-left" />
         <div className="marquee-fade-right" />
 
         <div className="marquee-track">

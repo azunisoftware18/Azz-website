@@ -11,7 +11,7 @@ const navLinks = [
   { to: "/pricing", label: "Pricing" },
   { to: "/careers", label: "Careers" },
   { to: "/whatwedo", label: "What We Do" },
-  { to: "/ERP", label: "ERP" },
+
 ];
 
 const navLinkClass = ({ isActive }) =>

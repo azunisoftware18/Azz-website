@@ -1,10 +1,4 @@
-import {
-  // Landmark,
-  // GraduationCap,
-  // CreditCard,
-  // CheckCircle,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Search, ClipboardList, PlugZap, Rocket } from "lucide-react";
 import { ShieldCheck, Zap, LifeBuoy, TrendingUp } from "lucide-react";
@@ -85,7 +79,6 @@ const testimonials = [
 const services = [
   {
     title: "Fintech Solutions",
-    // icon: CreditCard,
     image: "/images/",
     description:
       "Power digital payments, settlements, and compliance with a single, secure financial backbone. Unifin Fintech handles transaction processing, KYC, fraud checks, and API integrations so your team can launch new financial products without rebuilding core infrastructure.",
@@ -96,14 +89,11 @@ const services = [
       "Open APIs & SDKs for fast integration",
       "Transaction-level audit trails",
     ],
+    link: "/fintech",
   },
-
   {
-    title: "School Management Solutions",
-    // icon: GraduationCap,
-    image: "/images/",
-
-    // videoTitle: "Watch School Management Solutions Demo",
+    title: "School Management System",
+    image: "/images/ERP.png",
     reverse: true,
     description:
       "An end-to-end platform for admissions, academics, fees, and communication. Unifin School replaces scattered spreadsheets and paper trails with a single system that helps administrators, teachers, and parents stay aligned — driving better outcomes for students while reducing operational overhead for the institution.",
@@ -114,14 +104,11 @@ const services = [
       "Parent-teacher communication portal",
       "Timetable & exam management",
     ],
+    link: "/ERP",
   },
-
   {
     title: "Loan Management System",
-    // icon: Landmark,
     image: "/images/",
-
-    // videoTitle: "Watch Loan Management System Demo",
     description:
       "Originate, approve, and service loans on a workflow engine built for lenders. Unifin LMS digitizes the full lending lifecycle — from application and credit checks to disbursement and collections — cutting turnaround time from weeks to hours while keeping your portfolio risk and compliance under control.",
     features: [
@@ -131,16 +118,12 @@ const services = [
       "EMI scheduling & collections",
       "Disbursement automation",
     ],
+    link: "/loan",
   },
-
   {
     title: "Paying Payout Management System",
-    // icon: Landmark,
     image: "/images/",
-
-    // videoTitle: "Watch Loan Management System Demo",
     reverse: true,
-
     description:
       "Originate, approve, and service loans on a workflow engine built for lenders. Unifin LMS digitizes the full lending lifecycle — from application and credit checks to disbursement and collections — cutting turnaround time from weeks to hours while keeping your portfolio risk and compliance under control.",
     features: [
@@ -150,14 +133,11 @@ const services = [
       "EMI scheduling & collections",
       "Disbursement automation",
     ],
+    link: "/payout",
   },
-
   {
     title: "Ticket Booking Management System",
-    // icon: Landmark,
     image: "/images/",
-    // videoTitle: "Watch Loan Management System Demo",
-
     description:
       "Originate, approve, and service loans on a workflow engine built for lenders. Unifin LMS digitizes the full lending lifecycle — from application and credit checks to disbursement and collections — cutting turnaround time from weeks to hours while keeping your portfolio risk and compliance under control.",
     features: [
@@ -167,32 +147,26 @@ const services = [
       "EMI scheduling & collections",
       "Disbursement automation",
     ],
+    link: "/ticket",
   },
 ];
 
 function ServicesPage() {
   return (
     <>
-    <Header />
+      <Header />
       {/* Services Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Heading */}
           <div className="text-center mb-24">
             <span className="uppercase tracking-wider text-indigo-600 font-semibold text-sm">
               OUR SERVICES
             </span>
-
-            {/* <h2 className="mt-4 text-4xl md:text-5xl font-bold text-slate-900">
-              Our Products
-            </h2> */}
-
             <p className="mt-6 text-lg md:text-xl text-slate-500">
               Each solution is powerful on its own — and unstoppable together.
             </p>
           </div>
 
-          {/* Services List */}
           <div className="space-y-32">
             {services.map((service, index) => {
               return (
@@ -226,24 +200,30 @@ function ServicesPage() {
                       ))}
                     </div>
 
-                    <button className="group text-indigo-600 font-semibold text-lg flex items-center gap-2 hover:gap-4 transition-all">
-                      Learn more about {service.title}
-                    </button>
+                    <a
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group text-indigo-600 font-semibold text-lg flex items-center gap-2 hover:gap-4 transition-all"
+                    >
+                      Learn more
+                      <ArrowRight
+                        size={18}
+                        className="group-hover:translate-x-1 transition"
+                      />
+                    </a>
                   </div>
 
-                  {/* Right Image */}
-                  <div>
-                    {/* <div className="flex items-center gap-2 text-slate-700 font-medium mb-4">
-                      {service.title}
-                    </div> */}
-
-                    <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white">
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className="w-full h-[300px] md:h-[500px] object-cover"
-                      />
-                    </div>
+                  {/* Right Image  */}
+                  <div
+                    className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() => window.open(service.link, "_blank")}
+                  >
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full md:h-[500px] object-cover"
+                    />
                   </div>
                 </div>
               );
@@ -356,36 +336,18 @@ function ServicesPage() {
 
                 <div>
                   <h4 className="font-semibold text-slate-900">{item.name}</h4>
-
                   <p className="text-sm text-gray-500">{item.role}</p>
                 </div>
               </div>
             ))}
           </div>
-{/* 
-          <div className="mt-14 text-center">
-            <p className="text-xs uppercase tracking-[3px] text-gray-400 mb-8">
-              Trusted by leading institutions
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-16 text-gray-500 font-semibold">
-              <span>Greenfield</span>
-              <span>EduCredit</span>
-              <span>BrightPath</span>
-              <span>Vidya Bank</span>
-              <span>ScholarPay</span>
-              <span>LearnHub</span>
-            </div>
-          </div> */}
-
-
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-10xl  mx-auto ">
-          <div className=" bg-gradient-to-r from-indigo-700 via-blue-600 to-cyan-600 p-16 text-center text-white shadow-xl">
+        <div className="max-w-10xl mx-auto">
+          <div className="bg-gradient-to-r from-indigo-700 via-blue-600 to-cyan-600 p-16 text-center text-white shadow-xl">
             <h2 className="text-5xl font-bold mb-6">
               Ready to streamline your operations
               <br />
