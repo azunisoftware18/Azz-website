@@ -228,7 +228,7 @@ export default function Footer() {
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#2d3f7c]
+                hover:bg-[#000000]
                 hover:text-white
               "
             >
@@ -251,7 +251,7 @@ export default function Footer() {
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#2d3f7c]
+                hover:bg-[#000000]
                 hover:text-white
               "
             >
@@ -274,7 +274,7 @@ export default function Footer() {
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#2d3f7c]
+                hover:bg-[#000000]
                 hover:text-white
               "
             >

@@ -42,15 +42,16 @@
 
 // export default MainLayout;
 
-
 import { Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Lenis from "lenis";
 import Footer from "../components/Footer/Footer";
 
+const HIDE_FOOTER_ON = ['/ERP']; // same array – you can import from a shared file later
+
 const MainLayout = () => {
   const location = useLocation();
-  const hideFooter = location.pathname === "/ERP";
+  const hideFooter = HIDE_FOOTER_ON.includes(location.pathname);
 
   useEffect(() => {
     const lenis = new Lenis({
