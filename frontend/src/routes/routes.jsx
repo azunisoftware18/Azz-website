@@ -33,6 +33,10 @@ import ServiceList from "../admin/pages/services/ServiceList.jsx";
 import HomepageSettings from "../admin/homepage/HomepageSettings.jsx";
 import Settings from "../admin/pages/settings/Settings.jsx";
 import WhyChooseList from "../admin/pages/why-choose-us/WhyChooseList.jsx";
+import GalleryCMS from "../admin/pages/gallery/GalleryCMS.jsx";
+import Lms from "../components/school/Lms.jsx";
+import FintechReseller from "../components/school/FintechReseller.jsx";
+import TicketBooking from "../components/school/TicketBooking.jsx";
 
 export const createRouter = () => {
   return createBrowserRouter(
@@ -66,6 +70,12 @@ export const createRouter = () => {
           <Route path="whatwedo" element={<WWD />} />
 
           <Route path="ERP" element={<Sms />} />
+
+          <Route path="lms" element={<Lms />} />
+
+          <Route path="fintech" element={<FintechReseller />} />
+
+          <Route path="ticket" element={<TicketBooking   />} />
         </Route>
 
         {/* ==============================
@@ -113,8 +123,9 @@ export const createRouter = () => {
 
             <Route path="/admin/settings" element={<Settings />} />
 
-            <Route path="/admin/why-choose-us" element={<WhyChooseList />} />
+            {/* <Route path="/admin/why-choose-us" element={<WhyChooseList />} /> */}
 
+            <Route path="/admin/gallery" element={<GalleryCMS />} />
           </Route>
         </Route>
       </>,

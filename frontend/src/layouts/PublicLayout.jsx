@@ -20,7 +20,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 
 // You can define this array directly or import it from a config file
-const HIDE_FOOTER_ON = ["/ERP"]; // add more paths here later, e.g. '/demo', '/pricing'
+const HIDE_FOOTER_ON = ["/ERP", "/lms", "/ticket", "/fintech"]; // add more paths here later, e.g. '/demo', '/pricing'
 
 const PublicLayout = () => {
   const location = useLocation();

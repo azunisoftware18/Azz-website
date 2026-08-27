@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom"; // ← added useNavigate
 import {
   LayoutDashboard,
   House,
@@ -12,7 +12,6 @@ import {
   Settings,
   LogOut,
   FolderOpen,
-  icons,
 } from "lucide-react";
 
 const menuItems = [
@@ -82,11 +81,11 @@ const menuItems = [
   //   icon: Search,
   // },
 
-  {
-    title: "Why Choose Us",
-    path: "/admin/why-choose-us",
-    icon: Search,
-  },
+  // {
+  //   title: "Why Choose Us",
+  //   path: "/admin/why-choose-us",
+  //   icon: Search
+  // },
 
   {
     title: "Settings",
@@ -96,6 +95,18 @@ const menuItems = [
 ];
 
 export default function Sidebar() {
+  const navigate = useNavigate(); // ← hook for navigation
+
+  const handleLogout = () => {
+    // 1. Clear auth data (adjust according to your auth method)
+    localStorage.removeItem("token");        // remove token
+    sessionStorage.removeItem("user");       // remove user data if stored
+    // If you're using a context, call logout() from there.
+
+    // 2. Redirect to homepage
+    navigate("/", { replace: true });
+  };
+
   return (
     <aside className="flex w-72 flex-col bg-slate-900 text-white">
       <div className="flex h-20 items-center justify-center border-b border-slate-700">
@@ -105,7 +116,6 @@ export default function Sidebar() {
       <nav className="flex-1 space-y-2 px-4 py-6">
         {menuItems.map((item) => {
           const Icon = item.icon;
-
           return (
             <NavLink
               key={item.title}
@@ -117,7 +127,6 @@ export default function Sidebar() {
               }
             >
               <Icon size={20} />
-
               <span>{item.title}</span>
             </NavLink>
           );
@@ -125,7 +134,10 @@ export default function Sidebar() {
       </nav>
 
       <div className="border-t border-slate-700 p-4">
-        <button className="flex w-full items-center gap-3 rounded-lg px-4 py-3 hover:bg-slate-800">
+        <button
+          onClick={handleLogout} // ← attached handler
+          className="flex w-full items-center gap-3 rounded-lg px-4 py-3 hover:bg-slate-800"
+        >
           <LogOut size={20} />
           Logout
         </button>

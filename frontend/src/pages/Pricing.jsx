@@ -8,15 +8,15 @@ function Pricing() {
   const services = [
     { id: "website", label: "Website" },
     { id: "mobile", label: "Mobile App" },
-    { id: "ecommerce", label: "E-Commerce" },
-    { id: "crm", label: "CRM" },
+    { id: "softwaresolutions", label: "Software Solutions" },
+    { id: "digitalmarketing", label: "Digital Marketing" },
   ];
 
   const pricingData = {
     website: [
       {
         title: "Basic",
-        price: "₹30,000",
+        price: "₹4,999",
         features: [
           "5 Pages Website",
           "Responsive Design",
@@ -26,7 +26,7 @@ function Pricing() {
       },
       {
         title: "Professional",
-        price: "₹60,000",
+        price: "₹19,999",
         features: [
           "15 Pages Website",
           "CMS Integration",
@@ -39,7 +39,7 @@ function Pricing() {
     mobile: [
       {
         title: "Basic",
-        price: "₹50,000",
+        price: "₹25,000",
         features: [
           "Android or iOS",
           "User Authentication",
@@ -49,7 +49,7 @@ function Pricing() {
       },
       {
         title: "Professional",
-        price: "₹1,20,000",
+        price: "₹45,000",
         features: [
           "Android + iOS",
           "Payment Gateway",
@@ -59,10 +59,10 @@ function Pricing() {
       },
     ],
 
-    ecommerce: [
+    softwaresolutions: [
       {
         title: "Starter",
-        price: "₹80,000",
+        price: "₹50,000",
         features: [
           "Product Catalog",
           "Cart & Checkout",
@@ -72,15 +72,15 @@ function Pricing() {
       },
       {
         title: "Advanced",
-        price: "₹1,80,000",
+        price: "₹99,000",
         features: ["Multi Vendor", "Inventory", "Coupons", "Reports"],
       },
     ],
 
-    crm: [
+    digitalmarketing: [
       {
         title: "Starter",
-        price: "₹1,00,000",
+        price: "₹4,999",
         features: [
           "Lead Management",
           "Dashboard",
@@ -90,7 +90,7 @@ function Pricing() {
       },
       {
         title: "Business",
-        price: "₹2,50,000",
+        price: "₹15,999",
         features: ["Automation", "Workflow", "Analytics", "Multi-user"],
       },
     ],
@@ -209,12 +209,12 @@ function Pricing() {
             ))}
 
             {/* Enterprise */}
-            <div className="bg-[#1B0A42] rounded-3xl p-8 text-white shadow-lg hover:-translate-y-2 transition-all duration-300">
+            <div className="bg-[#ffffff] border-2 border-[#1b0a42] rounded-3xl p-8 text-[#1b0a42] shadow-lg hover:-translate-y-2 transition-all duration-300">
               <h3 className="text-3xl font-semibold">Enterprise</h3>
 
               <div className="mt-6 text-5xl font-bold">Custom</div>
 
-              <p className="mt-2 text-xl">Pricing</p>
+              {/* <p className="mt-2 text-xl">Pricing</p> */}
 
               <ul className="mt-8 space-y-4">
                 <li>✓ Unlimited Features</li>

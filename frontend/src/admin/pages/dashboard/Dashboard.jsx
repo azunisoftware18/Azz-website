@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
-import { FileText, Briefcase, Users, FolderOpen, PlusCircle } from "lucide-react";
+import {
+  FileText,
+  Briefcase,
+  Users,
+  FolderOpen,
+  PlusCircle,
+} from "lucide-react";
 import StatsCard from "./components/StatsCard";
 import RecentBlogs from "./components/RecentBlogs";
 import RecentJobs from "./components/RecentJobs";
@@ -32,7 +38,7 @@ export default function Dashboard() {
   const getGreeting = () => {
     const hour = new Date().getHours();
     if (hour < 12) return "Good morning";
-    if (hour < 18) return "Good afternoon";
+    if (hour < 17) return "Good afternoon";
     return "Good evening";
   };
 

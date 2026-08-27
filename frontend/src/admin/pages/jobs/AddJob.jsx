@@ -52,6 +52,7 @@ export default function AddJob() {
       </div>
 
       <JobForm
+        // initialData={job}
         categories={categories}
         loading={loading}
         onSubmit={handleSubmit}

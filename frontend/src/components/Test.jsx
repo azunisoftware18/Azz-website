@@ -150,7 +150,7 @@ function Test() {
           <div className="text-center mb-12">
             <div className="inline-block bg-neutral-100 border border-neutral-300 rounded-full px-5 py-1.5 mb-4">
               <span className="text-xs font-medium text-neutral-600 tracking-wide">
-                ⭐ Loved by clients
+                 Loved by clients
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-semibold text-[#0E0A42] mb-3">

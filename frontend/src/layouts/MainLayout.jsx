@@ -47,7 +47,7 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 import Footer from "../components/Footer/Footer";
 
-const HIDE_FOOTER_ON = ['/ERP']; // same array – you can import from a shared file later
+const HIDE_FOOTER_ON = ['/ERP', '/lms', '/ticket', '/fintech']; // same array – you can import from a shared file later
 
 const MainLayout = () => {
   const location = useLocation();
