@@ -173,21 +173,21 @@ const dashboardScreens = [
     subtitle: "Portfolio Overview",
     description:
       "Monitor loan applications, approvals, disbursements and collections from a single operational dashboard.",
-    image: "/lms/dashboard.png",
+    image: "/images/lmdash.png",
   },
   {
     title: "Loan Applications",
     subtitle: "Application Management",
     description:
       "Track your complete application pipeline with verification, approval and status visibility.",
-    image: "/lms/applications.png",
+    image: "/images/loanapp.png",
   },
   {
     title: "Accounting",
     subtitle: "Financial Operations",
     description:
       "Manage journals, accounts, receivables, payments and financial reporting in one place.",
-    image: "/lms/accounting.png",
+    image: "/images/accountingss.png",
   },
 ];
 
@@ -286,9 +286,9 @@ export default function Lms() {
                     Mas<span className="text-[#3557ff]">Cot</span>
                   </div>
 
-                  <div className="text-[9px] font-medium uppercase tracking-[0.2em] text-[#7b849a]">
+                  {/* <div className="text-[9px] font-medium uppercase tracking-[0.2em] text-[#7b849a]">
                     Loan Management System
-                  </div>
+                  </div> */}
                 </div>
               </button>
 
@@ -1066,31 +1066,7 @@ export default function Lms() {
                     />
 
                     {/* Screenshot Placeholder */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#f4f6ff] to-[#e2e7f5]">
-                      <div className="w-[82%] rounded-2xl border border-white bg-white p-5 shadow-xl">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <div className="h-3 w-28 rounded bg-[#dbe1ed]" />
-                            <div className="mt-2 h-2 w-20 rounded bg-[#edf0f5]" />
-                          </div>
-
-                          <div className="h-8 w-8 rounded-xl bg-[#eef2ff]" />
-                        </div>
-
-                        <div className="mt-5 grid grid-cols-3 gap-3">
-                          <div className="h-16 rounded-xl bg-[#f4f6fb]" />
-                          <div className="h-16 rounded-xl bg-[#f4f6fb]" />
-                          <div className="h-16 rounded-xl bg-[#eef2ff]" />
-                        </div>
-
-                        <div className="mt-4 h-28 rounded-xl bg-[#f7f8fc]" />
-
-                        <div className="mt-4 grid grid-cols-2 gap-3">
-                          <div className="h-10 rounded-xl bg-[#f2f4f9]" />
-                          <div className="h-10 rounded-xl bg-[#eef2ff]" />
-                        </div>
-                      </div>
-                    </div>
+                   
                   </div>
                 </div>
               </div>

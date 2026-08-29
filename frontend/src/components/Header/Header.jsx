@@ -74,7 +74,7 @@ export default function Header({ videoSrc = null, children }) {
                 {/* Button */}
                 <Link
                   to="/contact"
-                  className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition"
+                  className="bg-[#10154d] text-white px-8 py-3 rounded-full hover:bg-[#3557ff] transition"
                 >
                   Contact Us
                 </Link>
@@ -123,7 +123,7 @@ export default function Header({ videoSrc = null, children }) {
               {/* Button */}
               <Link
                 to="/contact"
-                className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition"
+                className="bg-[#10154d] text-white px-8 py-3 rounded-full hover:bg-[#3557ff] transition"
               >
                 Contact Us
               </Link>

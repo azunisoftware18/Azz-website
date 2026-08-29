@@ -20,10 +20,10 @@ export default function Footer() {
         inline-flex
         items-center
         gap-2
-        text-[#4b5a87]
+        text-[#10154d]/60
         transition-colors
         duration-300
-        hover:text-[#2d3f7c]
+        hover:text-[#3557ff]
       "
     >
       <span className="relative">
@@ -36,7 +36,7 @@ export default function Footer() {
             -bottom-1
             h-[1px]
             w-full
-            bg-current
+            bg-[#3557ff]
             origin-left
             scale-x-0
             transition-transform
@@ -58,27 +58,65 @@ export default function Footer() {
           group-hover:translate-x-0
           group-hover:translate-y-0
           group-hover:opacity-100
+          text-[#3557ff]
         "
       />
     </Link>
   );
 
   return (
-    <footer className="overflow-hidden bg-[#f5f5f5]">
-      {/* Top Section */}
+    <footer className="overflow-hidden bg-[#f5f5f5] text-[#10154d]">
+      {/* ================= TOP SECTION ================= */}
       <div className="mx-auto max-w-[1700px] px-6 py-14 sm:px-8 lg:px-12 lg:py-20">
-        {/* Optional Top Brand Area */}
-        <div className="mb-14 flex flex-col justify-between gap-8 border-b border-[#2d3f7c]/15 pb-10 md:flex-row md:items-end">
+        {/* Brand / CTA */}
+        <div
+          className="
+            mb-14
+            flex
+            flex-col
+            justify-between
+            gap-8
+            border-b
+            border-[#10154d]/10
+            pb-10
+            md:flex-row
+            md:items-end
+          "
+        >
           <div>
-            <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-[#4b5a87]">
+            <p
+              className="
+                mb-3
+                text-sm
+                font-semibold
+                uppercase
+                tracking-[0.25em]
+                text-[#3557ff]
+              "
+            >
               Azzunique
             </p>
 
-            <h2 className="max-w-2xl text-3xl font-light leading-tight text-[#2d3f7c] sm:text-4xl lg:text-5xl">
-              Building digital experiences for the future.
+            <h2
+              className="
+                max-w-2xl
+                text-3xl
+                font-light
+                leading-tight
+                tracking-tight
+                text-[#10154d]
+                sm:text-4xl
+                lg:text-5xl
+              "
+            >
+              Building digital experiences
+              <span className="block font-medium text-[#3557ff]">
+                for the future.
+              </span>
             </h2>
           </div>
 
+          {/* CTA */}
           <Link
             to="/contact"
             onClick={scrollToTop}
@@ -89,16 +127,20 @@ export default function Footer() {
               items-center
               gap-3
               rounded-full
-              bg-black
+              bg-[#10154d]
               px-6
               py-3.5
               text-sm
               font-medium
               text-white
+              shadow-lg
+              shadow-[#10154d]/10
               transition-all
               duration-300
               hover:-translate-y-1
-              hover:shadow-lg
+              hover:bg-[#3557ff]
+              hover:shadow-xl
+              hover:shadow-[#3557ff]/20
             "
           >
             Let's Talk
@@ -114,11 +156,29 @@ export default function Footer() {
           </Link>
         </div>
 
-        {/* Links */}
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Company */}
+        {/* ================= LINKS ================= */}
+        <div
+          className="
+            grid
+            grid-cols-1
+            gap-12
+            sm:grid-cols-2
+            lg:grid-cols-3
+          "
+        >
+          {/* COMPANY */}
           <div>
-            <h3 className="mb-7 text-xl font-medium text-[#2d3f7c]">Company</h3>
+            <h3
+              className="
+                mb-7
+                text-xl
+                font-medium
+                tracking-tight
+                text-[#10154d]
+              "
+            >
+              Company
+            </h3>
 
             <ul className="space-y-4 text-[15px]">
               <li>
@@ -143,9 +203,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* SERVICES */}
           <div>
-            <h3 className="mb-7 text-xl font-medium text-[#2d3f7c]">
+            <h3
+              className="
+                mb-7
+                text-xl
+                font-medium
+                tracking-tight
+                text-[#10154d]
+              "
+            >
               Services
             </h3>
 
@@ -172,9 +240,19 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Support */}
+          {/* SUPPORT */}
           <div>
-            <h3 className="mb-7 text-xl font-medium text-[#2d3f7c]">Support</h3>
+            <h3
+              className="
+                mb-7
+                text-xl
+                font-medium
+                tracking-tight
+                text-[#10154d]
+              "
+            >
+              Support
+            </h3>
 
             <ul className="space-y-4 text-[15px]">
               <li>
@@ -201,17 +279,33 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="border-t border-[#2d3f7c]/15">
-        <div className="mx-auto flex max-w-[1700px] flex-col gap-6 px-6 py-7 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
-          {/* Copyright */}
-          <p className="text-sm text-[#4b5a87]">
+      {/* ================= BOTTOM SECTION ================= */}
+      <div className="border-t border-[#10154d]/10">
+        <div
+          className="
+            mx-auto
+            flex
+            max-w-[1700px]
+            flex-col
+            gap-6
+            px-6
+            py-7
+            sm:px-8
+            md:flex-row
+            md:items-center
+            md:justify-between
+            lg:px-12
+          "
+        >
+          {/* COPYRIGHT */}
+          <p className="text-sm text-[#10154d]/55">
             Copyright © {new Date().getFullYear()} Azzunique. All Rights
             Reserved.
           </p>
 
-          {/* Social Icons */}
+          {/* SOCIAL ICONS */}
           <div className="flex items-center gap-3">
+            {/* FACEBOOK */}
             <a
               href="#"
               aria-label="Facebook"
@@ -223,18 +317,23 @@ export default function Footer() {
                 justify-center
                 rounded-full
                 border
-                border-[#2d3f7c]/20
-                text-[#4b5a87]
+                border-[#10154d]/15
+                bg-white
+                text-[#10154d]/60
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#000000]
+                hover:border-[#3557ff]
+                hover:bg-[#3557ff]
                 hover:text-white
+                hover:shadow-lg
+                hover:shadow-[#3557ff]/20
               "
             >
               <FaFacebookF size={15} />
             </a>
 
+            {/* LINKEDIN */}
             <a
               href="#"
               aria-label="LinkedIn"
@@ -246,18 +345,23 @@ export default function Footer() {
                 justify-center
                 rounded-full
                 border
-                border-[#2d3f7c]/20
-                text-[#4b5a87]
+                border-[#10154d]/15
+                bg-white
+                text-[#10154d]/60
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#000000]
+                hover:border-[#3557ff]
+                hover:bg-[#3557ff]
                 hover:text-white
+                hover:shadow-lg
+                hover:shadow-[#3557ff]/20
               "
             >
               <FaLinkedinIn size={16} />
             </a>
 
+            {/* X */}
             <a
               href="#"
               aria-label="X"
@@ -269,13 +373,17 @@ export default function Footer() {
                 justify-center
                 rounded-full
                 border
-                border-[#2d3f7c]/20
-                text-[#4b5a87]
+                border-[#10154d]/15
+                bg-white
+                text-[#10154d]/60
                 transition-all
                 duration-300
                 hover:-translate-y-1
-                hover:bg-[#000000]
+                hover:border-[#3557ff]
+                hover:bg-[#3557ff]
                 hover:text-white
+                hover:shadow-lg
+                hover:shadow-[#3557ff]/20
               "
             >
               <FaXTwitter size={15} />

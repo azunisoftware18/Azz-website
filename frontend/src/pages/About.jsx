@@ -94,6 +94,7 @@ export default function About() {
   };
 
   // ----- Render -----
+  
   return (
     <>
       <Header />
@@ -269,9 +270,7 @@ export default function About() {
         <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full border border-white/10 transition-transform duration-700 group-hover:scale-125" />
 
         <div className="relative">
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-sm text-white/70">
-            01
-          </span>
+          
         </div>
 
         <div className="relative mt-16">

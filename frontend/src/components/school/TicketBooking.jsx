@@ -21,6 +21,8 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
+import BookingDash from "../../../public/images/bookingdash.png"
+
 /* =========================================================
    DATA
 ========================================================= */
@@ -123,25 +125,26 @@ const resellerFeatures = [
 
 const screenshots = [
   {
-    title: "Booking Dashboard",
+    title: "Dashboard Overview",
     label: "Platform Overview",
     description:
       "Monitor bookings, ticket sales, visitors, revenue and attraction performance.",
-    image: "/ticket-booking/dashboard.png",
+    // image: "/images/bookingdash.png",
+    image: BookingDash,
   },
+  // {
+  //   title: "Reseller Management",
+  //   label: "Partner Network",
+  //   description:
+  //     "Manage resellers, partners, wallets, commissions and ticket-selling activity.",
+  //   image: "/ticket-booking/resellers.png",
+  // },
   {
-    title: "Reseller Management",
-    label: "Partner Network",
-    description:
-      "Manage resellers, partners, wallets, commissions and ticket-selling activity.",
-    image: "/ticket-booking/resellers.png",
-  },
-  {
-    title: "Ticket Bookings",
+    title: "Bookings Dashboard",
     label: "Booking Operations",
     description:
       "Track visitor bookings, dates, ticket quantities, payments and booking status.",
-    image: "/ticket-booking/bookings.png",
+    image: "/images/ticketbookingdash.png",
   },
 ];
 
@@ -246,7 +249,7 @@ export default function TicketBooking() {
     setMobileMenu(false);
   };
 
-//   
+  //
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#fffdfb] text-[#171717]">
@@ -269,7 +272,6 @@ export default function TicketBooking() {
                 <div className="text-sm font-bold tracking-tight text-[#171717] sm:text-base">
                   Parchi
                   <span className="text-[#ef5b2a]"> Kaat</span>
-                  
                 </div>
 
                 {/* Mobile subtitle */}
@@ -770,218 +772,6 @@ export default function TicketBooking() {
       </section>
 
       {/* =====================================================
-          RESELLER MANAGEMENT
-      ===================================================== */}
-
-      <section
-        id="resellers"
-        className="relative overflow-hidden bg-[#fffdfb] py-24 lg:py-32"
-      >
-        {/* Soft Background Decoration */}
-        <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-[#ef5b2a]/5 blur-3xl" />
-        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-[#f4a261]/10 blur-3xl" />
-
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid items-center gap-16 lg:grid-cols-2">
-            {/* =================================================
-          LEFT CONTENT
-      ================================================= */}
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.25em] text-[#ef5b2a]">
-                Reseller Management
-              </div>
-
-              <h2 className="mt-5 max-w-xl text-4xl font-light leading-tight tracking-tight text-[#171717] sm:text-5xl lg:text-6xl">
-                Let partners sell
-                <span className="block font-semibold text-[#ef5b2a]">
-                  your tickets everywhere.
-                </span>
-              </h2>
-
-              <p className="mt-6 max-w-xl text-lg leading-8 text-black/50">
-                Extend your ticket inventory to travel agents, local partners,
-                tour operators and resellers while keeping bookings, wallets,
-                commissions and sales activity under central control.
-              </p>
-
-              {/* Features */}
-              <div className="mt-9 grid gap-4 sm:grid-cols-2">
-                {resellerFeatures.map((feature) => (
-                  <div
-                    key={feature}
-                    className="flex items-center gap-3 text-sm text-black/65 sm:text-base"
-                  >
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#fff0eb] text-[#ef5b2a]">
-                      <Check size={14} />
-                    </span>
-
-                    <span>{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* CTA */}
-              <button
-                onClick={() => scrollTo("contact")}
-                className="group mt-9 flex items-center gap-3 rounded-full bg-[#171717] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ef5b2a] hover:shadow-lg"
-              >
-                Explore Reseller Management
-                <ArrowRight
-                  size={17}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
-              </button>
-            </div>
-
-            {/* =================================================
-          RIGHT VISUAL
-      ================================================= */}
-            <div className="relative">
-              {/* Glow */}
-              <div className="absolute -inset-5 rounded-[2.5rem] bg-[#ef5b2a]/5 blur-2xl" />
-
-              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-6 shadow-[0_25px_70px_rgba(23,23,23,0.08)] sm:p-8">
-                {/* Top Header */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-xs text-black/40">Active Partners</div>
-
-                    <div className="mt-1 text-3xl font-semibold tracking-tight text-[#171717]">
-                      1,284
-                    </div>
-
-                    <div className="mt-1 text-[11px] text-[#ef5b2a]">
-                      Resellers & Partners
-                    </div>
-                  </div>
-
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#fff0eb] text-[#ef5b2a]">
-                    <Users size={21} />
-                  </div>
-                </div>
-
-                {/* Search / Filter Bar */}
-                <div className="mt-7 flex items-center justify-between rounded-xl border border-slate-200 bg-[#fafafa] px-4 py-3">
-                  <div className="flex items-center gap-2 text-xs text-black/35">
-                    <span className="h-2 w-2 rounded-full bg-[#ef5b2a]" />
-                    All Partners
-                  </div>
-
-                  <span className="text-xs font-medium text-black/40">
-                    View All
-                  </span>
-                </div>
-
-                {/* Partner List */}
-                <div className="mt-4 space-y-3">
-                  {[
-                    ["City Tours", "2,840 bookings", "Active"],
-                    ["Local Travel Hub", "1,924 bookings", "Active"],
-                    ["Explore Partner", "1,286 bookings", "Active"],
-                    ["Weekend Deals", "842 bookings", "Review"],
-                  ].map(([name, bookings, status]) => (
-                    <div
-                      key={name}
-                      className="group flex items-center justify-between rounded-2xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#ef5b2a]/20 hover:bg-[#fffaf7] hover:shadow-md"
-                    >
-                      <div className="flex items-center gap-3">
-                        {/* Partner Icon */}
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f7f7f7] text-black/45 transition-colors group-hover:bg-[#fff0eb] group-hover:text-[#ef5b2a]">
-                          <Users size={17} />
-                        </div>
-
-                        <div>
-                          <div className="text-sm font-semibold text-[#171717]">
-                            {name}
-                          </div>
-
-                          <div className="mt-1 text-[10px] text-black/35">
-                            {bookings}
-                          </div>
-                        </div>
-                      </div>
-
-                      <span
-                        className={`rounded-full px-2.5 py-1 text-[10px] font-medium ${
-                          status === "Active"
-                            ? "bg-emerald-50 text-emerald-600"
-                            : "bg-amber-50 text-amber-600"
-                        }`}
-                      >
-                        {status}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Metrics */}
-                <div className="mt-5 grid grid-cols-3 gap-3">
-                  <div className="rounded-2xl bg-[#fafafa] p-4">
-                    <div className="text-[9px] uppercase tracking-wider text-black/30">
-                      Sales
-                    </div>
-
-                    <div className="mt-2 text-sm font-bold text-[#171717]">
-                      ₹42 L
-                    </div>
-
-                    <div className="mt-1 text-[9px] text-emerald-600">
-                      +12.4%
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl bg-[#fafafa] p-4">
-                    <div className="text-[9px] uppercase tracking-wider text-black/30">
-                      Commission
-                    </div>
-
-                    <div className="mt-2 text-sm font-bold text-[#171717]">
-                      ₹6.4 L
-                    </div>
-
-                    <div className="mt-1 text-[9px] text-emerald-600">
-                      +8.2%
-                    </div>
-                  </div>
-
-                  <div className="rounded-2xl bg-[#fff0eb] p-4">
-                    <div className="text-[9px] uppercase tracking-wider text-[#b84b2a]">
-                      Tickets
-                    </div>
-
-                    <div className="mt-2 text-sm font-bold text-[#171717]">
-                      18.2K
-                    </div>
-
-                    <div className="mt-1 text-[9px] text-[#ef5b2a]">
-                      This month
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Insight */}
-                <div className="mt-5 flex items-center justify-between rounded-2xl bg-[#171717] px-5 py-4 text-white">
-                  <div>
-                    <div className="text-[10px] text-white/40">
-                      Partner Performance
-                    </div>
-
-                    <div className="mt-1 text-sm font-semibold">
-                      Network sales are growing
-                    </div>
-                  </div>
-
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#ef5b2a]">
-                    <ArrowUpRight size={16} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =====================================================
           DASHBOARD SHOWCASE
       ===================================================== */}
 
@@ -1036,7 +826,6 @@ export default function TicketBooking() {
                 <p className="mt-5 text-base leading-7 text-black/50">
                   {screenshots[activeScreenshot].description}
                 </p>
-
                 <div className="mt-8 flex items-center gap-2 text-sm font-semibold">
                   View Product
                   <ArrowUpRight size={17} />
@@ -1048,14 +837,18 @@ export default function TicketBooking() {
                   <img
                     src={screenshots[activeScreenshot].image}
                     alt={screenshots[activeScreenshot].title}
-                    className="absolute inset-0 h-full w-full object-cover object-top"
-                    onError={(event) => {
-                      event.currentTarget.style.display = "none";
-                    }}
+                    className="absolute h-full w-full object-cover"
+                    // onError={(event) => {
+                    //   console.error(
+                    //     "Image failed to load:",
+                    //     screenshots[activeScreenshot].image,
+                    //   );
+                    //   event.currentTarget.style.display = "none";
+                    // }}
                   />
 
                   {/* Dashboard Placeholder */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#f7f5ff] to-[#e7e4ee]">
+                  {/* <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#f7f5ff] to-[#e7e4ee]">
                     <div className="w-[82%] rounded-2xl border border-white bg-white p-5 shadow-2xl">
                       <div className="flex items-center justify-between">
                         <div>
@@ -1081,7 +874,8 @@ export default function TicketBooking() {
                         <div className="h-10 rounded-xl bg-slate-50" />
                       </div>
                     </div>
-                  </div>
+                  </div> */}
+
                 </div>
               </div>
             </div>

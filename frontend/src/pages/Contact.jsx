@@ -137,8 +137,6 @@ export default function Contact() {
                           className="font-medium text-white transition hover:text-blue-400"
                         >
                           +91 74120 66477
-
-
                         </a>
                       </div>
                     </div>
@@ -151,7 +149,10 @@ export default function Contact() {
                       <div>
                         <p className="text-sm text-gray-400">Location</p>
 
-                        <p className="font-medium text-white">78, Tech Bhawan, Tara Nagar-A, Hari Nagar, Jhotwara, Jaipur, Rajasthan 302012 </p>
+                        <p className="font-medium text-white">
+                          78, Tech Bhawan, Tara Nagar-A, Hari Nagar, Jhotwara,
+                          Jaipur, Rajasthan 302012{" "}
+                        </p>
                       </div>
                     </div>
                   </div>

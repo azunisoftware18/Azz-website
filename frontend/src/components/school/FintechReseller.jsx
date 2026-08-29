@@ -128,9 +128,9 @@ const faqData = [
 ];
 
 const screenshots = [
-  { name: "Overview", image: "/fintech/dashboard.png" },
-  { name: "Resellers", image: "/fintech/resellers.png" },
-  { name: "Transactions", image: "/fintech/transactions.png" },
+  { name: "Overview", image: "/images/findash.png" },
+  { name: "Resellers", image: "/images/reseller.png" },
+  { name: "Transactions", image: "/images/trn.png" },
 ];
 
 // ---------- FAQ Item Component ----------
@@ -721,29 +721,7 @@ export default function FintechReseller() {
               />
 
               {/* Placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-100 to-slate-200/50">
-                <div className="w-[82%] rounded-2xl border border-white/80 bg-white/90 p-5 shadow-soft">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="h-3 w-32 rounded bg-slate-200" />
-                      <div className="mt-2 h-2 w-20 rounded bg-slate-100" />
-                    </div>
-                    <div className="h-9 w-9 rounded-xl bg-indigo-50" />
-                  </div>
-                  <div className="mt-6 grid grid-cols-4 gap-3">
-                    <div className="h-20 rounded-xl bg-slate-100" />
-                    <div className="h-20 rounded-xl bg-slate-100" />
-                    <div className="h-20 rounded-xl bg-indigo-50" />
-                    <div className="h-20 rounded-xl bg-slate-100" />
-                  </div>
-                  <div className="mt-4 h-44 rounded-xl bg-slate-100" />
-                  <div className="mt-4 grid grid-cols-3 gap-3">
-                    <div className="h-10 rounded-xl bg-slate-100" />
-                    <div className="h-10 rounded-xl bg-slate-100" />
-                    <div className="h-10 rounded-xl bg-indigo-50" />
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>

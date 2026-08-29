@@ -110,143 +110,271 @@ function WWD() {
     "Enterprise Grade Security",
   ];
 
-  return (
-    <>
-      <Header />
 
-      {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-white py-28 lg:py-36">
-        {/* Subtle background blobs (same as before, but cleaned) */}
-        <div className="absolute -left-32 top-10 w-96 h-96 rounded-full bg-blue-500/10 blur-[140px]"></div>
-        <div className="absolute right-0 bottom-0 w-[450px] h-[450px] rounded-full bg-purple-500/10 blur-[140px]"></div>
+return (
+  <>
+    <Header />
 
-        <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#0E0A42] leading-tight">
-            What We Do
-          </h1>
-          <p className="max-w-3xl mx-auto text-xl md:text-2xl text-gray-700 mt-6 leading-relaxed">
-            We empower businesses with innovative digital products, scalable
-            technologies, and exceptional user experiences. From websites to
-            enterprise software, we transform ideas into reality.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-3 mt-10 px-10 py-4 rounded-full bg-[#0E0A42] text-white font-semibold hover:bg-[#1a1b55] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Let's Work Together
-            <ArrowRight size={20} />
-          </Link>
+    {/* ===== HERO ===== */}
+    <section className="relative overflow-hidden bg-[#f3f4fb] py-28 lg:py-36">
+      {/* Background Decoration */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -left-32 top-10 h-96 w-96 rounded-full bg-[#3557ff]/10 blur-[140px]" />
+        <div className="absolute -right-20 bottom-0 h-[450px] w-[450px] rounded-full bg-[#10154d]/10 blur-[140px]" />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-6 text-center">
+        {/* Eyebrow */}
+        <div className="mb-6 flex items-center justify-center gap-3">
+          <span className="h-px w-10 bg-[#3557ff]" />
+          <span className="text-xs sm:text-sm font-semibold tracking-[0.25em] text-[#3557ff]">
+            WHAT WE DO
+          </span>
+          <span className="h-px w-10 bg-[#3557ff]" />
         </div>
-      </section>
 
-      {/* ===== ABOUT BLURB ===== */}
-      <section className="py-20 bg-[#F8FAFC]">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0E0A42]">
-            Helping Businesses Grow Digitally
-          </h2>
-          <p className="mt-6 text-gray-600 text-lg md:text-xl leading-relaxed max-w-4xl mx-auto">
-            Our company specializes in delivering high-quality software
-            development services tailored to startups, enterprises, and growing
-            businesses. We combine creativity, technology, and strategy to build
-            products that drive measurable success.
-          </p>
+        <h1 className="text-5xl font-light leading-tight tracking-tight text-[#10154d] sm:text-6xl md:text-7xl lg:text-8xl">
+          What We{" "}
+          <span className="font-medium text-[#3557ff]">Do</span>
+        </h1>
+
+        <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[#3c3c3c] sm:text-xl md:text-2xl">
+          We empower businesses with innovative digital products, scalable
+          technologies, and exceptional user experiences. From websites to
+          enterprise software, we transform ideas into reality.
+        </p>
+
+        <Link
+          to="/contact"
+          className="group mt-10 inline-flex items-center gap-3 rounded-full bg-[#10154d] px-10 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#3557ff] hover:shadow-xl"
+        >
+          Let's Work Together
+
+          <ArrowRight
+            size={20}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </Link>
+      </div>
+    </section>
+
+    {/* ===== ABOUT BLURB ===== */}
+    <section className="relative overflow-hidden bg-[#f5f5f5] py-20 lg:py-24">
+      {/* Background Decoration */}
+      <div className="absolute -left-32 top-0 h-80 w-80 rounded-full bg-[#3557ff]/5 blur-3xl" />
+      <div className="absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-[#10154d]/5 blur-3xl" />
+
+      <div className="relative mx-auto max-w-6xl px-6 text-center">
+        <div className="mb-5 flex items-center justify-center gap-3">
+          <span className="h-px w-8 bg-[#3557ff]" />
+
+          <span className="text-xs font-semibold tracking-[0.2em] text-[#3557ff]">
+            OUR EXPERTISE
+          </span>
+
+          <span className="h-px w-8 bg-[#3557ff]" />
         </div>
-      </section>
 
-      {/* ===== SERVICES GRID ===== */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#0E0A42]">
-              We Offer a Wide Variety of IT Services
-            </h2>
-            <p className="mt-4 text-gray-600 text-lg">
-              Everything your business needs under one roof.
-            </p>
+        <h2 className="text-4xl font-light tracking-tight text-[#10154d] sm:text-5xl md:text-6xl">
+          Helping Businesses{" "}
+          <span className="font-medium text-[#3557ff]">Grow Digitally</span>
+        </h2>
+
+        <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-[#3c3c3c] md:text-xl">
+          Our company specializes in delivering high-quality software
+          development services tailored to startups, enterprises, and growing
+          businesses. We combine creativity, technology, and strategy to build
+          products that drive measurable success.
+        </p>
+      </div>
+    </section>
+
+    {/* ===== SERVICES GRID ===== */}
+    <section className="relative overflow-hidden bg-white py-24 lg:py-28">
+      <div className="relative mx-auto max-w-7xl px-6">
+        {/* Section Heading */}
+        <div className="mb-16 text-center">
+          <div className="mb-5 flex items-center justify-center gap-3">
+            <span className="h-px w-10 bg-[#3557ff]" />
+
+            <span className="text-xs font-semibold tracking-[0.2em] text-[#3557ff]">
+              OUR SERVICES
+            </span>
+
+            <span className="h-px w-10 bg-[#3557ff]" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-3xl p-8 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 hover:border-blue-100"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-[#EEF3FA] flex items-center justify-center text-[#0E0A42] group-hover:bg-[#0E0A42] group-hover:text-white transition-colors duration-300 group-hover:rotate-6">
+          <h2 className="text-4xl font-light tracking-tight text-[#10154d] sm:text-5xl md:text-6xl">
+            We Offer a Wide Variety of{" "}
+            <span className="font-medium text-[#3557ff]">IT Services</span>
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-2xl text-lg text-[#3c3c3c]">
+            Everything your business needs under one roof.
+          </p>
+        </div>
+
+        {/* Services */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group relative overflow-hidden rounded-[2rem] border border-[#10154d]/10 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#3557ff]/30 hover:shadow-[0_25px_60px_rgba(16,21,77,0.12)]"
+            >
+              {/* Hover Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#3557ff]/0 via-transparent to-[#3557ff]/0 opacity-0 transition-opacity duration-500 group-hover:from-[#3557ff]/5 group-hover:to-[#3557ff]/10 group-hover:opacity-100" />
+
+              {/* Icon */}
+              <div className="relative flex items-center justify-between">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#f3f4fb] text-[#3557ff] transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:bg-[#3557ff] group-hover:text-white">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-[#0E0A42] mt-6">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed mt-4">
-                  {service.description}
-                </p>
-                <div className="mt-6 flex items-center text-[#0E0A42] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span>Learn More</span>
-                  <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+
+                {/* Arrow */}
+                <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#10154d]/10 text-[#10154d] transition-all duration-500 group-hover:border-[#3557ff] group-hover:bg-[#3557ff] group-hover:text-white">
+                  <ArrowRight
+                    size={18}
+                    className="transition-transform duration-500 group-hover:translate-x-1"
+                  />
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ===== WHY CHOOSE US ===== */}
-      <section className="py-24 bg-[#EEF3FA]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#0E0A42]">
-                Why Businesses Choose Us
-              </h2>
-              <p className="mt-6 text-gray-700 text-lg leading-relaxed">
-                We don't just build software—we create scalable digital
-                ecosystems that help businesses improve efficiency, engage
-                customers, and increase revenue.
-              </p>
-              <ul className="space-y-4 mt-10">
-                {benefits.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle
-                      size={22}
-                      className="text-[#0E0A42] flex-shrink-0 mt-1"
-                    />
-                    <span className="text-gray-700 text-lg">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Content */}
+              <div className="relative mt-8">
+                <h3 className="text-2xl font-medium tracking-tight text-[#10154d] transition-colors duration-300 group-hover:text-[#3557ff]">
+                  {service.title}
+                </h3>
+
+                <div className="mt-5 h-px w-12 bg-[#3557ff] transition-all duration-500 group-hover:w-full" />
+
+                <p className="mt-5 leading-8 text-[#3c3c3c]">
+                  {service.description}
+                </p>
+              </div>
+
+              {/* Learn More */}
+              <div className="relative mt-7 flex items-center text-sm font-medium text-[#3557ff] opacity-0 transition-all duration-300 group-hover:opacity-100">
+                <span>Learn More</span>
+
+                <ArrowRight
+                  size={17}
+                  className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </div>
             </div>
-            <div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ===== WHY CHOOSE US ===== */}
+    <section className="relative overflow-hidden bg-[#e8edf6] py-24 lg:py-28">
+      {/* Background Decoration */}
+      <div className="absolute left-0 top-0 h-80 w-80 rounded-full bg-[#3557ff]/5 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-[#10154d]/5 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-6">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
+          {/* Content */}
+          <div>
+            <div className="mb-5 flex items-center gap-3">
+              <span className="h-px w-10 bg-[#3557ff]" />
+
+              <span className="text-xs font-semibold tracking-[0.2em] text-[#3557ff]">
+                WHY CHOOSE US
+              </span>
+            </div>
+
+            <h2 className="text-4xl font-light tracking-tight text-[#10154d] sm:text-5xl md:text-6xl">
+              Why Businesses{" "}
+              <span className="font-medium text-[#3557ff]">Choose Us</span>
+            </h2>
+
+            <p className="mt-6 text-lg leading-8 text-[#3c3c3c]">
+              We don't just build software—we create scalable digital
+              ecosystems that help businesses improve efficiency, engage
+              customers, and increase revenue.
+            </p>
+
+            <ul className="mt-10 space-y-5">
+              {benefits.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="group flex items-start gap-4"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white text-[#3557ff] shadow-sm transition-all duration-300 group-hover:bg-[#3557ff] group-hover:text-white">
+                    <CheckCircle size={20} />
+                  </span>
+
+                  <span className="pt-1 text-lg text-[#3c3c3c] transition-colors duration-300 group-hover:text-[#10154d]">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Image */}
+          <div className="group relative">
+            <div className="absolute -inset-3 rounded-[44px] bg-[#3557ff]/10 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
+
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white p-2 shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200"
                 alt="Team collaboration"
-                className="rounded-[40px] shadow-2xl hover:scale-105 transition duration-700 object-cover w-full h-[400px]"
+                className="h-[400px] w-full rounded-[1.5rem] object-cover transition-transform duration-700 group-hover:scale-105"
               />
+
+              {/* Image Overlay */}
+              <div className="absolute inset-2 rounded-[1.5rem] bg-gradient-to-t from-[#10154d]/30 via-transparent to-transparent" />
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      {/* ===== CTA ===== */}
-      <section className="py-28 bg-white text-center">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-4xl md:text-6xl font-bold text-[#0E0A42]">
-            Ready to Build Something Amazing?
-          </h2>
-          <p className="mt-6 text-gray-700 text-xl leading-relaxed max-w-2xl mx-auto">
-            Let's discuss your project and create a solution that accelerates
-            your business growth.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex mt-10 px-12 py-5 rounded-full bg-[#0E0A42] text-white font-semibold hover:bg-[#1a1b55] hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Get Started Today
-          </Link>
+    {/* ===== CTA ===== */}
+    <section className="relative overflow-hidden bg-[#10154d] py-28 text-center">
+      {/* Decorative Elements */}
+      <div className="absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-[#3557ff]/20 blur-3xl" />
+      <div className="absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full bg-[#3557ff]/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-5xl px-6">
+        <div className="mb-6 flex items-center justify-center gap-3">
+          <span className="h-px w-10 bg-[#7f96ff]" />
+
+          <span className="text-xs font-semibold tracking-[0.25em] text-[#9eafff]">
+            LET'S BUILD TOGETHER
+          </span>
+
+          <span className="h-px w-10 bg-[#7f96ff]" />
         </div>
-      </section>
-    </>
-  );
-}
+
+        <h2 className="text-4xl font-light leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
+          Ready to Build Something{" "}
+          <span className="font-medium text-[#7f96ff]">Amazing?</span>
+        </h2>
+
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/65 sm:text-xl">
+          Let's discuss your project and create a solution that accelerates
+          your business growth.
+        </p>
+
+        <Link
+          to="/contact"
+          className="group mt-10 inline-flex items-center gap-3 rounded-full bg-[#3557ff] px-12 py-5 font-semibold text-white shadow-[0_12px_40px_-8px_rgba(53,87,255,0.5)] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#10154d]"
+        >
+          Get Started Today
+
+          <ArrowRight
+            size={20}
+            className="transition-transform duration-300 group-hover:translate-x-1"
+          />
+        </Link>
+      </div>
+    </section>
+  </>
+);
+};
 
 export default WWD;
