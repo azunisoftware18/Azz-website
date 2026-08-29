@@ -1,4 +1,5 @@
 import prisma from "../../db/db.js";
+import { addContactToGoogleSheet } from "../../services/googleSheets.service.js";
 import {
   createContactSchema,
   updateReadStatusSchema,
@@ -7,14 +8,22 @@ import {
 /* ===========================
    Create Contact (Public)
 =========================== */
-
 export const createContact = async (req, res) => {
   try {
     const body = createContactSchema.parse(req.body);
 
+    // 1. Save contact in database
     const contact = await prisma.contact.create({
       data: body,
     });
+
+    // 2. Save contact in Google Sheet
+    try {
+      await addContactToGoogleSheet(contact);
+    } catch (sheetError) {
+      // Google Sheet fail hone par database contact delete nahi hoga
+      console.error("Google Sheet Error:", sheetError);
+    }
 
     return res.status(201).json({
       success: true,
@@ -26,7 +35,7 @@ export const createContact = async (req, res) => {
 
     return res.status(400).json({
       success: false,
-      message: error.message,
+      message: error?.message || "Something went wrong.",
     });
   }
 };
