@@ -314,11 +314,11 @@ export default function Lms() {
               {/* Right Side */}
               <div className="hidden items-center gap-3 lg:flex">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917412066477"
                   className="flex items-center gap-2 rounded-full px-4 py-2.5 text-sm font-medium text-[#10154d] transition hover:bg-[#f1f4fb]"
                 >
                   <Phone size={15} />
-                  +91 98765 43210
+                  +91 74120 66477
                 </a>
 
                 <button
@@ -364,11 +364,11 @@ export default function Lms() {
                   ))}
 
                   <a
-                    href="tel:+919876543210"
+                    href="tel:+917412066477"
                     className="mt-2 flex items-center gap-2 rounded-xl bg-[#f3f5fa] px-4 py-3 text-sm font-semibold"
                   >
                     <Phone size={16} />
-                    +91 98765 43210
+                    +91 74120 66477
                   </a>
                 </div>
               </div>
@@ -430,7 +430,7 @@ export default function Lms() {
                 </button>
 
                 <a
-                  href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20your%20Loan%20Management%20System."
+                  href="https://wa.me/917412066477?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20your%20Loan%20Management%20System."
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-3 rounded-full border border-[#10154d]/12 bg-white px-7 py-4 text-sm font-semibold text-[#10154d] transition-all duration-300 hover:-translate-y-1 hover:border-[#3557ff]/30 hover:shadow-lg"
@@ -1235,7 +1235,7 @@ export default function Lms() {
               </button>
 
               <a
-                href="https://wa.me/919876543210?text=Hi%2C%20I%20have%20some%20questions%20about%20your%20Loan%20Management%20System."
+                href="https://wa.me/917412066477?text=Hi%2C%20I%20have%20some%20questions%20about%20your%20Loan%20Management%20System."
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-center gap-2 rounded-full border border-[#10154d]/12 bg-white px-6 py-3.5 text-sm font-semibold text-[#10154d] transition-all hover:-translate-y-0.5 hover:border-[#3557ff]/30 hover:shadow-md"
@@ -1287,15 +1287,15 @@ export default function Lms() {
 
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917412066477"
                   className="flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#10154d] transition hover:bg-[#e9edff]"
                 >
                   <Phone size={18} />
-                  Call +91 98765 43210
+                  Call +91 74120 66477
                 </a>
 
                 <a
-                  href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20book%20a%20demo%20of%20your%20Loan%20Management%20System."
+                  href="https://wa.me/917412066477?text=Hi%2C%20I%20would%20like%20to%20book%20a%20demo%20of%20your%20Loan%20Management%20System."
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-3 rounded-full bg-[#3557ff] px-7 py-4 text-sm font-semibold text-white transition hover:bg-[#4868ff]"
@@ -1335,9 +1335,9 @@ export default function Lms() {
 
               <button onClick={() => scrollTo("contact")}>Contact</button>
 
-              <a href="tel:+919876543210" className="flex items-center gap-2">
+              <a href="tel:+917412066477" className="flex items-center gap-2">
                 <Phone size={15} />
-                +91 98765 43210
+                +91 74120 66477
               </a>
             </div>
 
@@ -1354,7 +1354,7 @@ export default function Lms() {
 
       {/* Phone */}
       <a
-        href="tel:+919876543210"
+        href="tel:+917412066477"
         aria-label="Call"
         className="fixed bottom-24 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-[#10154d] text-white shadow-[0_10px_30px_rgba(16,21,77,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#3557ff] sm:right-6"
       >
@@ -1363,7 +1363,7 @@ export default function Lms() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20Loan%20Management%20System."
+        href="https://wa.me/917412066477?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20Loan%20Management%20System."
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"

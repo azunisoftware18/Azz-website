@@ -484,7 +484,7 @@ export default function About() {
                 <span className="w-10 h-10 rounded-xl bg-blue-100/80 flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors duration-300">
                   <Phone size={20} />
                 </span>
-                <span className="text-sm font-medium">+1 (555) 123-4567</span>
+                <span className="text-sm font-medium">+91 74120 66477</span>
               </div>
               <div className="flex items-center gap-4 group">
                 <span className="w-10 h-10 rounded-xl bg-blue-100/80 flex items-center justify-center text-blue-600 group-hover:bg-blue-200 transition-colors duration-300">

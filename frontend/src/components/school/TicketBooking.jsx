@@ -21,8 +21,6 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
-import BookingDash from "../../../public/images/bookingdash.png"
-
 /* =========================================================
    DATA
 ========================================================= */
@@ -129,8 +127,7 @@ const screenshots = [
     label: "Platform Overview",
     description:
       "Monitor bookings, ticket sales, visitors, revenue and attraction performance.",
-    // image: "/images/bookingdash.png",
-    image: BookingDash,
+    image: "/images/bookingdash.png",
   },
   // {
   //   title: "Reseller Management",

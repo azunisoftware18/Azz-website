@@ -223,11 +223,11 @@ export default function FintechReseller() {
 
             <div className="hidden items-center gap-4 lg:flex">
               <a
-                href="tel:+919876543210"
+                href="tel:+917412066477"
                 className="flex items-center gap-2 text-sm text-slate-600"
               >
                 <Phone size={15} />
-                +91 98765 43210
+                +91 74120 66477
               </a>
               <button
                 onClick={() => scrollTo("contact")}
@@ -307,7 +307,7 @@ export default function FintechReseller() {
                   />
                 </button>
                 <a
-                  href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20Fintech%20Reseller%20Platform."
+                  href="https://wa.me/917412066477?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20Fintech%20Reseller%20Platform."
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-3 rounded-full border border-slate-200 bg-white px-7 py-4 text-sm font-semibold text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50"
@@ -784,7 +784,7 @@ export default function FintechReseller() {
                   className="flex items-center justify-center gap-3 rounded-full bg-slate-800 px-7 py-4 text-sm font-semibold text-white transition hover:bg-slate-700"
                 >
                   <Phone size={18} />
-                  +91 98765 43210
+                  +91 74120 66477
                 </a>
                 <a
                   href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20your%20Fintech%20Reseller%20Platform."
@@ -838,7 +838,8 @@ export default function FintechReseller() {
 
       {/* ===== FLOATING CONTACT ===== */}
       <a
-        href="tel:+919876543210"
+      // +91 74120 66477
+        href="tel:+917412066477"
         aria-label="Call"
         className="fixed bottom-24 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-slate-800 text-white shadow-xl transition hover:-translate-y-1 hover:bg-indigo-600 sm:right-6"
       >
@@ -846,7 +847,7 @@ export default function FintechReseller() {
       </a>
 
       <a
-        href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20Fintech%20Reseller%20Platform."
+        href="https://wa.me/917412066477?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20Fintech%20Reseller%20Platform."
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"

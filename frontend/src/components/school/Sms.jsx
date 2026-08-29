@@ -126,7 +126,7 @@ function Sms() {
               {/* Right side */}
               <div className="flex items-center gap-3">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917412066477"
                   className="hidden sm:flex items-center gap-2 text-slate-700 hover:text-brand-600 font-semibold text-sm px-3 py-2 rounded-lg hover:bg-slate-100 transition-all border border-transparent hover:border-slate-200"
                 >
                   <div className="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center">
@@ -134,7 +134,7 @@ function Sms() {
                   </div>
 
                   {/* change it */}
-                  <span className="hidden md:inline">+91 98765 43210</span>
+                  <span className="hidden md:inline">+91 74120 66477</span>
                 </a>
 
                 <button
@@ -192,10 +192,10 @@ function Sms() {
               ROI Calculator
             </a>
             <a
-              href="tel:+919876543210"
+              href="tel:+917412066477"
               className="flex items-center gap-2 py-2 text-brand-600 font-semibold"
             >
-              <FaPhone /> Call Sales: +91 98765 43210
+              <FaPhone /> Call Sales: +91 74120 66477
             </a>
             <button
               onClick={() => {
@@ -242,7 +242,7 @@ function Sms() {
                   <FaCalendarCheck className="text-sm" />
                 </button>
                 <a
-                  href="https://wa.me/919876543210?text=Hi%20Azzunique,%20I%20would%20like%20to%20get%20a%20demo%20and%20pricing%20details%20for%20our%20school."
+                  href="https://wa.me/917412066477?text=Hi%20Azzunique,%20I%20would%20like%20to%20get%20a%20demo%20and%20pricing%20details%20for%20school%20management%20system."
                   target="_blank"
                   className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-base rounded-2xl shadow-xl shadow-emerald-500/25 hover:shadow-emerald-500/40 hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3"
                 >
@@ -1666,10 +1666,10 @@ function Sms() {
                 Book Free Live Guided Demo
               </button>
               <a
-                href="tel:+919876543210"
+                href="tel:+917412066477"
                 className="w-full sm:w-auto px-8 py-4 bg-brand-800/60 border border-brand-400/40 hover:bg-brand-800 text-white font-bold text-base rounded-2xl transition-all flex items-center justify-center gap-2"
               >
-                <PhoneCall /> Call Sales: +91 98765 43210
+                <PhoneCall /> Call Sales: +91 74120 66477
               </a>
             </div>
           </div>
@@ -1760,15 +1760,15 @@ function Sms() {
                 <div className="space-y-2 text-xs">
                   <p className="flex items-center gap-2">
                     <i className="fa-solid fa-phone text-brand-500"></i> +91
-                    98765 43210 / 98765 43211
+                     74120 66477 
                   </p>
                   <p className="flex items-center gap-2">
                     <i className="fa-solid fa-envelope text-brand-500"></i>{" "}
-                    sales@azzunique.com
+                    info@azzunique.com
                   </p>
                   <p className="flex items-center gap-2">
                     <i className="fa-solid fa-globe text-brand-500"></i>{" "}
-                    www.azzunique.com
+                    azzunique.co.in
                   </p>
                 </div>
               </div>
@@ -1808,7 +1808,7 @@ function Sms() {
             </button>
           </div>
           <a
-            href="https://wa.me/919876543210?text=Hi%20Azzunique%20ERP%20Team,%20I%20am%20interested%20in%20a%20free%20demo%20for%20our%20school."
+            href="https://wa.me/917412066477?text=Hi%20Azzunique%20ERP%20Team,%20I%20am%20interested%20in%20a%20free%20demo%20for%20school%20management%20system."
             target="_blank"
             className="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl shadow-emerald-500/50 hover:scale-110 transition-all"
           >
