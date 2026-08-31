@@ -1,24 +1,46 @@
-import dotenv from "dotenv"; 
+// import dotenv from "dotenv"; 
+// import prisma from "./db/db.js";
+// import app from "./app.js";
+// dotenv.config({ path: "./.env" });
+
+
+
+// (async function main() {
+//   try {
+//     await prisma.$connect();
+
+//     console.log("✅ Database connected");
+
+//     const PORT = process.env.PORT || 4000;
+
+//     app.listen(PORT, "0.0.0.0", () => {
+//       console.log(`🚀 Server running on port ${PORT}`);
+//     });
+//   } catch (error) {
+//     console.error("❌ Startup error:", error);
+
+//     process.exit(1);
+//   }
+// })();
+
+import "dotenv/config";
 import prisma from "./db/db.js";
 import app from "./app.js";
-dotenv.config({ path: "./.env" });
 
+let initialized = false;
 
-
-(async function main() {
-  try {
+async function initializeDatabase() {
+  if (!initialized) {
     await prisma.$connect();
-
     console.log("✅ Database connected");
-
-    const PORT = process.env.PORT || 4000;
-
-    app.listen(PORT, "0.0.0.0", () => {
-      console.log(`🚀 Server running on port ${PORT}`);
-    });
-  } catch (error) {
-    console.error("❌ Startup error:", error);
-
-    process.exit(1);
+    initialized = true;
   }
-})();
+}
+
+try {
+  await initializeDatabase();
+} catch (error) {
+  console.error("❌ Database connection error:", error);
+}
+
+export default app;
