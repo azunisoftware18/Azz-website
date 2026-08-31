@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import StatsCard from "./components/StatsCard";
 import RecentBlogs from "./components/RecentBlogs";
-import RecentJobs from "./components/RecentJobs";
+// import RecentJobs from "./components/RecentJobs";
 import RecentApplications from "../../../admin/pages/dashboard/components/RecentApplication.jsx";
 import { getDashboard } from "../../../services/dashboard.service";
 
