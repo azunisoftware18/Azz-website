@@ -77,7 +77,7 @@ function Home() {
 
   return (
     <>
-      <Header videoSrc="https://www.infosys.com//content/dam/infosys-web/en/hero-video/leon-navigate-ai.mp4" />
+      <Header videoSrc="/videos/vi.mp4" />
 
       {/* Top Stories */}
       <section className="bg-[#d9dde8] py-12 overflow-hidden">

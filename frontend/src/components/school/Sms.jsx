@@ -76,9 +76,9 @@ function Sms() {
                     <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">
                       Aadishala<span className="text-brand-600"> ERP</span>
                     </span>
-                    <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
-                      School Operating System
-                    </span>
+                    {/* <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
+                      School Management System
+                    </span> */}
                   </div>
                 </a>
               </div>
@@ -335,7 +335,7 @@ function Sms() {
               {activeTab === "overview" && (
                 <div className="overflow-hidden  shadow-xl">
                   <img
-                    src="/images/dashboard.png"
+                    src="/images/ssdash.png"
                     alt="School ERP Dashboard"
                     className="block w-full h-auto object-contain"
                   />
@@ -365,7 +365,7 @@ function Sms() {
               {activeTab === "exams" && (
                 <div className="overflow-hidden rounded-xl border border-slate-800 bg-white shadow-xl">
                   <img
-                    src="/images/exams.png"
+                    src="/images/exam.png"
                     alt="Examination Management Dashboard"
                     className="block w-full h-auto object-contain"
                   />
