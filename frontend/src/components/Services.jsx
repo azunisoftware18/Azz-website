@@ -138,28 +138,8 @@ export default function Services() {
           })}
         </div>
 
-        {/* Call to action */}
-        <div className="mt-20 text-center">
-          <a
-            href="#"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-black text-white font-semibold rounded-xl shadow-lg shadow-indigo-200/50 hover:bg-gray-900 hover:shadow-indigo-300/70 hover:-translate-y-0.5 transition-all duration-300"
-          >
-            Let's Build Something Amazing
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-        </div>
+     
+        
       </div>
     </section>
   );

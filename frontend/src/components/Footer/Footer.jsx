@@ -181,12 +181,13 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-4 text-[15px]">
-              <li>
-                <AnimatedLink to="/about">About Us</AnimatedLink>
-              </li>
 
               <li>
                 <AnimatedLink to="/">Home</AnimatedLink>
+              </li>
+              
+              <li>
+                <AnimatedLink to="/about">About Us</AnimatedLink>
               </li>
 
               <li>

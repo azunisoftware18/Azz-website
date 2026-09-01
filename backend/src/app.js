@@ -32,10 +32,6 @@ app.use("/api/blog-categories", categoryRoutes);
 app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 app.use("/api/jobs", jobRoutes);
 app.use("/api/applications", applicationRoutes);
-app.use(
-  "/uploads",
-  express.static(path.join(process.cwd(), "uploads"))
-);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/settings", settingsRoutes);
@@ -47,3 +43,4 @@ app.use("/api/gallery", galleryRoutes);
 app.use("/api/services", serviceRoutes);
 
 export default app;
+

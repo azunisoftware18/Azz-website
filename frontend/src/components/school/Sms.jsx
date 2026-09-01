@@ -76,9 +76,9 @@ function Sms() {
                     <span className="font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">
                       Aadishala<span className="text-brand-600"> ERP</span>
                     </span>
-                    <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
-                      School Operating System
-                    </span>
+                    {/* <span className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider">
+                      School Management System
+                    </span> */}
                   </div>
                 </a>
               </div>
@@ -321,7 +321,7 @@ function Sms() {
                     ></i>
                     {tab === "overview" && "Main Dashboard"}
                     {tab === "fees" && "Fee Management"}
-                    {tab === "attendance" && "RFID Attendance"}
+                    {tab === "attendance" && "Attendance"}
                     {tab === "exams" && "Examination & Report"}
                     {tab === "transport" && "Transport & GPS"}
                   </button>
@@ -330,578 +330,57 @@ function Sms() {
             </div>
 
             {/* Dashboard Display */}
-            <div className="relative rounded-2xl bg-slate-900 p-3 sm:p-5 shadow-2xl border border-slate-800">
-              {/* Browser Bar */}
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 text-xs text-slate-400">
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
-                  </div>
-                  <span className="ml-3 font-mono text-slate-400 bg-slate-800 px-3 py-1 rounded-md text-[11px] flex items-center gap-1.5">
-                    <i className="fa-solid fa-lock text-emerald-400 text-[10px]"></i>
-                    https://school-demo.azzunique.com/admin/dashboard
-                  </span>
+            {/* ===== SCREENSHOT CONTENT ===== */}
+            <div className=" p-4 sm:p-4 text-slate-100">
+              {activeTab === "overview" && (
+                <div className="overflow-hidden  shadow-xl">
+                  <img
+                    src="/images/ssdash.png"
+                    alt="School ERP Dashboard"
+                    className="block w-full h-auto object-contain"
+                  />
                 </div>
-                <div className="hidden sm:flex items-center gap-3 font-medium">
-                  <span className="text-emerald-400 flex items-center gap-1">
-                    <i className="fa-solid fa-circle text-[8px]"></i> System
-                    Live
-                  </span>
-                  <span>Academic Session: 2026-27</span>
+              )}
+
+              {activeTab === "fees" && (
+                <div className="overflow-hidden rounded-xl border border-slate-800 bg-white shadow-xl">
+                  <img
+                    src="/images/fees.png"
+                    alt="Fee Management Dashboard"
+                    className="block w-full h-auto object-contain"
+                  />
                 </div>
-              </div>
+              )}
 
-              {/* Tab Content */}
-              <div className="bg-slate-950 rounded-xl p-4 sm:p-6 text-slate-100 min-h-[460px]">
-                {activeTab === "overview" && (
-                  <div>
-                    {/* Metric Cards */}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-                      <div className="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                        <div className="flex justify-between items-center text-slate-400 text-xs font-medium">
-                          <span>Total Students</span>
-                          <i className="fa-solid fa-user-graduate text-brand-500 text-base"></i>
-                        </div>
-                        <div className="text-2xl font-bold mt-2 text-white">
-                          2,480
-                        </div>
-                        <div className="text-[11px] text-emerald-400 mt-1 flex items-center gap-1">
-                          <i className="fa-solid fa-arrow-up"></i> +12% from
-                          last term
-                        </div>
-                      </div>
-                      <div className="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                        <div className="flex justify-between items-center text-slate-400 text-xs font-medium">
-                          <span>Today's Attendance</span>
-                          <i className="fa-solid fa-clipboard-user text-emerald-500 text-base"></i>
-                        </div>
-                        <div className="text-2xl font-bold mt-2 text-emerald-400">
-                          96.4%
-                        </div>
-                        <div className="text-[11px] text-slate-400 mt-1">
-                          2,391 Present / 89 Absent
-                        </div>
-                      </div>
-                      <div className="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                        <div className="flex justify-between items-center text-slate-400 text-xs font-medium">
-                          <span>Fee Collection (This Month)</span>
-                          <i className="fa-solid fa-indian-rupee-sign text-amber-500 text-base"></i>
-                        </div>
-                        <div className="text-2xl font-bold mt-2 text-white">
-                          ₹ 42,85,000
-                        </div>
-                        <div className="text-[11px] text-emerald-400 mt-1 flex items-center gap-1">
-                          <i className="fa-solid fa-circle-check"></i> 88%
-                          Collection Rate
-                        </div>
-                      </div>
-                      <div className="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                        <div className="flex justify-between items-center text-slate-400 text-xs font-medium">
-                          <span>Active Fleet (Buses)</span>
-                          <i className="fa-solid fa-bus text-indigo-400 text-base"></i>
-                        </div>
-                        <div className="text-2xl font-bold mt-2 text-white">
-                          18 / 18
-                        </div>
-                        <div className="text-[11px] text-indigo-400 mt-1">
-                          All Routes On Time
-                        </div>
-                      </div>
-                    </div>
+              {activeTab === "attendance" && (
+                <div className="overflow-hidden rounded-xl border border-slate-800 bg-white shadow-xl">
+                  <img
+                    src="/images/attendance.png"
+                    alt="Attendance Management Dashboard"
+                    className="block w-full h-auto object-contain"
+                  />
+                </div>
+              )}
 
-                    {/* Chart and Alerts */}
-                    <div className="grid lg:grid-cols-3 gap-6">
-                      <div className="lg:col-span-2 bg-slate-900 p-4 rounded-xl border border-slate-800">
-                        <div className="flex justify-between items-center mb-4">
-                          <h4 className="font-bold text-sm text-slate-200">
-                            Monthly Fee Collection & Expenses Analytics
-                          </h4>
-                          <span className="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded">
-                            2026 Fiscal Year
-                          </span>
-                        </div>
-                        <div className="h-44 flex items-end justify-between gap-2 pt-6 px-2 border-b border-slate-800">
-                          <div className="flex-1 flex flex-col items-center gap-2">
-                            <div
-                              className="w-full bg-brand-500/80 rounded-t h-24 hover:bg-brand-400 transition-colors"
-                              title="Apr: 35L"
-                            ></div>
-                            <span className="text-[10px] text-slate-400">
-                              Apr
-                            </span>
-                          </div>
-                          <div className="flex-1 flex flex-col items-center gap-2">
-                            <div
-                              className="w-full bg-brand-500/80 rounded-t h-32 hover:bg-brand-400 transition-colors"
-                              title="May: 48L"
-                            ></div>
-                            <span className="text-[10px] text-slate-400">
-                              May
-                            </span>
-                          </div>
-                          <div className="flex-1 flex flex-col items-center gap-2">
-                            <div
-                              className="w-full bg-brand-500/80 rounded-t h-28 hover:bg-brand-400 transition-colors"
-                              title="Jun: 40L"
-                            ></div>
-                            <span className="text-[10px] text-slate-400">
-                              Jun
-                            </span>
-                          </div>
-                          <div className="flex-1 flex flex-col items-center gap-2">
-                            <div
-                              className="w-full bg-brand-500/80 rounded-t h-36 hover:bg-brand-400 transition-colors"
-                              title="Jul: 52L"
-                            ></div>
-                            <span className="text-[10px] text-slate-400">
-                              Jul
-                            </span>
-                          </div>
-                          <div className="flex-1 flex flex-col items-center gap-2">
-                            <div
-                              className="w-full bg-emerald-500 rounded-t h-40 hover:bg-emerald-400 transition-colors"
-                              title="Aug: 58L"
-                            ></div>
-                            <span className="text-[10px] text-emerald-400 font-bold">
-                              Aug
-                            </span>
-                          </div>
-                          <div className="flex-1 flex flex-col items-center gap-2">
-                            <div
-                              className="w-full bg-slate-800 rounded-t h-16"
-                              title="Sep (Est)"
-                            ></div>
-                            <span className="text-[10px] text-slate-400">
-                              Sep
-                            </span>
-                          </div>
-                        </div>
-                      </div>
+              {activeTab === "exams" && (
+                <div className="overflow-hidden rounded-xl border border-slate-800 bg-white shadow-xl">
+                  <img
+                    src="/images/exam.png"
+                    alt="Examination Management Dashboard"
+                    className="block w-full h-auto object-contain"
+                  />
+                </div>
+              )}
 
-                      <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
-                        <div>
-                          <h4 className="font-bold text-sm text-slate-200 mb-3 flex items-center gap-2">
-                            <i className="fa-solid fa-bell text-amber-400"></i>{" "}
-                            Recent ERP Notifications
-                          </h4>
-                          <div className="space-y-3 text-xs">
-                            <div className="p-2.5 rounded-lg bg-slate-800/60 border border-slate-700/50">
-                              <div className="text-slate-200 font-semibold">
-                                Automatic SMS Alerts Sent
-                              </div>
-                              <div className="text-slate-400 text-[11px]">
-                                89 absence SMS sent to parents via WhatsApp API.
-                              </div>
-                            </div>
-                            <div className="p-2.5 rounded-lg bg-slate-800/60 border border-slate-700/50">
-                              <div className="text-slate-200 font-semibold">
-                                Online Fee Received
-                              </div>
-                              <div className="text-slate-400 text-[11px]">
-                                Rohan Sharma (Class X-A) paid ₹ 14,500 via UPI.
-                              </div>
-                            </div>
-                            <div className="p-2.5 rounded-lg bg-slate-800/60 border border-slate-700/50">
-                              <div className="text-slate-200 font-semibold">
-                                Timetable Substitution
-                              </div>
-                              <div className="text-slate-400 text-[11px]">
-                                Prof. Mehta on leave. Period 3 auto-assigned to
-                                Ms. Verma.
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <span className="text-[10px] text-brand-400 hover:underline cursor-pointer font-medium text-center block mt-3">
-                          View Live Audit Logs &rarr;
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {/* Similar for other tabs – using only Tailwind classes */}
-
-                {activeTab === "fees" && (
-                  <div>
-                    <div className="flex flex-wrap justify-between items-center mb-6 gap-3">
-                      <div>
-                        <h3 className="text-lg font-bold text-white">
-                          Fee Collection & Online Gateway
-                        </h3>
-                        <p className="text-xs text-slate-400">
-                          Automated invoices, UPI/Card payments & customized
-                          receipt generation
-                        </p>
-                      </div>
-                      <div className="flex gap-2">
-                        <span className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs px-3 py-1.5 rounded-lg font-medium flex items-center gap-1.5">
-                          <i className="fa-solid fa-shield-halved"></i> Payment
-                          Gateway Connected
-                        </span>
-                      </div>
-                    </div>
-                    <div className="overflow-x-auto rounded-lg border border-slate-800">
-                      <table className="w-full text-left text-xs text-slate-300">
-                        <thead className="bg-slate-900 text-slate-400 uppercase text-[10px] tracking-wider">
-                          <tr>
-                            <th className="p-3">Receipt #</th>
-                            <th className="p-3">Student Name</th>
-                            <th className="p-3">Class & Sec</th>
-                            <th className="p-3">Fee Type</th>
-                            <th className="p-3">Amount</th>
-                            <th className="p-3">Payment Mode</th>
-                            <th className="p-3">Status</th>
-                            <th className="p-3 text-right">Action</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-slate-800 font-mono">
-                          <tr className="hover:bg-slate-900/50">
-                            <td className="p-3 text-brand-400 font-semibold">
-                              #AZ-9841
-                            </td>
-                            <td className="p-3 font-sans font-medium text-white">
-                              Aarav Singhania
-                            </td>
-                            <td className="p-3 font-sans">Class 10-B</td>
-                            <td className="p-3 font-sans">Q2 Tuition + Bus</td>
-                            <td className="p-3 font-bold text-emerald-400">
-                              ₹ 18,500
-                            </td>
-                            <td className="p-3 font-sans">
-                              <span className="bg-indigo-950 text-indigo-300 border border-indigo-800 px-2 py-0.5 rounded text-[10px]">
-                                UPI / Razorpay
-                              </span>
-                            </td>
-                            <td className="p-3 font-sans">
-                              <span className="bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-0.5 rounded text-[10px]">
-                                Paid
-                              </span>
-                            </td>
-                            <td className="p-3 text-right font-sans">
-                              <button className="text-xs text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded">
-                                <i className="fa-solid fa-print"></i> Print
-                              </button>
-                            </td>
-                          </tr>
-                          <tr className="hover:bg-slate-900/50">
-                            <td className="p-3 text-brand-400 font-semibold">
-                              #AZ-9842
-                            </td>
-                            <td className="p-3 font-sans font-medium text-white">
-                              Ananya Verma
-                            </td>
-                            <td className="p-3 font-sans">Class 8-A</td>
-                            <td className="p-3 font-sans">
-                              Annual Activity Fee
-                            </td>
-                            <td className="p-3 font-bold text-white">
-                              ₹ 6,200
-                            </td>
-                            <td className="p-3 font-sans">
-                              <span className="bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded text-[10px]">
-                                Bank Transfer
-                              </span>
-                            </td>
-                            <td className="p-3 font-sans">
-                              <span className="bg-emerald-950 text-emerald-400 border border-emerald-800 px-2 py-0.5 rounded text-[10px]">
-                                Paid
-                              </span>
-                            </td>
-                            <td className="p-3 text-right font-sans">
-                              <button className="text-xs text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 px-2.5 py-1 rounded">
-                                <i className="fa-solid fa-print"></i> Print
-                              </button>
-                            </td>
-                          </tr>
-                          <tr className="hover:bg-slate-900/50">
-                            <td className="p-3 text-brand-400 font-semibold">
-                              #AZ-9843
-                            </td>
-                            <td className="p-3 font-sans font-medium text-white">
-                              Kabir Patel
-                            </td>
-                            <td className="p-3 font-sans">Class 12-C</td>
-                            <td className="p-3 font-sans">Q2 Tuition Fee</td>
-                            <td className="p-3 font-bold text-rose-400">
-                              ₹ 22,000
-                            </td>
-                            <td className="p-3 font-sans">
-                              <span className="text-slate-500 font-sans">
-                                Pending
-                              </span>
-                            </td>
-                            <td className="p-3 font-sans">
-                              <span className="bg-rose-950 text-rose-400 border border-rose-800 px-2 py-0.5 rounded text-[10px]">
-                                Due in 2 days
-                              </span>
-                            </td>
-                            <td className="p-3 text-right font-sans">
-                              <button className="text-xs text-brand-300 bg-brand-950 hover:bg-brand-900 border border-brand-800 px-2.5 py-1 rounded flex items-center gap-1 justify-end ml-auto">
-                                <i className="fa-brands fa-whatsapp"></i> Remind
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                )}
-
-                {activeTab === "attendance" && (
-                  <div>
-                    <div className="flex justify-between items-center mb-6">
-                      <div>
-                        <h3 className="text-lg font-bold text-white">
-                          Biometric & RFID Attendance Console
-                        </h3>
-                        <p className="text-xs text-slate-400">
-                          Real-time gate punch logs with automatic SMS dispatch
-                          to parents
-                        </p>
-                      </div>
-                      <span className="bg-brand-500/20 text-brand-400 border border-brand-500/30 text-xs px-3 py-1 rounded-lg">
-                        5 RFID Gate Readers Active
-                      </span>
-                    </div>
-                    <div className="grid md:grid-cols-3 gap-4">
-                      <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 md:col-span-2">
-                        <h4 className="text-xs font-bold text-slate-300 uppercase mb-3">
-                          Live Punch Stream (Main Gate 1)
-                        </h4>
-                        <div className="space-y-2 font-mono text-xs">
-                          <div className="flex items-center justify-between p-2 rounded bg-slate-800/80 border border-slate-700/60">
-                            <div className="flex items-center gap-2">
-                              <i className="fa-solid fa-circle-check text-emerald-400"></i>
-                              <span className="text-white font-sans font-medium">
-                                Vikramaditya Roy (XI-B)
-                              </span>
-                            </div>
-                            <span className="text-slate-400 text-[11px]">
-                              08:14:02 AM - Card Punch
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between p-2 rounded bg-slate-800/80 border border-slate-700/60">
-                            <div className="flex items-center gap-2">
-                              <i className="fa-solid fa-circle-check text-emerald-400"></i>
-                              <span className="text-white font-sans font-medium">
-                                Sneha Kulkarni (IX-A)
-                              </span>
-                            </div>
-                            <span className="text-slate-400 text-[11px]">
-                              08:13:50 AM - Face Recognition
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between p-2 rounded bg-slate-800/80 border border-slate-700/60">
-                            <div className="flex items-center gap-2">
-                              <i className="fa-solid fa-triangle-exclamation text-amber-400"></i>
-                              <span className="text-white font-sans font-medium">
-                                Rohan Gupta (VII-C)
-                              </span>
-                            </div>
-                            <span className="text-amber-400 text-[11px]">
-                              08:35:10 AM - Late Arrival
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
-                        <div>
-                          <h4 className="text-xs font-bold text-slate-300 uppercase mb-3">
-                            Daily Breakdown
-                          </h4>
-                          <div className="space-y-3">
-                            <div>
-                              <div className="flex justify-between text-xs mb-1">
-                                <span className="text-slate-400">
-                                  Students Present
-                                </span>
-                                <span className="text-emerald-400 font-bold">
-                                  96.4%
-                                </span>
-                              </div>
-                              <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                                <div className="bg-emerald-500 h-full w-[96.4%]"></div>
-                              </div>
-                            </div>
-                            <div>
-                              <div className="flex justify-between text-xs mb-1">
-                                <span className="text-slate-400">
-                                  Teachers Present
-                                </span>
-                                <span className="text-brand-400 font-bold">
-                                  98.5%
-                                </span>
-                              </div>
-                              <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                                <div className="bg-brand-500 h-full w-[98.5%]"></div>
-                              </div>
-                            </div>
-                            <div>
-                              <div className="flex justify-between text-xs mb-1">
-                                <span className="text-slate-400">
-                                  Non-Teaching Staff
-                                </span>
-                                <span className="text-indigo-400 font-bold">
-                                  100%
-                                </span>
-                              </div>
-                              <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-                                <div className="bg-indigo-500 h-full w-full"></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <button className="w-full mt-4 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2 rounded-lg">
-                          Send Absentee SMS Alerts
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {activeTab === "exams" && (
-                  <div>
-                    <div className="flex justify-between items-center mb-6">
-                      <div>
-                        <h3 className="text-lg font-bold text-white">
-                          Exam Engine & Automated Marksheets
-                        </h3>
-                        <p className="text-xs text-slate-400">
-                          CBSE CCE compliant grading, rank list calculation, and
-                          single-click PDF report card generation
-                        </p>
-                      </div>
-                      <span className="bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs px-3 py-1 rounded-lg">
-                        Term 1 Assessment
-                      </span>
-                    </div>
-                    <div className="bg-slate-900 p-4 rounded-xl border border-slate-800 mb-4">
-                      <div className="flex flex-wrap items-center justify-between gap-4 pb-3 border-b border-slate-800">
-                        <div>
-                          <span className="text-xs text-slate-400 block">
-                            Selected Examination
-                          </span>
-                          <span className="text-sm font-bold text-white">
-                            Half Yearly Examination 2026-27
-                          </span>
-                        </div>
-                        <div>
-                          <span className="text-xs text-slate-400 block">
-                            Class & Section
-                          </span>
-                          <span className="text-sm font-bold text-brand-400">
-                            Class 10 - Section A
-                          </span>
-                        </div>
-                        <button className="bg-emerald-600 hover:bg-emerald-500 text-white text-xs px-3 py-2 rounded-lg font-semibold flex items-center gap-1.5">
-                          <i className="fa-solid fa-file-pdf"></i> Download
-                          Class Marksheets (PDF)
-                        </button>
-                      </div>
-                      <div className="mt-4 grid grid-cols-2 md:grid-cols-5 gap-3 text-center">
-                        <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                          <span className="text-[10px] text-slate-400 block">
-                            Mathematics
-                          </span>
-                          <span className="text-sm font-bold text-emerald-400">
-                            98 / 100 (A1)
-                          </span>
-                        </div>
-                        <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                          <span className="text-[10px] text-slate-400 block">
-                            Science & Tech
-                          </span>
-                          <span className="text-sm font-bold text-emerald-400">
-                            95 / 100 (A1)
-                          </span>
-                        </div>
-                        <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                          <span className="text-[10px] text-slate-400 block">
-                            English Core
-                          </span>
-                          <span className="text-sm font-bold text-brand-400">
-                            89 / 100 (A2)
-                          </span>
-                        </div>
-                        <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                          <span className="text-[10px] text-slate-400 block">
-                            Social Studies
-                          </span>
-                          <span className="text-sm font-bold text-emerald-400">
-                            92 / 100 (A1)
-                          </span>
-                        </div>
-                        <div className="bg-slate-950 p-2.5 rounded-lg border border-slate-800 col-span-2 md:col-span-1">
-                          <span className="text-[10px] text-slate-400 block">
-                            Overall Rank
-                          </span>
-                          <span className="text-sm font-extrabold text-amber-400">
-                            Rank # 02
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {activeTab === "transport" && (
-                  <div>
-                    <div className="flex justify-between items-center mb-4">
-                      <div>
-                        <h3 className="text-lg font-bold text-white">
-                          Live Transport GPS Fleet Tracker
-                        </h3>
-                        <p className="text-xs text-slate-400">
-                          Real-time bus tracking, speed alerts & route
-                          optimization for parents and school admin
-                        </p>
-                      </div>
-                      <span className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs px-3 py-1 rounded-lg flex items-center gap-1.5">
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>{" "}
-                        Live GPS Streaming
-                      </span>
-                    </div>
-                    <div className="relative h-64 bg-slate-900 rounded-xl border border-slate-800 overflow-hidden flex items-center justify-center p-4">
-                      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                      <svg
-                        className="absolute inset-0 w-full h-full text-brand-500/40"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeDasharray="6,6"
-                      >
-                        <path
-                          d="M 50 150 Q 200 50 400 120 T 700 180"
-                          fill="none"
-                        />
-                      </svg>
-                      <div className="absolute top-1/4 left-1/3 bg-brand-600 text-white p-2 rounded-xl shadow-lg flex items-center gap-2 border border-brand-400 animate-bounce">
-                        <i className="fa-solid fa-bus text-xs"></i>
-                        <div className="text-[11px] leading-tight font-sans">
-                          <div className="font-bold">Bus #04 - Route North</div>
-                          <div className="text-[9px] text-brand-200">
-                            Speed: 34 km/h • Next: Sector 14
-                          </div>
-                        </div>
-                      </div>
-                      <div className="absolute bottom-1/3 right-1/4 bg-amber-600 text-white p-2 rounded-xl shadow-lg flex items-center gap-2 border border-amber-400">
-                        <i className="fa-solid fa-bus text-xs"></i>
-                        <div className="text-[11px] leading-tight font-sans">
-                          <div className="font-bold">Bus #12 - Route South</div>
-                          <div className="text-[9px] text-amber-200">
-                            Speed: 28 km/h • Dropping Off
-                          </div>
-                        </div>
-                      </div>
-                      <div className="absolute bottom-3 left-3 bg-slate-950/90 border border-slate-800 px-3 py-1.5 rounded-lg text-xs font-mono text-slate-300">
-                        Total Bus Capacity: 720 Seats | Active Occupancy: 645
-                        Students
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
+              {activeTab === "transport" && (
+                <div className="overflow-hidden rounded-xl border border-slate-800 bg-white shadow-xl">
+                  <img
+                    src="/images/transport.png"
+                    alt="School Transport GPS Dashboard"
+                    className="block w-full h-auto object-contain"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -1760,7 +1239,7 @@ function Sms() {
                 <div className="space-y-2 text-xs">
                   <p className="flex items-center gap-2">
                     <i className="fa-solid fa-phone text-brand-500"></i> +91
-                     74120 66477 
+                    74120 66477
                   </p>
                   <p className="flex items-center gap-2">
                     <i className="fa-solid fa-envelope text-brand-500"></i>{" "}

@@ -3,16 +3,16 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const DEFAULT_VIDEO_SRC =
-  "https://www.infosys.com//content/dam/infosys-web/en/hero-video/leon-navigate-ai.mp4";
+  "/videos/vi.mp4";
 
 const navLinks = [
   { to: "/", label: "Home", end: true },
   { to: "/about", label: "About Us" },
   { to: "/services", label: "Services" },
-  { to: "/careers", label: "Careers" },
-  { to: "/whatwedo", label: "What We Do" },
+  // { to: "/careers", label: "Careers" },
   { to: "/pricing", label: "Pricing" },
-  { to: "/blog", label: "Blog" },
+  { to: "/whatwedo", label: "What We Do" },
+  // { to: "/blog", label: "Blog" },
 ];
 
 const navLinkClass = ({ isActive }) =>
