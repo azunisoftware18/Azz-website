@@ -18,12 +18,7 @@ export const createContact = async (req, res) => {
     });
 
     // 2. Save contact in Google Sheet
-    try {
-      await addContactToGoogleSheet(contact);
-    } catch (sheetError) {
-      // Google Sheet fail hone par database contact delete nahi hoga
-      console.error("Google Sheet Error:", sheetError);
-    }
+    await addContactToGoogleSheet(contact);
 
     return res.status(201).json({
       success: true,
@@ -31,7 +26,7 @@ export const createContact = async (req, res) => {
       data: contact,
     });
   } catch (error) {
-    console.error(error);
+    console.error("Create Contact Error:", error);
 
     return res.status(400).json({
       success: false,
@@ -46,12 +41,7 @@ export const createContact = async (req, res) => {
 
 export const getContacts = async (req, res) => {
   try {
-    const {
-      page = 1,
-      limit = 10,
-      search = "",
-      isRead,
-    } = req.query;
+    const { page = 1, limit = 10, search = "", isRead } = req.query;
 
     const skip = (Number(page) - 1) * Number(limit);
 
