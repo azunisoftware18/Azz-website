@@ -69,7 +69,7 @@ export const createRouter = () => {
 
           <Route path="whatwedo" element={<WWD />} />
 
-          <Route path="services/ERP" element={<Sms />} />
+          <Route path="ERP" element={<Sms />} />
 
           <Route path="lms" element={<Lms />} />
 

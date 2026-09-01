@@ -103,7 +103,7 @@ const services = [
       "Parent-teacher communication portal",
       "Timetable & exam management",
     ],
-    link: "/services/ERP",
+    link: "ERP",
   },
   {
     title: "Loan Management System",
