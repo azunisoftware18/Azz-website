@@ -283,7 +283,7 @@ export default function Lms() {
 
                 <div className="text-left">
                   <div className="text-xl font-bold ">
-                    Mas<span className="text-[#3557ff]">Cot</span>
+                   LMS {/* <span className="text-[#3557ff]">Cot</span> */}
                   </div>
 
                   {/* <div className="text-[9px] font-medium uppercase tracking-[0.2em] text-[#7b849a]">

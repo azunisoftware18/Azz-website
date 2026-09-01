@@ -308,7 +308,7 @@ export default function TicketBooking() {
             <div className="hidden items-center gap-3 lg:flex">
               {/* Phone */}
               <a
-                href="tel:+919876543210"
+                href="tel:+917412066477"
                 className="group flex items-center gap-2 rounded-full bg-[#171717] px-4 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ef5b2a] hover:shadow-lg"
               >
                 <Phone
@@ -316,7 +316,7 @@ export default function TicketBooking() {
                   className="transition-transform duration-300 group-hover:scale-110"
                 />
 
-                <span>+91 98765 43210</span>
+                <span>+91 74120 66477</span>
               </a>
 
               {/* Demo */}
@@ -374,11 +374,11 @@ export default function TicketBooking() {
 
                 {/* Mobile Phone */}
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917412066477"
                   className="mt-3 flex items-center justify-center gap-2 rounded-full bg-[#171717] px-4 py-3.5 text-sm font-semibold text-white transition hover:bg-[#ef5b2a]"
                 >
                   <Phone size={16} />
-                  +91 98765 43210
+                  +91 74120 66477
                 </a>
 
                 {/* Mobile Demo */}
@@ -996,11 +996,11 @@ export default function TicketBooking() {
                   {/* Buttons */}
                   <div className="mt-7 space-y-3">
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+917412066477"
                       className="group flex w-full items-center justify-center gap-3 rounded-full bg-[#171717] px-6 py-4 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ef5b2a] hover:shadow-lg"
                     >
                       <PhoneIcon />
-                      +91 98765 43210
+                      +91 74120 66477
                       <ArrowUpRight
                         size={16}
                         className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -1156,7 +1156,7 @@ export default function TicketBooking() {
       ===================================================== */}
 
       <a
-        href="tel:+919876543210"
+        href="tel:+917412066477"
         aria-label="Call"
         className="fixed bottom-24 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#171717] text-white shadow-xl transition hover:-translate-y-1 hover:bg-[#ef5b2a] sm:right-6"
       >
