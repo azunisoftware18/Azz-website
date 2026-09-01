@@ -443,7 +443,7 @@ export default function TicketBooking() {
                 </button>
 
                 <a
-                  href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20your%20Ticket%20Booking%20System."
+                  href="https://wa.me/917412066477?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20your%20Ticket%20Booking%20System."
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-3 rounded-full border border-black/10 bg-white/70 px-7 py-4 text-sm font-semibold text-[#171717] transition hover:-translate-y-1 hover:bg-white"
@@ -1008,7 +1008,7 @@ export default function TicketBooking() {
                     </a>
 
                     <a
-                      href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20your%20City%20Ticket%20Booking%20System."
+                      href="https://wa.me/917412066477?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20your%20City%20Ticket%20Booking%20System."
                       target="_blank"
                       rel="noreferrer"
                       className="group flex w-full items-center justify-center gap-3 rounded-full border border-black/10 bg-white px-6 py-4 text-sm font-semibold text-[#171717] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#ef5b2a]/30 hover:bg-[#fffaf7] hover:shadow-md"
@@ -1117,15 +1117,15 @@ export default function TicketBooking() {
 
               <div className="space-y-2">
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917412066477"
                   className="flex items-center gap-2 text-sm font-medium text-black/60 transition-colors hover:text-[#ef5b2a]"
                 >
                   <PhoneIcon />
-                  +91 98765 43210
+                  +91 74120 66477
                 </a>
 
                 <a
-                  href="https://wa.me/919876543210?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Ticket%20Booking%20System."
+                  href="https://wa.me/917412066477?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20Ticket%20Booking%20System."
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2 text-sm font-medium text-black/60 transition-colors hover:text-[#ef5b2a]"
@@ -1164,7 +1164,7 @@ export default function TicketBooking() {
       </a>
 
       <a
-        href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20Ticket%20Booking%20System."
+        href="https://wa.me/917412066477?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20Ticket%20Booking%20System."
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"
