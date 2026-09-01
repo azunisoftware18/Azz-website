@@ -309,7 +309,6 @@ function ServicesPage() {
                   {/* CTA */}
                   <a
                     href={service.link}
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="group/link mt-9 inline-flex items-center gap-3 rounded-full border border-[#10154d]/10 bg-white px-5 py-3 text-sm font-semibold text-[#10154d] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#3557ff] hover:bg-[#3557ff] hover:text-white hover:shadow-lg"
                   >
