@@ -20,20 +20,18 @@ export async function addContactToGoogleSheet({
   company,
   message,
 }) {
-  try {
-    const values = [
-      [
-        name || "",
-        email || "",
-        phone || "",
-        company || "",
-        message || "",
-        new Date().toLocaleString("en-IN", {
-          timeZone: "Asia/Kolkata",
-        }),
-      ],
-    ];
+  const values = [[
+    name ?? "",
+    email ?? "",
+    phone ?? "",
+    company ?? "",
+    message ?? "",
+    new Date().toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+    }),
+  ]];
 
+  try {
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: "Sheet1!A:F",
@@ -48,10 +46,9 @@ export async function addContactToGoogleSheet({
   } catch (error) {
     console.error(
       "Google Sheets Error:",
-      error?.response?.data || error.message
+      error?.response?.data || error
     );
 
-    throw new Error("Failed to save contact to Google Sheet");
+    throw error;
   }
 }
-
