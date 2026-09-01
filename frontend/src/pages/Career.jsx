@@ -414,13 +414,13 @@ function Career() {
                         ))}
                       </div>
                     </div>
-                    <button
-                      onClick={() => openApplyModal(job)}
+                    <Link
+                     to="/contact"
                       className="group relative inline-flex items-center justify-center gap-2 px-8 py-3 bg-indigo-600 text-white rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300 whitespace-nowrap shadow-lg shadow-indigo-200/50 hover:shadow-indigo-300/70"
                     >
                       <span>Apply Now</span>
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}
@@ -463,155 +463,7 @@ function Career() {
       </div>
 
       {/* ===== APPLICATION MODAL ===== */}
-      {showApplyModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
-          <div className="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl p-8 relative animate-fade-in-up">
-            {/* Close button */}
-            <button
-              onClick={closeApplyModal}
-              className="absolute top-4 right-4 p-2 rounded-full hover:bg-slate-100 transition-colors text-slate-400 hover:text-slate-700"
-            >
-              <X size={24} />
-            </button>
-
-            {!isSubmitted ? (
-              <>
-                <div className="mb-6">
-                  <h3 className="text-2xl font-semibold text-slate-900">
-                    Apply for {selectedJob?.title}
-                  </h3>
-                  <p className="text-slate-500 text-sm mt-1">
-                    Fill in your details and we'll get back to you soon.
-                  </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition outline-none"
-                      placeholder="John Doe"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition outline-none"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">
-                      Phone Number *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition outline-none"
-                      placeholder="+91 98765 43210"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="coverLetter" className="block text-sm font-medium text-slate-700 mb-1">
-                      Cover Letter (Optional)
-                    </label>
-                    <textarea
-                      id="coverLetter"
-                      name="coverLetter"
-                      rows="3"
-                      value={formData.coverLetter}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition outline-none resize-none"
-                      placeholder="Tell us why you'd be a great fit..."
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="resume" className="block text-sm font-medium text-slate-700 mb-1">
-                      Resume/CV *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="file"
-                        id="resume"
-                        name="resume"
-                        required
-                        onChange={handleFileChange}
-                        accept=".pdf,.doc,.docx"
-                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                      />
-                      <div className="flex items-center gap-3 px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 transition">
-                        <Upload size={20} className="text-slate-400" />
-                        <span className="text-sm text-slate-600">
-                          {formData.resume ? formData.resume.name : "Upload your resume (PDF, DOC, DOCX)"}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <span className="animate-spin rounded-full h-5 w-5 border-b-2 border-white" />
-                        Submitting...
-                      </>
-                    ) : (
-                      "Submit Application"
-                    )}
-                  </button>
-                </form>
-              </>
-            ) : (
-              <div className="text-center py-8">
-                <div className="mx-auto w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle size={40} className="text-emerald-600" />
-                </div>
-                <h3 className="text-2xl font-semibold text-slate-900 mb-2">
-                  Application Submitted!
-                </h3>
-                <p className="text-slate-500">
-                  Thank you for applying to <span className="font-medium text-slate-700">{selectedJob?.title}</span>.
-                  <br />
-                  We'll review your application and get back to you soon.
-                </p>
-                <button
-                  onClick={closeApplyModal}
-                  className="mt-6 px-6 py-2 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition"
-                >
-                  Close
-                </button>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+   
 
       {/* Add a small animation keyframe in a style tag */}
       <style>{`
@@ -628,3 +480,162 @@ function Career() {
 }
 
 export default Career;
+
+
+
+// pop form of job applicaton 
+  //  {showApplyModal && (
+  //       <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
+  //         <div className="bg-white rounded-3xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl p-8 relative animate-fade-in-up">
+  //           {/* Close button */}
+  //           <button
+  //             onClick={closeApplyModal}
+  //             className="absolute top-4 right-4 p-2 rounded-full hover:bg-slate-100 transition-colors text-slate-400 hover:text-slate-700"
+  //           >
+  //             <X size={24} />
+  //           </button>
+
+  //           {!isSubmitted ? (
+  //             <>
+  //               <div className="mb-6">
+  //                 <h3 className="text-2xl font-semibold text-slate-900">
+  //                   Apply for {selectedJob?.title}
+  //                 </h3>
+  //                 <p className="text-slate-500 text-sm mt-1">
+  //                   Fill in your details and we'll get back to you soon.
+  //                 </p>
+  //               </div>
+
+  //               <form onSubmit={handleSubmit} className="space-y-5">
+  //                 <div>
+  //                   <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
+  //                     Full Name *
+  //                   </label>
+  //                   <input
+  //                     type="text"
+  //                     id="name"
+  //                     name="name"
+  //                     required
+  //                     value={formData.name}
+  //                     onChange={handleInputChange}
+  //                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition outline-none"
+  //                     placeholder="John Doe"
+  //                   />
+  //                 </div>
+
+  //                 <div>
+  //                   <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
+  //                     Email Address *
+  //                   </label>
+  //                   <input
+  //                     type="email"
+  //                     id="email"
+  //                     name="email"
+  //                     required
+  //                     value={formData.email}
+  //                     onChange={handleInputChange}
+  //                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition outline-none"
+  //                     placeholder="john@example.com"
+  //                   />
+  //                 </div>
+
+  //                 <div>
+  //                   <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-1">
+  //                     Phone Number *
+  //                   </label>
+  //                   <input
+  //                     type="tel"
+  //                     id="phone"
+  //                     name="phone"
+  //                     required
+  //                     value={formData.phone}
+  //                     onChange={handleInputChange}
+  //                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition outline-none"
+  //                     placeholder="+91 98765 43210"
+  //                   />
+  //                 </div>
+
+  //                 <div>
+  //                   <label htmlFor="coverLetter" className="block text-sm font-medium text-slate-700 mb-1">
+  //                     Cover Letter (Optional)
+  //                   </label>
+  //                   <textarea
+  //                     id="coverLetter"
+  //                     name="coverLetter"
+  //                     rows="3"
+  //                     value={formData.coverLetter}
+  //                     onChange={handleInputChange}
+  //                     className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition outline-none resize-none"
+  //                     placeholder="Tell us why you'd be a great fit..."
+  //                   />
+  //                 </div>
+
+  //                 <div>
+  //                   <label htmlFor="resume" className="block text-sm font-medium text-slate-700 mb-1">
+  //                     Resume/CV *
+  //                   </label>
+  //                   <div className="relative">
+  //                     <input
+  //                       type="file"
+  //                       id="resume"
+  //                       name="resume"
+  //                       required
+  //                       onChange={handleFileChange}
+  //                       accept=".pdf,.doc,.docx"
+  //                       className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+  //                     />
+  //                     <div className="flex items-center gap-3 px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 transition">
+  //                       <Upload size={20} className="text-slate-400" />
+  //                       <span className="text-sm text-slate-600">
+  //                         {formData.resume ? formData.resume.name : "Upload your resume (PDF, DOC, DOCX)"}
+  //                       </span>
+  //                     </div>
+  //                   </div>
+  //                 </div>
+
+  //                 <button
+  //                   type="submit"
+  //                   disabled={isSubmitting}
+  //                   className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+  //                 >
+  //                   {isSubmitting ? (
+  //                     <>
+  //                       <span className="animate-spin rounded-full h-5 w-5 border-b-2 border-white" />
+  //                       Submitting...
+  //                     </>
+  //                   ) : (
+  //                     "Submit Application"
+  //                   )}
+  //                 </button>
+  //               </form>
+  //             </>
+  //           ) : (
+  //             <div className="text-center py-8">
+  //               <div className="mx-auto w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+  //                 <CheckCircle size={40} className="text-emerald-600" />
+  //               </div>
+  //               <h3 className="text-2xl font-semibold text-slate-900 mb-2">
+  //                 Application Submitted!
+  //               </h3>
+  //               <p className="text-slate-500">
+  //                 Thank you for applying to <span className="font-medium text-slate-700">{selectedJob?.title}</span>.
+  //                 <br />
+  //                 We'll review your application and get back to you soon.
+  //               </p>
+  //               <button
+  //                 onClick={closeApplyModal}
+  //                 className="mt-6 px-6 py-2 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition"
+  //               >
+  //                 Close
+  //               </button>
+  //             </div>
+  //           )}
+  //         </div>
+  //       </div>
+  //     )}
+
+
+
+
+
+
