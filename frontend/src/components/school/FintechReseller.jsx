@@ -195,7 +195,7 @@ export default function FintechReseller() {
               </div> */}
               <div>
                 <div className="text-sm font-semibold text-slate-800">
-                  BANKFIPAY
+                  FINTECH
                 </div>
                 {/* <div className="text-[8px] uppercase tracking-[0.2em] text-slate-400">
                   Fintech Infrastructure
