@@ -18,8 +18,22 @@ export const createContact = async (req, res) => {
     });
 
     // 2. Save contact in Google Sheet
-    await addContactToGoogleSheet(contact);
+    try {
+      await addContactToGoogleSheet(contact);
+      console.log("Contact added to Google Sheet");
+    } catch (sheetError) {
+      console.error("Google Sheet Error:", sheetError);
+    }
 
+    // // 3. Send contact details by email
+    // try {
+    //   await sendContactEmail(contact);
+    //   console.log("Contact email sent successfully");
+    // } catch (emailError) {
+    //   console.error("Email Error:", emailError);
+    // }
+
+    // 4. Response
     return res.status(201).json({
       success: true,
       message: "Your enquiry has been submitted successfully.",
