@@ -1,4 +1,5 @@
 import prisma from "../../db/db.js";
+import { sendContactEmail } from "../../services/email.service.js";
 import { addContactToGoogleSheet } from "../../services/googleSheets.service.js";
 import {
   createContactSchema,
@@ -25,13 +26,13 @@ export const createContact = async (req, res) => {
       console.error("Google Sheet Error:", sheetError);
     }
 
-    // // 3. Send contact details by email
-    // try {
-    //   await sendContactEmail(contact);
-    //   console.log("Contact email sent successfully");
-    // } catch (emailError) {
-    //   console.error("Email Error:", emailError);
-    // }
+    // 3. Send contact details by email
+    try {
+      await sendContactEmail(contact);
+      console.log("Contact email sent successfully");
+    } catch (emailError) {
+      console.error("Email Error:", emailError);
+    }
 
     // 4. Response
     return res.status(201).json({
