@@ -1,0 +1,80 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: myappdb
+      MYSQL_USER: anuj
+      MYSQL_PASSWORD: anujpassword
+
+    ports:
+      - "3306:3306"
+
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-prootpassword"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    container_name: company-backend
+    restart: always
+
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: mysql://anuj:anujpassword@mysql:3306/myappdb
+
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - ./backend/uploads:/app/uploads
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+
+    container_name: company-frontend
+    restart: always
+
+    depends_on:
+      - backend
+
+    ports:
+      - "3000:80"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+
+    depends_on:
+      - mysql
+
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: rootpassword
+
+    ports:
+      - "8080:80"
+
+volumes:
+  mysql_data:
