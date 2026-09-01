@@ -78,7 +78,7 @@ export default function Header({
                   className="shrink-0"
                 >
                   <img
-                    src="https://azzunique.co.in/assets/images/header-hash-logo-pvt.png"
+                    src="https://azzunique.com/Images/Logo/09052023135911.png"
                     alt="Azzunique"
                     className="
                       h-9
