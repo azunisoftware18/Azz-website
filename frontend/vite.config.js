@@ -8,7 +8,8 @@ export default defineConfig({
     host: '0.0.0.0',
     allowedHosts: [
       'jue6j7tmf90h6t8ehdrk6isw.147.93.20.127.sslip.io',
-      'azzunique.co.in'
+      'azzunique.co.in',
+      'azzunique.com'
     ]
   }
 })
