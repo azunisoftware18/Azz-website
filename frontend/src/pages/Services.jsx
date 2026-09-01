@@ -331,7 +331,7 @@ function ServicesPage() {
                 <div
                   className="relative cursor-pointer"
                   onClick={() =>
-                    window.open(service.link, "_blank")
+                    window.open(service.link)
                   }
                 >
 
