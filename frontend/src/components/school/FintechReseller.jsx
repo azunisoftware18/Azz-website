@@ -53,8 +53,8 @@ const services = [
     icon: FileCheck2,
   },
   {
-    title: "UPI CashOut",
-    label: "Money Transfer",
+    title: "UPI CashPoint",
+    label: "Cash Withdrawal",
     description:
       "Manage business payouts, beneficiaries, transaction status and operational visibility.",
     icon: Wallet,
