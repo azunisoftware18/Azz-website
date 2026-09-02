@@ -106,7 +106,7 @@ export default function CompanyForm({ settings, onChange }) {
           value={settings.footerText}
           onChange={onChange}
           className="w-full rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          placeholder="© 2026 Your Company. All rights reserved."
+          
         />
       </div>
     </div>

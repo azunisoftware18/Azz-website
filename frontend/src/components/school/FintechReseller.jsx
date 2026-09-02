@@ -53,6 +53,13 @@ const services = [
     icon: FileCheck2,
   },
   {
+    title: "UPI CashOut",
+    label: "Money Transfer",
+    description:
+      "Manage business payouts, beneficiaries, transaction status and operational visibility.",
+    icon: Wallet,
+  },
+  {
     title: "DMT",
     label: "Money Transfer",
     description:
@@ -66,6 +73,8 @@ const services = [
       "Manage business payouts, beneficiaries, transaction status and operational visibility.",
     icon: Wallet,
   },
+
+  
 ];
 
 const resellerFeatures = [

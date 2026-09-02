@@ -300,7 +300,7 @@ export default function Footer() {
         >
           {/* COPYRIGHT */}
           <p className="text-sm text-[#10154d]/55">
-            Copyright © {new Date().getFullYear()} Azzunique. All Rights
+            Copyright © 2021 Azzunique. All Rights
             Reserved.
           </p>
 
