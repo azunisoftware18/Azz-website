@@ -182,19 +182,32 @@ function Career() {
     },
 
     {
+      name: "Karn",
+      role: "Full Stack Developer",
+      photo: "/images/karan.jpeg",
+    },
+
+    {
+      name: "Vikas",
+      role: "Full Stack Developer",
+      photo: "/images/vikas.jpeg",
+    },
+
+    {
       name: "Durgesh",
       role: "Laravel Developer",
       photo: "/images/durgesh.jpeg",
+    },
+    
+    {
+      name: "Dipendar",
+      role: "Account Manager",
+      photo: "/images/deep.jpeg",
     },
     {
       name: "Manoj",
       role: "Team Manager",
       photo: "/images/manoj.jpeg",
-    },
-    {
-      name: "Dipendar",
-      role: "Account Manager",
-      photo: "/images/deep.jpeg",
     },
   ];
 
@@ -345,7 +358,7 @@ function Career() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <span className="text-indigo-600 text-sm font-semibold uppercase tracking-wider">
-                ● Our People
+                 Our People
               </span>
 
               <h2 className="text-4xl md:text-5xl font-light text-slate-900 mt-2">
