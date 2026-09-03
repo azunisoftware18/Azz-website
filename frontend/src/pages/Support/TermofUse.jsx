@@ -1,7 +1,10 @@
 import React from "react";
+import Header from "../../components/Header/Header";
 
 function TermofUse() {
   return (
+    <>
+    <Header />
     <div className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
       <section className="bg-slate-900 text-white">
@@ -17,8 +20,11 @@ function TermofUse() {
 
             <p className="mt-6 text-lg leading-8 text-slate-300">
               Please read these Terms of Use carefully before accessing or using
-              our website, products, or services.
+              the Azzunique website, products, applications, software, or
+              services.
             </p>
+
+            
           </div>
         </div>
       </section>
@@ -26,26 +32,28 @@ function TermofUse() {
       {/* Main Content */}
       <main className="mx-auto max-w-5xl px-6 py-16 lg:px-8">
         <div className="space-y-12">
-          {/* Introduction */}
+          {/* 1. Introduction */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               1. Introduction
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              Welcome to <strong>Azzunique Softwares</strong>. These Terms of Use govern
-              your access to and use of our website, applications, software,
-              products, and services.
+              Welcome to <strong>Azzunique Software</strong> ("Azzunique," "we,"
+              "us," or "our"). These Terms of Use govern your access to and use
+              of our website, applications, software, products, and services.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              By accessing or using our website or services, you agree to be
-              bound by these Terms of Use. If you do not agree with any part of
-              these terms, please do not use our website or services.
+              By accessing or using our website or services, you acknowledge
+              that you have read, understood, and agree to be bound by these
+              Terms of Use and applicable laws and regulations. If you do not
+              agree with these Terms, please do not access or use our website or
+              services.
             </p>
           </section>
 
-          {/* Services */}
+          {/* 2. Our Services */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               2. Our Services
@@ -53,7 +61,12 @@ function TermofUse() {
 
             <p className="mt-4 leading-7 text-gray-600">
               Azzunique is an information technology company providing
-              technology solutions and services. Our services may include:
+              technology solutions and services to businesses and other
+              customers.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Our services may include, but are not limited to:
             </p>
 
             <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-600">
@@ -69,13 +82,19 @@ function TermofUse() {
             </ul>
 
             <p className="mt-4 leading-7 text-gray-600">
-              Specific services, pricing, timelines, deliverables, and
-              responsibilities may be governed by a separate agreement,
-              proposal, quotation, or statement of work.
+              The availability and scope of our services may vary depending on
+              the customer's requirements.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Specific services, pricing, timelines, deliverables, payment
+              terms, responsibilities, and other project-specific conditions may
+              be governed by a separate proposal, quotation, statement of work,
+              service agreement, or other written contract.
             </p>
           </section>
 
-          {/* Website Usage */}
+          {/* 3. Use of Our Website */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               3. Use of Our Website
@@ -90,57 +109,103 @@ function TermofUse() {
 
             <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-600">
               <li>
-                Use the website for any unlawful, fraudulent, or unauthorized
-                purpose.
+                Use the website for any unlawful, fraudulent, misleading, or
+                unauthorized purpose.
               </li>
+
               <li>
-                Attempt to gain unauthorized access to our systems, servers,
-                accounts, or networks.
+                Attempt to gain unauthorized access to our website, systems,
+                servers, accounts, databases, or networks.
               </li>
+
               <li>
-                Introduce viruses, malware, malicious code, or harmful
-                technologies.
+                Introduce or transmit viruses, malware, malicious code, or other
+                harmful technologies.
               </li>
+
               <li>
-                Interfere with the security, functionality, or operation of the
-                website.
+                Interfere with or attempt to compromise the security,
+                functionality, availability, or operation of our website or
+                services.
               </li>
+
               <li>
-                Copy, reproduce, modify, or commercially exploit our content
-                without permission.
+                Copy, reproduce, modify, distribute, publish, sell, or
+                commercially exploit our website content without prior written
+                authorization.
               </li>
+
               <li>
-                Use automated tools to scrape or extract information from our
-                website without authorization.
+                Use automated tools, bots, crawlers, or scraping technologies to
+                extract information from our website without our prior
+                authorization.
               </li>
+
               <li>
-                Misrepresent your identity or relationship with any person or
+                Impersonate another person or organization or misrepresent your
+                identity, affiliation, or relationship with any person or
                 organization.
               </li>
+
+              <li>
+                Use our website in a manner that could damage our reputation,
+                systems, services, or the rights of others.
+              </li>
             </ul>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              We reserve the right to restrict or terminate access to our
+              website where we reasonably believe that these Terms have been
+              violated.
+            </p>
           </section>
 
-          {/* Intellectual Property */}
+          {/* 4. Intellectual Property */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               4. Intellectual Property
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              All content available on this website, including text, graphics,
-              logos, branding, images, videos, website design, software, source
-              code, documents, and other materials, is owned by or licensed to{" "}
-              <strong>Azzunique</strong>, unless otherwise stated.
+              Unless otherwise stated, all content and materials available on
+              this website are owned by or licensed to{" "}
+              <strong>Azzunique</strong>.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">This may include:</p>
+
+            <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-600">
+              <li>Text and written content</li>
+              <li>Graphics and illustrations</li>
+              <li>Logos and trademarks</li>
+              <li>Branding and visual elements</li>
+              <li>Images and videos</li>
+              <li>Website layouts and designs</li>
+              <li>Software and applications</li>
+              <li>Source code</li>
+              <li>Documents and other materials</li>
+            </ul>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Our intellectual property is protected by applicable intellectual
+              property laws.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              You may not reproduce, modify, distribute, publish, sell, license,
-              or create derivative works from our intellectual property without
-              prior written permission.
+              You may not reproduce, modify, copy, distribute, publish, display,
+              sell, license, create derivative works from, or otherwise
+              commercially exploit our intellectual property without our prior
+              written permission, except where permitted by applicable law.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Nothing in these Terms grants you ownership or any other rights in
+              Azzunique's intellectual property unless expressly agreed in
+              writing.
             </p>
           </section>
 
-          {/* Client Information */}
+          {/* 5. Client Information */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               5. Client Information and Submissions
@@ -149,37 +214,62 @@ function TermofUse() {
             <p className="mt-4 leading-7 text-gray-600">
               If you submit information through our website, including contact
               forms, project requirements, inquiries, feedback, or other
-              materials, you agree that the information provided is accurate and
-              lawful.
+              materials, you are responsible for ensuring that the information
+              provided is accurate, lawful, and not misleading.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              Please do not submit confidential, sensitive, proprietary, or
-              legally restricted information unless specifically requested or
-              agreed upon through an appropriate business process.
+              You should not submit confidential, sensitive, proprietary,
+              personal, or legally restricted information through publicly
+              accessible website forms unless specifically requested or
+              otherwise agreed upon through an appropriate business process.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              By submitting information to us, you represent that you have the
+              necessary rights and authority to provide such information.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Information submitted through our website may be handled in
+              accordance with our Privacy Statement and applicable laws.
             </p>
           </section>
 
-          {/* Project Agreements */}
+          {/* 6. Services and Project Agreements */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               6. Services and Project Agreements
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              Information presented on this website is provided for general
-              informational purposes. Service descriptions, features, timelines,
-              pricing, and deliverables may vary depending on the customer's
-              requirements.
+              Information presented on our website is provided for general
+              informational purposes and does not necessarily constitute an
+              offer, guarantee, or binding commitment to provide any particular
+              service.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              Where applicable, project work will be governed by a separate
-              proposal, quotation, agreement, statement of work, or contract.
+              Service descriptions, features, pricing, availability, timelines,
+              technical specifications, and deliverables may vary depending on
+              the customer's requirements and the scope of the project.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Where applicable, specific projects and services will be governed
+              by a separate proposal, quotation, statement of work, service
+              agreement, or other written contract.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              In the event of any conflict between these Terms of Use and a
+              specific written agreement governing a particular service, the
+              terms of that specific agreement may prevail to the extent
+              applicable.
             </p>
           </section>
 
-          {/* Third Party */}
+          {/* 7. Third Party */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               7. Third-Party Services and Links
@@ -187,105 +277,156 @@ function TermofUse() {
 
             <p className="mt-4 leading-7 text-gray-600">
               Our website or services may contain links to third-party websites,
-              platforms, tools, or services.
+              platforms, applications, tools, or services.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              These third-party services are operated independently from
-              Azzunique. We do not control and are not responsible for their
-              content, availability, security, privacy practices, or terms of
-              use.
+              These third-party services are operated independently of
+              Azzunique. We do not control and are not responsible for the
+              content, availability, security, accuracy, privacy practices, or
+              terms of use of third-party services.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Your interactions with third-party websites and services are
+              subject to the terms and policies of those third parties.
             </p>
           </section>
 
-          {/* Availability */}
+          {/* 8. Website Availability */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               8. Website Availability
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              We aim to keep our website and services available and functioning
-              properly. However, we do not guarantee that the website will
-              always be available, uninterrupted, secure, or error-free.
+              We make reasonable efforts to maintain the availability and
+              functionality of our website and services. However, we do not
+              guarantee that the website will always be available,
+              uninterrupted, secure, or free from errors.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              The website may occasionally be unavailable due to maintenance,
-              updates, technical issues, server problems, network failures,
-              security incidents, or circumstances beyond our reasonable
-              control.
+              The website may occasionally be unavailable or experience
+              interruptions due to:
+            </p>
+
+            <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-600">
+              <li>Scheduled maintenance or updates</li>
+              <li>Technical problems</li>
+              <li>Server or hosting issues</li>
+              <li>Network failures</li>
+              <li>Security incidents</li>
+              <li>Software or hardware failures</li>
+              <li>Circumstances beyond our reasonable control</li>
+            </ul>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              We reserve the right to modify, suspend, restrict, or discontinue
+              any part of the website or its functionality where reasonably
+              necessary.
             </p>
           </section>
 
-          {/* Disclaimer */}
+          {/* 9. Disclaimer */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">9. Disclaimer</h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              The information provided on this website is provided on an "as is"
-              and "as available" basis.
+              The information and materials provided through our website are
+              provided on an <strong>"as is"</strong> and{" "}
+              <strong>"as available"</strong> basis, to the maximum extent
+              permitted by applicable law.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              While we make reasonable efforts to ensure that the information on
-              our website is accurate and up to date, we do not guarantee that
-              all information will always be complete, accurate, reliable, or
-              current.
+              While we make reasonable efforts to ensure that information
+              published on our website is accurate and up to date, we do not
+              guarantee that the information will always be complete, accurate,
+              reliable, current, or free from errors or omissions.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Information on our website should not be treated as a substitute
+              for professional, legal, financial, technical, or other
+              specialized advice where such advice is required.
             </p>
           </section>
 
-          {/* Liability */}
+          {/* 10. Limitation of Liability */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               10. Limitation of Liability
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              To the maximum extent permitted by applicable law, Azzunique shall
-              not be liable for any indirect, incidental, special,
-              consequential, or punitive damages arising from or related to your
-              use of our website or services.
+              To the maximum extent permitted by applicable law, Azzunique and
+              its directors, officers, employees, contractors, representatives,
+              and service providers shall not be liable for any indirect,
+              incidental, special, consequential, exemplary, or punitive damages
+              arising out of or relating to your access to or use of our website
+              or services.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              This may include loss of data, loss of profits, business
-              interruption, loss of opportunities, or other economic losses.
+              This may include, where permitted by applicable law, loss of data,
+              loss of profits, loss of revenue, business interruption, loss of
+              business opportunities, or other economic losses.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Nothing in these Terms is intended to exclude or limit liability
+              that cannot lawfully be excluded or limited under applicable law.
             </p>
           </section>
 
-          {/* Indemnification */}
+          {/* 11. Indemnification */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               11. Indemnification
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              You agree to indemnify and hold harmless Azzunique, its directors,
-              employees, officers, contractors, and representatives from claims,
-              liabilities, damages, losses, costs, and expenses arising out of:
+              To the extent permitted by applicable law, you agree to indemnify
+              and hold harmless Azzunique, its directors, officers, employees,
+              contractors, representatives, and service providers from claims,
+              liabilities, damages, losses, costs, and reasonable expenses
+              arising out of or relating to:
             </p>
 
             <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-600">
               <li>Your violation of these Terms of Use.</li>
               <li>Your misuse of our website or services.</li>
               <li>Your violation of applicable laws or regulations.</li>
-              <li>Your infringement of third-party rights.</li>
+              <li>Your infringement or violation of any third-party rights.</li>
+              <li>
+                Information or materials submitted by you through our website or
+                services.
+              </li>
             </ul>
           </section>
 
-          {/* Privacy */}
+          {/* 12. Privacy */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">12. Privacy</h2>
 
             <p className="mt-4 leading-7 text-gray-600">
               Your use of our website may involve the collection and processing
-              of certain information. Our handling of personal information is
-              governed by our Privacy Policy.
+              of certain information.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Our collection, use, storage, and handling of personal information
+              are described in our Privacy Statement.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Our website may also use cookies and similar technologies. Please
+              refer to our Cookie Policy for additional information.
             </p>
           </section>
 
-          {/* Changes */}
+          {/* 13. Changes */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               13. Changes to These Terms
@@ -293,93 +434,152 @@ function TermofUse() {
 
             <p className="mt-4 leading-7 text-gray-600">
               We may update or modify these Terms of Use from time to time to
-              reflect changes in our services, legal requirements, technology,
-              or business practices.
+              reflect changes in our services, website, technology, legal
+              requirements, or business practices.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              Any updated version will be posted on this page with a revised
-              "Last Updated" date. Your continued use of the website after
-              changes are posted constitutes acceptance of the updated terms.
+              When changes are made, the updated version will be published on
+              this page with a revised <strong>"Last Updated"</strong> date.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Your continued use of our website after the updated Terms are
+              published may constitute acceptance of the revised Terms, to the
+              extent permitted by applicable law.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              We encourage you to review these Terms periodically.
             </p>
           </section>
 
-          {/* Governing Law */}
+          {/* 14. Governing Law */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
-              14. Governing Law
+              14. Governing Law and Jurisdiction
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
               These Terms of Use shall be governed by and interpreted in
-              accordance with the applicable laws of India.
+              accordance with the laws of <strong>India</strong>, without regard
+              to conflict-of-law principles.
             </p>
 
             <p className="mt-4 leading-7 text-gray-600">
-              Any dispute arising in connection with these Terms or your use of
-              our website or services shall be subject to the applicable
-              jurisdiction of the courts of [City, State, India], unless
-              otherwise agreed in writing.
+              Subject to applicable law and any written agreement between you
+              and Azzunique, any dispute arising out of or relating to these
+              Terms or your use of our website or services shall be subject to
+              the jurisdiction of the competent courts in{" "}
+              <strong>Jaipur, Rajasthan, India</strong>.
             </p>
           </section>
 
-          {/* Termination */}
+          {/* 15. Termination */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
-              15. Termination
+              15. Termination and Suspension
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              We reserve the right to suspend or terminate your access to our
-              website or services if you violate these Terms of Use or engage in
-              conduct that may harm our company, users, systems, or other
-              parties.
+              We reserve the right, where reasonably necessary and to the extent
+              permitted by applicable law, to suspend, restrict, or terminate
+              your access to our website or services if:
+            </p>
+
+            <ul className="mt-4 list-disc space-y-2 pl-6 text-gray-600">
+              <li>You violate these Terms of Use.</li>
+              <li>
+                You engage in unlawful, fraudulent, abusive, or unauthorized
+                activity.
+              </li>
+              <li>
+                Your actions may harm our company, users, systems, services, or
+                third parties.
+              </li>
+              <li>
+                Such action is required for security, legal, regulatory, or
+                operational reasons.
+              </li>
+            </ul>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Termination or suspension will not affect rights or obligations
+              that arose before the effective date of termination.
             </p>
           </section>
 
-          {/* Severability */}
+          {/* 16. Severability */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               16. Severability
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              If any provision of these Terms of Use is found to be invalid,
-              unlawful, or unenforceable, that provision shall be interpreted or
-              modified to the extent necessary to make it enforceable, while the
-              remaining provisions shall continue to remain in effect.
+              If any provision of these Terms of Use is determined to be
+              invalid, unlawful, or unenforceable by a competent authority or
+              court, that provision shall be interpreted or modified to the
+              extent necessary to make it valid and enforceable, where permitted
+              by law.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              The remaining provisions of these Terms will continue to remain in
+              full force and effect.
             </p>
           </section>
 
-          {/* Entire Agreement */}
+          {/* 17. Entire Agreement */}
           <section>
             <h2 className="text-2xl font-bold text-gray-900">
               17. Entire Agreement
             </h2>
 
             <p className="mt-4 leading-7 text-gray-600">
-              These Terms of Use, together with our Privacy Policy and any other
-              applicable agreements or policies referenced on our website,
-              constitute the general terms governing your use of our website.
+              These Terms of Use, together with our Privacy Statement, Cookie
+              Policy, and any other applicable agreements or policies referenced
+              on our website, constitute the general terms governing your use of
+              our website.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              For specific projects or services, additional written agreements,
+              proposals, quotations, statements of work, or contracts may apply.
             </p>
           </section>
 
-          {/* Contact */}
+          {/* 18. No Waiver */}
+          <section>
+            <h2 className="text-2xl font-bold text-gray-900">18. No Waiver</h2>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Our failure to enforce any provision of these Terms of Use does
+              not constitute a waiver of our right to enforce that provision or
+              any other provision in the future.
+            </p>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Any waiver must be expressly provided in writing by an authorized
+              representative of Azzunique.
+            </p>
+          </section>
+
+          {/* 19. Contact */}
           <section className="rounded-2xl bg-slate-50 p-8">
-            <h2 className="text-2xl font-bold text-gray-900">18. Contact Us</h2>
+            <h2 className="text-2xl font-bold text-gray-900">19. Contact Us</h2>
 
             <p className="mt-4 leading-7 text-gray-600">
               If you have any questions, concerns, or requests regarding these
-              Terms of Use, please contact us.
+              Terms of Use, please contact us using the information below.
             </p>
 
-            <div className="mt-6 space-y-2 text-gray-700">
+            <div className="mt-6 space-y-3 text-gray-700">
               <p>
                 <strong>Azzunique Software</strong>
               </p>
 
               <p>
-                Email:{" "}
+                <strong>Email:</strong>{" "}
                 <a
                   href="mailto:info@azzunique.com"
                   className="text-blue-600 hover:underline"
@@ -388,17 +588,27 @@ function TermofUse() {
                 </a>
               </p>
 
-              <p>Phone: +91 74120 66477</p>
+              <p>
+                <strong>Phone:</strong> +91 74120 66477
+              </p>
 
               <p>
-                Address: 78, Tech Bhawan, Tara Nagar-A, Hari Nagar, Jhotwara,
-                Jaipur, Rajasthan 302012
+                <strong>Address:</strong> 78, Tech Bhawan, Tara Nagar-A, Hari
+                Nagar, Jhotwara, Jaipur, Rajasthan 302012, India
               </p>
             </div>
+
+            <a
+              href="/contact"
+              className="mt-6 inline-flex items-center rounded-full bg-blue-600 px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:bg-slate-900"
+            >
+              Contact Azzunique
+            </a>
           </section>
         </div>
       </main>
     </div>
+    </>
   );
 }
 
