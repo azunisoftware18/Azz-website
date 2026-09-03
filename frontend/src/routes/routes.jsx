@@ -37,6 +37,9 @@ import GalleryCMS from "../admin/pages/gallery/GalleryCMS.jsx";
 import Lms from "../components/school/Lms.jsx";
 import FintechReseller from "../components/school/FintechReseller.jsx";
 import TicketBooking from "../components/school/TicketBooking.jsx";
+import TermofUse from "../pages/Support/TermofUse.jsx";
+import PrivacyStatement from "../pages/Support/PrivacyStatement.jsx";
+import CookiePolicy from "../pages/Support/CookiePolicy.jsx";
 
 export const createRouter = () => {
   return createBrowserRouter(
@@ -76,6 +79,14 @@ export const createRouter = () => {
           <Route path="fintech" element={<FintechReseller />} />
 
           <Route path="ticket" element={<TicketBooking   />} />
+
+          <Route path="terms" element={<TermofUse />} />
+
+          <Route path="privacy" element={<PrivacyStatement />} />
+
+          <Route path="cookie-policy" element={<CookiePolicy />} />
+
+
         </Route>
 
         {/* ==============================

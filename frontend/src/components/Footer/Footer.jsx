@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ArrowUpRight } from "lucide-react";
 
@@ -181,11 +181,10 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-4 text-[15px]">
-
               <li>
                 <AnimatedLink to="/">Home</AnimatedLink>
               </li>
-              
+
               <li>
                 <AnimatedLink to="/about">About Us</AnimatedLink>
               </li>
@@ -220,23 +219,23 @@ export default function Footer() {
 
             <ul className="space-y-4 text-[15px]">
               <li>
-                <AnimatedLink to="/services">Web Development</AnimatedLink>
+                <AnimatedLink to="">Web Development</AnimatedLink>
               </li>
 
               <li>
-                <AnimatedLink to="/services">Software Development</AnimatedLink>
+                <AnimatedLink to="">Software Development</AnimatedLink>
               </li>
 
               <li>
-                <AnimatedLink to="/services">UI/UX Design</AnimatedLink>
+                <AnimatedLink to="">UI/UX Design</AnimatedLink>
               </li>
 
               <li>
-                <AnimatedLink to="/services">Digital Solutions</AnimatedLink>
+                <AnimatedLink to="">Digital Solutions</AnimatedLink>
               </li>
 
               <li>
-                <AnimatedLink to="/services">Cloud Solutions</AnimatedLink>
+                <AnimatedLink to="">Cloud Solutions</AnimatedLink>
               </li>
             </ul>
           </div>
@@ -257,23 +256,53 @@ export default function Footer() {
 
             <ul className="space-y-4 text-[15px]">
               <li>
-                <AnimatedLink to="/terms">Terms of Use</AnimatedLink>
+                <Link
+                  to="/terms"
+                  onClick={scrollToTop}
+                  className="text-[#10154d]/60 transition-colors duration-300 hover:text-[#3557ff]"
+                >
+                  Terms of Use
+                </Link>
               </li>
 
               <li>
-                <AnimatedLink to="/privacy">Privacy Statement</AnimatedLink>
+                <Link
+                  to="/privacy"
+                  onClick={scrollToTop}
+                  className="text-[#10154d]/60 transition-colors duration-300 hover:text-[#3557ff]"
+                >
+                  Privacy Statement
+                </Link>
               </li>
 
               <li>
-                <AnimatedLink to="/cookie-policy">Cookie Policy</AnimatedLink>
+                <Link
+                  to="/cookie-policy"
+                  onClick={scrollToTop}
+                  className="text-[#10154d]/60 transition-colors duration-300 hover:text-[#3557ff]"
+                >
+                  Cookie Policy
+                </Link>
               </li>
 
-              <li>
-                <AnimatedLink to="/site-map">Site Map</AnimatedLink>
-              </li>
+              {/* <li>
+                <Link
+                  to="/site-map"
+                  onClick={scrollToTop}
+                  className="text-[#10154d]/60 transition-colors duration-300 hover:text-[#3557ff]"
+                >
+                  Site Map
+                </Link>
+              </li> */}
 
               <li>
-                <AnimatedLink to="/contact">Contact Us</AnimatedLink>
+                <Link
+                  to="/contact"
+                  onClick={scrollToTop}
+                  className="text-[#10154d]/60 transition-colors duration-300 hover:text-[#3557ff]"
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -300,15 +329,14 @@ export default function Footer() {
         >
           {/* COPYRIGHT */}
           <p className="text-sm text-[#10154d]/55">
-            Copyright © 2021 Azzunique. All Rights
-            Reserved.
+            Copyright © 2021 Azzunique. All Rights Reserved.
           </p>
 
           {/* SOCIAL ICONS */}
           <div className="flex items-center gap-3">
             {/* FACEBOOK */}
             <a
-              href="#"
+              href="https://www.facebook.com/azzuniquesoftware"
               aria-label="Facebook"
               className="
                 flex
@@ -336,7 +364,7 @@ export default function Footer() {
 
             {/* LINKEDIN */}
             <a
-              href="#"
+              href="https://in.linkedin.com/company/azzunique-software"
               aria-label="LinkedIn"
               className="
                 flex
@@ -362,9 +390,38 @@ export default function Footer() {
               <FaLinkedinIn size={16} />
             </a>
 
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/azzuniquesoftware/"
+              aria-label="Instagram"
+              className="
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-full
+                border
+                border-[#10154d]/15
+                bg-white
+                text-[#10154d]/60
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-[#3557ff]
+                hover:bg-[#3557ff]
+                hover:text-white
+                hover:shadow-lg
+                hover:shadow-[#3557ff]/20
+              "
+            >
+              <FaInstagram size={16} />
+            </a>
+
             {/* X */}
             <a
-              href="#"
+              href="https://x.com/Azzunique_"
               aria-label="X"
               className="
                 flex

@@ -1,49 +1,44 @@
-import React from 'react'
+import React from "react";
 
 function Test() {
   const testimonials = [
     {
-      text: "PrebuiltUI helped us move faster without sacrificing design quality. The components feel production-ready.",
-      name: "Cristofer Levin",
-      role: "Founder @ TechStart",
-      image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200"
+      text: "Azzunique helped us build a professional digital presence that truly represents our brand. The team understood our requirements and delivered exactly what we needed.",
+      name: "Arti",
+      // role: "Founder & CEO",
+      image: "/images/arti.jpg",
     },
     {
-      text: "The attention to detail in PrebuiltUI is impressive. Saved me hours of repetitive work and time. Highly recommended.",
-      name: "Rohan Mehta",
-      role: "Lead Developer",
-      image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200"
+      text: "The development team was highly responsive and professional throughout the project. They delivered a clean, user-friendly solution while keeping everything aligned with our business needs.",
+      name: "Rahul Saini",    
+      image: "/images/rahul.jpg",
     },
     {
-      text: "We were able ship faster using PrebuiltUI. The consistency across components made UI feel polished.",
-      name: "Jason Kim",
-      role: "Product Designer",
-      image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60"
+      text: "We had a great experience working with Azzunique. Their attention to detail, modern design approach, and technical expertise helped us create a much better digital experience for our customers.",
+      name: "Birender",      
+      image: "/images/birendar.jpg",
     },
     {
-      text: "PrebuiltUI feels like it was built by people who actually ship products. Components are clean and easy to use.",
-      name: "Alex Turner",
-      role: "Engineering Manager",
-      image: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60"
+      text: "Azzunique made the entire development process smooth and straightforward. The team was easy to communicate with, understood our vision, and delivered a polished product on time.",
+      name: "Kartik kumawat",      
+      image: "/images/kartik.jpg",
     },
     {
-      text: "PrebuiltUI helped us maintain design consistency across multiple projects. It's now a core part of design.",
-      name: "Sofia Martinez",
-      role: "UX Director",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&h=100&auto=format&fit=crop"
+      text: "What impressed us most was the combination of design quality and functionality. Azzunique created a solution that looks professional and works seamlessly across devices.",
+      name: "Shyam Singh",      
+      image: "/images/shyam.jpg",
     },
     {
-      text: "Our team productivity improved noticeably after adopting PrebuiltUI. It reduced design handoff friction.",
-      name: "Daniel Wong",
-      role: "CTO",
-      image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/userImage/userImage1.png"
-    }
+      text: "Working with Azzunique significantly improved our digital workflow. Their team provided the right technical guidance and delivered a reliable solution that supports our business goals.",
+      name: "Dr. R. K. Tailor",
+      image: "/images/rk.jpg",
+    },
   ];
 
   // Two rows: first 3 testimonials, last 3 testimonials
   const rows = [
     { start: 0, end: 3, className: "animate-scroll" },
-    { start: 3, end: 6, className: "animate-scroll-reverse" }
+    { start: 3, end: 6, className: "animate-scroll-reverse" },
   ];
 
   // Render a single testimonial card
@@ -87,8 +82,12 @@ function Test() {
           className="w-12 h-12 rounded-full object-cover border-2 border-slate-100"
         />
         <div>
-          <p className="font-semibold text-neutral-800 text-sm">{testimonial.name}</p>
-          <p className="text-neutral-500 text-xs">{testimonial.role || "Client"}</p>
+          <p className="font-semibold text-neutral-800 text-sm">
+            {testimonial.name}
+          </p>
+          {/* <p className="text-neutral-500 text-xs">
+            {testimonial.role || "Client"}
+          </p> */}
         </div>
       </div>
     </div>
@@ -150,7 +149,7 @@ function Test() {
           <div className="text-center mb-12">
             <div className="inline-block bg-neutral-100 border border-neutral-300 rounded-full px-5 py-1.5 mb-4">
               <span className="text-xs font-medium text-neutral-600 tracking-wide">
-                 Loved by clients
+                Loved by clients
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-semibold text-[#0E0A42] mb-3">
@@ -178,7 +177,7 @@ function Test() {
 
                   <div className={`flex gap-6 ${row.className}`}>
                     {tripled.map((testimonial, idx) =>
-                      renderCard(testimonial, idx)
+                      renderCard(testimonial, idx),
                     )}
                   </div>
                 </div>
