@@ -1043,14 +1043,12 @@ export default function TicketBooking() {
             {/* Brand */}
             <div>
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#171717] text-white">
-                  <Ticket size={18} />
-                </div>
+                
 
                 <div>
                   <div className="text-sm font-bold text-[#171717]">
-                    Unifin
-                    <span className="text-[#ef5b2a]"> Tickets</span>
+                    Parchi
+                    <span className="text-[#ef5b2a]">Kaat</span>
                   </div>
 
                   <div className="mt-0.5 text-[9px] uppercase tracking-[0.18em] text-black">
@@ -1140,7 +1138,7 @@ export default function TicketBooking() {
           {/* Bottom */}
           <div className="mt-8 flex flex-col gap-4 border-t border-black/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-xs text-black">
-              © {new Date().getFullYear()} Unifin Tickets. All Rights Reserved.
+              © {new Date().getFullYear()} ParchiKat All Rights Reserved.
             </p>
 
             <div className="flex items-center gap-2 text-xs text-black">
