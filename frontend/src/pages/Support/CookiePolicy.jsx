@@ -25,6 +25,10 @@ function CookiePolicy() {
             interact with our website. It explains what cookies are, why we may
             use them, and the choices available to you regarding their use.
           </p>
+
+          <p className="mt-6 max-w-3xl text-base leading-7 text-[#10154d]/65 md:text-sm">
+            Last Updated: September 3, 2026
+          </p>
         </div>
       </section>
 

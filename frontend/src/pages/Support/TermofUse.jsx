@@ -24,6 +24,10 @@ function TermofUse() {
               services.
             </p>
 
+            <p className="mt-6 text-sm leading-8 text-slate-300">
+              Last Updated: September 3, 2026
+            </p>
+
             
           </div>
         </div>
