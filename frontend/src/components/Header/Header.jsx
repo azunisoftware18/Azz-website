@@ -280,7 +280,7 @@ export default function Header({
                 className="shrink-0"
               >
                 <img
-                  src="https://azzunique.com/Images/Logo/09052023135911.png"
+                  src="http://azzunique.com/Images/Logo/09052023135911.png"
                   alt="Azzunique"
                   className="
                     h-9
