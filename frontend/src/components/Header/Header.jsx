@@ -76,7 +76,7 @@ export default function Header({
                   to="/"
                   onClick={closeMobileMenu}
                   className="shrink-0"
-                >
+                > 
                   <img
                     src="/images/logo.png"
                     alt="Azzunique"
